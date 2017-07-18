@@ -1,5 +1,58 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "galleries-list": {
+        "type": "galleries-list",
+        "blocks": {
+          "1481226333517": {
+            "type": "gallery",
+            "settings": {
+              "gallery-title": "Post1",
+              "gallery-location": 196399568
+            }
+          },
+          "1481226363413": {
+            "type": "gallery",
+            "settings": {
+              "gallery-title": "gallery2",
+              "gallery-location": 196399824
+            }
+          },
+          "1481258836305": {
+            "type": "gallery",
+            "settings": {
+              "gallery-title": "3",
+              "gallery-location": 196399824
+            }
+          },
+          "1481259145853": {
+            "type": "gallery",
+            "settings": {
+              "gallery-title": "",
+              "gallery-location": 1234
+            }
+          }
+        },
+        "block_order": [
+          "1481226333517",
+          "1481226363413",
+          "1481258836305",
+          "1481259145853"
+        ],
+        "settings": {
+          "gallery-section-title": "Testing Galleries"
+        }
+      }
+    },
+    "content_for_index": [
+      "1476907275518",
+      "1490630041372",
+      "1481226882734",
+      "1481226851955",
+      "1481258787290",
+      "1482239582728"
+    ]
+  },
   "presets": {
     "Default": {
       "sections": {
@@ -30,12 +83,34 @@
         },
         "featured-product": {
           "type": "featured-product"
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {
+          }
         }
       },
       "content_for_index": [
-        "collection-list",
-        "featured-collection",
-        "featured-product"
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
       ]
     }
   }
