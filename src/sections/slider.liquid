@@ -4,23 +4,43 @@
   {% endfor %}
 </div>
 
+
+{% stylesheet %}
+.slider{
+  border: 1px solid red;
+}
+{% endstylesheet %}
+
+
+
+
+{% javascript %}
+
+{% endjavascript %}
+
+
+
 {% schema %}
-  {
+{
+  "name": "Slider",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "limit": 4,
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [{
     "name": "Slider",
-    "max_blocks": 6,
-    "blocks": [
-      {
-        "type": "slide",
-        "name": "Slide",
-        "limit": 4,
-        "settings": [
-          {
-            "id": "image",
-            "type": "image_picker",
-            "label": "Image"
-          }
-        ]
-      }
-    ]
-  }
+    "category": "Slideshow"
+  }]
+}
 {% endschema %}
