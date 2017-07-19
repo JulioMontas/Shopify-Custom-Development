@@ -1,8 +1,12 @@
 <div class="slider">
   {% for block in section.blocks %}
-    <img src="{{ block.settings.image | img_url: 'master' }}" alt="" />
+    <div class="">
+      <img src="{{ block.settings.image | img_url: 'master' }}" alt="" />
+      <a href="{{ block.settings.url }}">{{ block.settings.textarea }}</a>
+    </div>
   {% endfor %}
 </div>
+
 
 {% stylesheet %}
 .slider{
@@ -14,12 +18,15 @@
 {% javascript %}
 $(document).ready(function(){
   $('.slider').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
   });
 });
 {% endjavascript %}
+
 
 
 {% schema %}
@@ -36,6 +43,17 @@ $(document).ready(function(){
           "id": "image",
           "type": "image_picker",
           "label": "Image"
+        },
+        {
+           "type": "textarea",
+           "id": "textarea",
+           "default": "You Are Never Fully Dressed Without Perfume!",
+           "label": "Short Summary"
+        },
+        {
+           "type": "url",
+           "id": "url",
+           "label": "Link to the Button"
         }
       ]
     }
