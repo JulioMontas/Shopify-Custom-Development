@@ -8,11 +8,11 @@
  */
 // =require vendor/jquery-2.2.3.min.js
 
-
 /*!
- * slick-1.6.0.min
+ * slick.min.js
  */
-// =require vendor/slick-1.6.0.min.js
+// =require vendor/slick.min.js
+
 
 // Attempts to preserve comments that likely contain licensing information,
 // even if the comment does not have directives such as `@license` or `/*!`.
