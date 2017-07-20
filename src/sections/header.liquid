@@ -17,11 +17,11 @@
       <p class="country">US</p>
     </section>
 
-    <section class="grid__item  one-third">
+    <section class="grid__item  one-third" id="topShip">
       <p>Free shipping on all US orders</p>
     </section>
 
-    <section class="grid__item  one-third">
+    <section class="grid__item  one-third" id="topCart">
       <a href="/cart">
         {% include 'icon-cart' %}
         {{ 'layout.cart.title' | t }}
@@ -57,11 +57,11 @@
 
   </div>
 
-  <header class="grid" role="banner">
+  <header class="" role="banner">
     {% if template.name == 'index' %}
-      <h1 class="grid__item  one-third" itemscope itemtype="http://schema.org/Organization">
+      <h1 id="logoHead" class="" itemscope itemtype="http://schema.org/Organization">
     {% else %}
-      <div class="h1 grid__item  one-third" itemscope itemtype="http://schema.org/Organization">
+      <div class="" itemscope itemtype="http://schema.org/Organization">
     {% endif %}
         <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
           {% if section.settings.logo != blank %}
@@ -80,13 +80,13 @@
       </div>
     {% endif %}
 
-    <nav role="navigation" class="grid__item  one-third">
-      <ul class="site-nav">
+    <nav role="navigation" >
+      <ul class="site-nav" id="desktop-nav" style="">
         {% for link in linklists[section.settings.main_linklist].links %}
           {%- assign child_list_handle = link.title | handleize -%}
           {% if menus[child_list_handle].links != blank %}
             <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
-              <a href="{{ link.url }}" class="site-nav__link">
+              <a href="{{ link.url }}" class="site-nav__link two-thirds">
                 {{ link.title }}
                 {% include 'icon-arrow-down' %}
               </a>
@@ -105,27 +105,106 @@
           {% endif %}
         {% endfor %}
       </ul>
+        <form action="/search" method="get" role="search" id="searchForm">
+          <label for="Search" class="label-hidden">
+            {{ 'general.search.placeholder' | t }}
+          </label>
+          <input type="search"
+                 name="q"
+                 id="Search"
+                 value="{{ search.terms | escape }}"
+                 placeholder="{{ 'general.search.placeholder' | t }}">
+          <button type="submit" class="btn">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
+        </form>
     </nav>
 
-    <section class="grid__item  one-third">
-      <form action="/search" method="get" role="search">
-        <label for="Search" class="label-hidden">
-          {{ 'general.search.placeholder' | t }}
-        </label>
-        <input type="search"
-               name="q"
-               id="Search"
-               value="{{ search.terms | escape }}"
-               placeholder="{{ 'general.search.placeholder' | t }}">
-        <button type="submit" class="btn">
-          {% include 'icon-search' %}
-          <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-        </button>
-      </form>
-    </section>
+
   </header>
 
+  <div class="mobile-nav">
+    <nav id="mobile-nav-nav">
+      {% if template.name == 'index' %}
+        <h2 id="" class="" itemscope itemtype="http://schema.org/Organization">
+      {% else %}
+        <div class="" itemscope itemtype="http://schema.org/Organization">
+      {% endif %}
+      <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+        {% if section.settings.logo != blank %}
+          {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
+          <img src="{{ section.settings.logo | img_url: image_size }}"
+               srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+               alt="{{ section.settings.logo.alt | default: shop.name }}"
+               itemprop="logo">
+        {% else %}
+          {{ shop.name }}
+        {% endif %}
+      </a>
+  {% if template.name == 'index' %}
+    </h1>
+  {% else %}
+    </div>
+  {% endif %}
+  <ul class="site-mobile-nav">
+    {% for link in linklists[section.settings.main_linklist].links %}
+      {%- assign child_list_handle = link.title | handleize -%}
+      {% if menus[child_list_handle].links != blank %}
+        <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
+          <a href="{{ link.url }}" class="site-nav__link">
+            {{ link.title }}
+            {% include 'icon-arrow-down' %}
+          </a>
+          <ul class="site-nav__submenu" id="mobileLinks">
+            {% for childlink in menus[child_list_handle].links %}
+              <li {% if childlink.active %}class="site-nav--active"{% endif %}>
+                <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% else %}
+        <li {% if link.active %}class="site-nav--active"{% endif %}>
+          <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+
+    </nav>
+  </div>
+
 </div>
+
+{% stylesheet %}
+
+h1 { padding-left: 5px; }
+.country { padding-left: 5px; }
+#topCart {
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.site-nav { display: inline; }
+
+#logoHead {margin-bottom: 0;}
+
+
+<!-- Nav Bar Media Queries -->
+@media (max-width: 767px) {
+  <!-- #desktop-nav { display: none; } -->
+  #mobileLinks { display: inline-block; }
+  #mobileLinks { list-style-type: none; }
+}
+@media (min-width: 768px) {
+  #mobile-nav-nav { display: none; }
+}
+
+{% endstylesheet %}
+
 
 {% schema %}
   {

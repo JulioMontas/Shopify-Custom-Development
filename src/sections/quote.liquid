@@ -1,0 +1,43 @@
+<div class="quote">
+  {% for block in section.blocks %}
+    <span><h2>{{ block.settings.textarea }}</h2></span>
+  {% endfor %}
+</div>
+
+{% stylesheet %}
+.quote{ border: 10px dotted black }
+{% endstylesheet %}
+
+
+
+
+{% javascript %}
+
+{% endjavascript %}
+
+
+
+{% schema %}
+{
+  "name": "Fucking Quote",
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "type": "textarea",
+      "name": "Insert some bullshit here",
+      "limit": 1,
+      "settings": [
+        {
+          "id": "textarea",
+          "type": "text",
+          "label": "Say something you fuck"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Inspire me",
+    "category": "Quote"
+  }]
+}
+{% endschema %}

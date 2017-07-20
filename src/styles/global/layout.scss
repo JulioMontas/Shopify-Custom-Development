@@ -55,15 +55,16 @@ html {
 
 /*================ Header ================*/
 
+
 .site-nav {
 	list-style: none;
 	text-align: center;
 }
 
-.site-nav li {
-    float: left;
-    padding-left: 10px;
-}
+// .site-nav li {
+//     float: left;
+//     padding-left: 10px;
+// }
 .site-nav li a{
     text-decoration: none;
 }
@@ -76,3 +77,30 @@ html {
 	background: #333;
 	margin-top: 4px;
 }
+
+.country {
+  padding-left: 10px;
+}
+
+#topShip {
+  text-align: center;
+}
+#topCart {
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 15px;
+}
+
+
+
+/*================ Navigation ================*/
+
+#searchForm {
+  float: right;
+}
+
+
+
+
+
+/*================ Footer ================*/

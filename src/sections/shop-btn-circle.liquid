@@ -1,0 +1,59 @@
+<div class="shop-btn-circle grid__item">
+  {% for block in section.blocks %}
+    <img class="shopButton" src="{{ block.settings.image | img_url: 'master' }}" alt="" />
+    <h3 class="shopTitle">{{ block.settings.text }}</h3>
+    <p class="shopTitle">{{ block.settings.text }}</p>
+  {% endfor %}
+</div>
+
+
+{% stylesheet %}
+.shop-btn-circle { border: 10px solid black }
+.shopButton { border: 5px solid green }
+.shopTitle { border: 5px solid yellow }
+
+{% endstylesheet %}
+
+
+
+
+{% javascript %}
+
+{% endjavascript %}
+
+
+
+{% schema %}
+{
+  "name": "Shop Pictures",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Pick a pic",
+      "limit": 4,
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "text",
+          "type": "text",
+          "label": "title here buddy"
+        },
+        {
+          "id": "textarea",
+          "type": "text",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Shop Shop Shop Shop",
+    "category": "Slideshow"
+  }]
+}
+{% endschema %}

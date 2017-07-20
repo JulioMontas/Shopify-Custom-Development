@@ -14,12 +14,48 @@
             },
             "collection-list-2": {
               "type": "collection"
+            },
+            "asdf": {
+              "type": "collection"
             }
           },
           "block_order": [
             "collection-list-0",
             "collection-list-1",
-            "collection-list-2"
+            "collection-list-2",
+            "asdf"
+          ]
+        },
+        "featured-product": {
+          "type": "featured-product"
+        },
+        "featured-fuck": {
+          "type": "featured-fuck"
+        },
+        "shop-circle": {
+          "type": "image",
+          "blocks": {
+            "img-0": {
+              "type": "image",
+              "id": "hello",
+              "label": "Slide 3 Image",
+              "info": "Put slide 3 image"
+            },
+            "img-1": {
+              "type": "image"
+            },
+            "img-2": {
+              "type": "image"
+            },
+            "img-3": {
+              "type": "image"
+            }
+          },
+          "block_order": [
+            "img-0",
+            "img-1",
+            "img-2",
+            "img-3"
           ]
         },
         "featured-collection": {
@@ -27,15 +63,13 @@
           "settings": {
             "collection": "frontpage"
           }
-        },
-        "featured-product": {
-          "type": "featured-product"
         }
       },
       "content_for_index": [
         "collection-list",
+        "featured-product",
         "featured-collection",
-        "featured-product"
+        "shop-circle"
       ]
     }
   }
