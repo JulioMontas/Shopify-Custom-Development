@@ -1,5 +1,10 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+    },
+    "content_for_index": [
+    ]
+  },
   "presets": {
     "Default": {
       "sections": {
@@ -66,10 +71,6 @@
         }
       },
       "content_for_index": [
-        "collection-list",
-        "featured-product",
-        "featured-collection",
-        "shop-circle"
       ]
     }
   }

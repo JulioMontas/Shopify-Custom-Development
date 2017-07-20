@@ -1,0 +1,68 @@
+<div class="slider">
+  {% for block in section.blocks %}
+    <div class="">
+      <img src="{{ block.settings.image | img_url: 'master' }}" alt="" />
+      <a href="{{ block.settings.url }}">{{ block.settings.textarea }}</a>
+    </div>
+  {% endfor %}
+</div>
+
+
+{% stylesheet %}
+.slider{
+  border: 1px solid red;
+}
+{% endstylesheet %}
+
+
+{% javascript %}
+$(document).ready(function(){
+  $('.slider').slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+
+  });
+});
+{% endjavascript %}
+
+
+
+{% schema %}
+{
+  "name": "Slider",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "limit": 4,
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+           "type": "textarea",
+           "id": "textarea",
+           "default": "You Are Never Fully Dressed Without Perfume!",
+           "label": "Short Summary"
+        },
+        {
+           "type": "url",
+           "id": "url",
+           "label": "Link to the Button"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Slider",
+    "category": "Slideshow"
+  }]
+}
+{% endschema %}
