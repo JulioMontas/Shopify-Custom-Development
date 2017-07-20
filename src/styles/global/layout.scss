@@ -12,15 +12,14 @@ html {
 }
 
 /*================ ME ================*/
-.center{
-  text-align: center;
-}
 
-/*================ Top Banner With Animated Background ================*/
+/*================ Banner With Animated Background ================*/
 
-.TopBanner a{color: white;}
+#top-banner .grid__item:nth-child(2), #lower-banner .grid__item:nth-child(2) {text-align: center;}
+#top-banner .grid__item:nth-child(3), #lower-banner .grid__item:nth-child(3) {text-align: right; padding-right: 30px;}
+#top-banner > div:nth-child(3) > a {color: white;}
 
-.TopBanner{
+#top-banner{
   font-size: 0.8em;
   letter-spacing: 0.1em;
   color: white;
@@ -53,54 +52,42 @@ html {
     100%{background-position:0% 50%}
 }
 
-/*================ Header ================*/
+#lower-banner{height: 100px;}
 
-
-.site-nav {
-	list-style: none;
-	text-align: center;
+#lower-banner .site-logo {
+ 	color: #333;
+ 	text-decoration: none;
+ 	font-size: 0.6em;
+ 	font-weight: 300;
+ 	text-transform: uppercase;
+ 	letter-spacing: 2px;
 }
 
-// .site-nav li {
-//     float: left;
-//     padding-left: 10px;
-// }
-.site-nav li a{
-    text-decoration: none;
-}
+ #lower-banner > div:nth-child(1) {margin-top: 20px;}
+ #lower-banner > div:nth-child(2) {margin-top: 27px;}
+ #lower-banner > div:nth-child(3) {margin-top: 37px;}
 
-.site-nav li a::after {
+ #lower-banner .site-nav li {
+ 	margin-left: 30px;
+ 	float: left;
+ 	list-style: none;
+ }
+
+ #lower-banner .site-nav li:nth-child(1) {margin-left: 0px;}
+
+ #lower-banner .site-nav li a {
+   text-decoration: none;
+   color: #333;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 0.7em;
+ }
+
+#lower-banner .site-nav li a::after {
 	content: "";
 	display: block;
 	width: 100%;
 	height: 2px;
-	background: #333;
+	background: #666;
 	margin-top: 4px;
 }
-
-.country {
-  padding-left: 10px;
-}
-
-#topShip {
-  text-align: center;
-}
-#topCart {
-  text-align: right;
-  padding-top: 10px;
-  padding-right: 15px;
-}
-
-
-
-/*================ Navigation ================*/
-
-#searchForm {
-  float: right;
-}
-
-
-
-
-
-/*================ Footer ================*/
