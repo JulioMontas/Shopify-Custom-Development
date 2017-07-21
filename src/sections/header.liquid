@@ -5,53 +5,27 @@
     }
   {% endif %}
 </style>
+
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
-
-
   <header role="banner">
 
-    <div class="grid__item">
-      <div class="grid" id="top-banner">
-        <div class="grid__item medium-up--one-quarter small--one-third"><p>US</p></div>
-        <div class="grid__item medium-up--one-half small--one-third"><p>Free shipping on all US orders</p></div>
-        <div class="grid__item medium-up--one-quarter small--one-third">
-          <a href="/cart">
-            {% include 'icon-cart' %}
-            {{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }}
-          </a>
 
-          {% if shop.customer_accounts_enabled %}
-            <ul>
-              {% if customer %}
-                <li>
-                  {% if customer.first_name != blank %}
-                    {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
-                    {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
-                  {% else %}
-                    <a href="/account">{{ 'layout.customer.account' | t }}</a>
-                  {% endif %}
-                </li>
-                <li>
-                  {{ 'layout.customer.log_out' | t | customer_logout_link }}
-                </li>
-              {% else %}
-                <li>
-                  {{ 'layout.customer.log_in' | t | customer_login_link }}
-                </li>
-                <li>
-                  {{ 'layout.customer.create_account' | t | customer_register_link }}
-                </li>
-              {% endif %}
-            </ul>
-          {% endif %}
-        </div>
+
+
+
+
+
+      <div class="" id="top-header">
+        <div><p>US</p></div>
+        <div><p>Free shipping on all US orders</p></div>
+        <div><a href="/cart">{% include 'icon-cart' %} {{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }}</a></div>
       </div>
-  </div>
+      <!-- End of #top-header -->
 
 
-  <div class="grid__item">
-    <div class="grid" id="lower-banner">
-      <div class="grid__item medium-up--one-quarter small--one-third">
+
+    <div class="center-lower-header">
+    <div id="lower-header">
         {% if template.name == 'index' %}
           <h1 itemscope itemtype="http://schema.org/Organization">
         {% else %}
@@ -74,8 +48,6 @@
           </h1>
         {% endif %}
 
-      </div>
-      <div class="grid__item medium-up--one-half small--one-third">
         <nav role="navigation">
           <ul class="site-nav">
             {% for link in linklists[section.settings.main_linklist].links %}
@@ -102,8 +74,7 @@
             {% endfor %}
           </ul>
         </nav>
-      </div>
-      <div class="grid__item medium-up--one-quarter small--one-third">
+
         <form action="/search" method="get" role="search">
           <label for="Search" class="label-hidden">
             {{ 'general.search.placeholder' | t }}
@@ -118,20 +89,10 @@
             <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
           </button>
         </form>
-      </div>
-    </div>
-</div>
-
-
-
-
-
+     </div><!-- End of #top-header -->
+   </div><!-- End of .center-lower-header -->
 
   </header>
-
-
-
-
 </div>
 
 {% schema %}

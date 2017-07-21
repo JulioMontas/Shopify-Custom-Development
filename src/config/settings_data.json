@@ -37,32 +37,6 @@
         "featured-fuck": {
           "type": "featured-fuck"
         },
-        "shop-circle": {
-          "type": "image",
-          "blocks": {
-            "img-0": {
-              "type": "image",
-              "id": "hello",
-              "label": "Slide 3 Image",
-              "info": "Put slide 3 image"
-            },
-            "img-1": {
-              "type": "image"
-            },
-            "img-2": {
-              "type": "image"
-            },
-            "img-3": {
-              "type": "image"
-            }
-          },
-          "block_order": [
-            "img-0",
-            "img-1",
-            "img-2",
-            "img-3"
-          ]
-        },
         "featured-collection": {
           "type": "featured-collection",
           "settings": {
