@@ -12,9 +12,9 @@
 
     <div class="grid__item">
       <div class="grid" id="top-banner">
-        <div class="grid__item medium-up--one-third small--one-third"><p>US</p></div>
-        <div class="grid__item medium-up--one-third small--one-third"><p>Free shipping on all US orders</p></div>
-        <div class="grid__item medium-up--one-third small--one-third">
+        <div class="grid__item medium-up--one-quarter small--one-third"><p>US</p></div>
+        <div class="grid__item medium-up--one-half small--one-third"><p>Free shipping on all US orders</p></div>
+        <div class="grid__item medium-up--one-quarter small--one-third">
           <a href="/cart">
             {% include 'icon-cart' %}
             {{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }}
@@ -51,7 +51,7 @@
 
   <div class="grid__item">
     <div class="grid" id="lower-banner">
-      <div class="grid__item medium-up--one-third small--one-third">
+      <div class="grid__item medium-up--one-quarter small--one-third">
         {% if template.name == 'index' %}
           <h1 itemscope itemtype="http://schema.org/Organization">
         {% else %}
@@ -75,7 +75,7 @@
         {% endif %}
 
       </div>
-      <div class="grid__item medium-up--one-third small--one-third">
+      <div class="grid__item medium-up--one-half small--one-third">
         <nav role="navigation">
           <ul class="site-nav">
             {% for link in linklists[section.settings.main_linklist].links %}
@@ -103,7 +103,7 @@
           </ul>
         </nav>
       </div>
-      <div class="grid__item medium-up--one-third small--one-third">
+      <div class="grid__item medium-up--one-quarter small--one-third">
         <form action="/search" method="get" role="search">
           <label for="Search" class="label-hidden">
             {{ 'general.search.placeholder' | t }}

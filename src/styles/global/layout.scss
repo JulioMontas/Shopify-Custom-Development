@@ -52,7 +52,10 @@ html {
     100%{background-position:0% 50%}
 }
 
-#lower-banner{height: 100px;}
+#lower-banner{
+  height: 100px;
+  background: #fbfbfb;
+}
 
 #lower-banner .site-logo {
  	color: #333;
@@ -64,16 +67,18 @@ html {
 }
 
  #lower-banner > div:nth-child(1) {margin-top: 20px;}
- #lower-banner > div:nth-child(2) {margin-top: 27px;}
+ #lower-banner > div:nth-child(2) {margin-top: 23px;}
  #lower-banner > div:nth-child(3) {margin-top: 37px;}
 
+#lower-banner .site-nav {
+  display: flex;
+  justify-content:space-around;
+
+}
  #lower-banner .site-nav li {
- 	margin-left: 30px;
- 	float: left;
+ 	margin-left: -65px;
  	list-style: none;
  }
-
- #lower-banner .site-nav li:nth-child(1) {margin-left: 0px;}
 
  #lower-banner .site-nav li a {
    text-decoration: none;
@@ -82,6 +87,8 @@ html {
    letter-spacing: 1px;
    font-size: 0.7em;
  }
+
+.site-nav--active > a:nth-child(1){font-weight: 600;}
 
 #lower-banner .site-nav li a::after {
 	content: "";
