@@ -34,9 +34,6 @@
         "featured-product": {
           "type": "featured-product"
         },
-        "featured-fuck": {
-          "type": "featured-fuck"
-        },
         "shop-circle": {
           "type": "image",
           "blocks": {
