@@ -1,0 +1,56 @@
+<style>
+  .latest-product .grid__item{
+    padding-left: 0px;
+  }
+  .latest-product{
+    text-align: center;
+    padding: 100px;
+  }
+  .latest-product .title {margin-top: 106px;}
+
+  .latest-product .title h2 {
+    color:#72466B;
+    letter-spacing: 1px;
+	  font-size: 2em;
+    font-style: bold;
+    text-transform: uppercase;
+   }
+   .latest-product .title p {
+	   color: #333;
+	   margin: -21px 0 80px;
+	   font-size: 1em;
+   }
+   .latest-product .description {
+	  padding: 0px 120px;
+	  line-height: 2em;
+	  color: #666666;
+	  font-style: italic;
+	  margin-bottom: 90px;
+	  letter-spacing: 1px;
+    }
+   .btn-gradient {
+    	padding: 20px 30px;
+    	border-radius: 5px;
+    	color: white;
+    	text-decoration: none;
+      background: #72c602;
+      background: -webkit-linear-gradient(left, #bba2c8 50%, #e895af);
+      background: linear-gradient(-28deg, #bba2c8 0%, #e895af 100%);
+     }
+</style>
+
+{% if template.name == 'index' %}
+<div class="latest-product grid">
+  <section class="grid__item medium-up--one-half">
+    <img src="https://dummyimage.com/550x640/000/fff.jpg" alt="">
+  </section>
+  <section class="grid__item medium-up--one-half">
+    <div class="title">
+      <h2>Delina</h2>
+      <p>by PARFUMS de MARLY</p>
+    </div>
+    <div class="description"><p>Pretty, Pink and Purely Feminine. Delina Eau de Parfum will warm your heart and make you feel like royalty. A floral explosion of Turkish Rose, Lily of the Valley and Peony creates a girlish feminine fragrance accented with bright and tangy notes of Lychee, Rhubarb and Bergamot. Vanilla, musk and cashmeran will wrap you in a feeling of warmth and sensuality.</p></div>
+    <a href="#" class="btn-gradient">DISCOVER DELINA</a>
+  </section>
+</div>
+{% endif %}
