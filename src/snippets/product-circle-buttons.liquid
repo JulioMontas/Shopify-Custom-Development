@@ -1,7 +1,6 @@
 <style>
-.product-circle-buttons{
-  text-align: center;
-}
+.product-circle-buttons{text-align: center;}
+
 .product-circle-buttons section:nth-child(1) p {
 	font-size: 1.7em;
 	margin-bottom: 50px;
@@ -19,24 +18,30 @@
   list-style: none;
   width: 250px;
 }
-.product-circle-buttons nav ul li a{
-  text-decoration: none;
-}
-.product-circle-buttons nav ul li a img{
-  border-radius: 150px;
-}
+.product-circle-buttons nav ul li a{text-decoration: none;}
+
+.product-circle-buttons nav ul li a img{border-radius: 150px;}
+
 .product-circle-buttons nav ul li a h3 {
 	text-transform: uppercase;
 	color: #333;
 	font-weight: normal;
 	letter-spacing: 2px;
 }
+.product-circle-buttons nav ul li a h3::after {
+	content: "";
+	background: #333;
+	width: 70px;
+	height: 3px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+}
 .product-circle-buttons nav ul li a p {
 	color: #666;
 	line-height: 23px;
 	letter-spacing: 1px;
 }
-
 </style>
 
 {% if template.name == 'index' %}
