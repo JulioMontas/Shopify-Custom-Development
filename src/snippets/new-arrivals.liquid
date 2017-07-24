@@ -1,0 +1,14 @@
+<style>
+
+</style>
+
+{% if template.name == 'index' %}
+<div class="new-arrivals page-width">
+	<h2>New Arrivals</h2>
+	<section>
+		{% for product_vendor in collection.all_vendors %}
+  {{ product_vendor | link_to_vendor }}
+{% endfor %}
+	</section>
+</div>
+{% endif %}
