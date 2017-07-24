@@ -1,0 +1,80 @@
+<style>
+.product-circle-buttons{
+  text-align: center;
+}
+.product-circle-buttons section:nth-child(1) p {
+	font-size: 1.7em;
+	margin-bottom: 50px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 1.7em;
+	font-weight: bold;
+}
+.product-circle-buttons nav ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.product-circle-buttons nav ul li{
+  list-style: none;
+  width: 250px;
+}
+.product-circle-buttons nav ul li a{
+  text-decoration: none;
+}
+.product-circle-buttons nav ul li a img{
+  border-radius: 150px;
+}
+.product-circle-buttons nav ul li a h3 {
+	text-transform: uppercase;
+	color: #333;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+.product-circle-buttons nav ul li a p {
+	color: #666;
+	line-height: 23px;
+	letter-spacing: 1px;
+}
+
+</style>
+
+{% if template.name == 'index' %}
+<div class="product-circle-buttons page-width">
+  <section><p>Luxury is a mood best enhanced by a selection of the finest in fragrance, candles, skincare, and bath & body products.</p></section>
+  <section>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="https://dummyimage.com/185x185/000/fff.jpg" alt="">
+            <h3>Fragrance Finder</h3>
+            <p>Find the perfect scent to suit every taste with our expert guide to the fragrance families.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://dummyimage.com/185x185/000/fff.jpg" alt="">
+            <h3>Home Fragrances</h3>
+            <p>Create an atmosphere for every occasion with our elegant, stylish and long lasting candles.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://dummyimage.com/185x185/000/fff.jpg" alt="">
+            <h3>Skincare</h3>
+            <p>Achieve a radiant, youthful complexion with cleansers, moisturizers, and scrubs made with the highest quality ingredients.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://dummyimage.com/185x185/000/fff.jpg" alt="">
+            <h3>Bath & Body</h3>
+            <p>Our luxurious soaps, shower gels and moisturizers will pamper you while indulging your senses.</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+</div>
+{% endif %}
