@@ -1,11 +1,13 @@
-<div class="slider">
+<div class="slick-slider js-slick">
   {% for block in section.blocks %}
-    <div class="">
+    <div class="photo is-animating">
       <img src="{{ block.settings.image | img_url: 'master' }}" alt="" />
       <a href="{{ block.settings.url }}">{{ block.settings.textarea }}</a>
     </div>
   {% endfor %}
 </div>
+
+
 
 {% schema %}
 {
@@ -46,13 +48,25 @@
 
 {% javascript %}
 $(document).ready(function(){
-  $('.slider').slick({
+  $(document).ready(function () {
+  $('.js-slick').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
     dots: true,
-    arrows:false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true
+    draggable: false,
+    fade: true,
+    speed: 1000,
+    arrows:false
   });
+
+  $('.js-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $(slick.$slides).removeClass('is-animating');
+  });
+
+  $('.js-slick').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+    $(slick.$slides.get(currentSlide)).addClass('is-animating');
+  });
+});
+
 });
 {% endjavascript %}
