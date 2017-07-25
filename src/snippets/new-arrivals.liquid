@@ -1,14 +1,17 @@
-<style>
+{% if template.name == 'index' %}
 
+<style media="screen">
+.whateverrrr .slick-slide img {width: 80px;}
 </style>
 
-{% if template.name == 'index' %}
-<div class="new-arrivals page-width">
-	<h2>New Arrivals</h2>
-	<section>
-		{% for product_vendor in collection.all_vendors %}
-  {{ product_vendor | link_to_vendor }}
-{% endfor %}
-	</section>
-</div>
+	<div class="whateverrrr page-width">
+	{%- assign collection = collections.new-arrivals -%}
+		{% for product in collection.products limit: 12 %}
+		  <a href="{{ product.url | within: collection }}">
+				{{ product.featured_image.src | img_url: '80x80' | img_tag: product.title }}
+				<p>{{ product.title }}</p>
+		  </a>
+		{% endfor %}
+	</div>
+
 {% endif %}

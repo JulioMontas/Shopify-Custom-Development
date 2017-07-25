@@ -47,7 +47,6 @@
 
 
 {% javascript %}
-$(document).ready(function(){
   $(document).ready(function () {
   $('.js-slick').slick({
     autoplay: true,
@@ -66,7 +65,5 @@ $(document).ready(function(){
   $('.js-slick').on('afterChange', function(event, slick, currentSlide, nextSlide) {
     $(slick.$slides.get(currentSlide)).addClass('is-animating');
   });
-});
-
 });
 {% endjavascript %}
