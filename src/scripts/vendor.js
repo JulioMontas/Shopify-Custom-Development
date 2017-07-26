@@ -14,6 +14,12 @@
 // =require vendor/slick.min.js
 
 
+/*!
+ * custom-draft.js
+ */
+// =require vendor/custom-draft.js
+
+
 // Attempts to preserve comments that likely contain licensing information,
 // even if the comment does not have directives such as `@license` or `/*!`.
 //
