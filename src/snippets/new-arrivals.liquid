@@ -1,4 +1,5 @@
 {% if template.name == 'index' %}
+
 <style>
 .whateverrrr .slick-slide img {width: 80px;}
 .whateverrrr a.slick-slide {
@@ -8,11 +9,20 @@
 .whateverrrr a.slick-slide span {
 	border: 1px solid red;
 	display: inline-block;
-	width: 100%;
-	height: 120px;
+	height: 110px;
+	background: yellow;
+	padding: 0px 60px;
+}
+.nameName{
+	text-align: center;
 }
 </style>
 
+  <div class="nameName">
+  	<h2>New Arrivals</h2>
+  </div>
+
+	
 	<div class="whateverrrr page-width">
 	{%- assign collection = collections.new-arrivals -%}
 		{% for product in collection.products limit: 12 %}
@@ -22,7 +32,6 @@
 				<p>{{ product.title }}</p>
 				<p>
 			    {% if product.compare_at_price > product.price %}
-
 			      {% if product.price_varies %}
 			        {%- assign sale_price = product.price | money -%}
 			        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
@@ -30,20 +39,24 @@
 			        {{ 'products.product.on_sale' | t }}
 			        {{ product.price | money }}
 			      {% endif %}
-
 			    {% else %}
-
 			      {% if product.price_varies %}
 			        {%- assign price = product.price | money -%}
 			        {{ 'products.product.from_text_html' | t: price: price }}
 			      {% else %}
 			        {{ product.price | money }}
 			      {% endif %}
-
 			    {% endif %}
 			  </p>
 			{% else %}
 		  </a>
 		{% endfor %}
 	</div>
+
+	<div class="nameName">
+		<h2>New Arrivals</h2>
+	</div>
+
+
+
 {% endif %}
