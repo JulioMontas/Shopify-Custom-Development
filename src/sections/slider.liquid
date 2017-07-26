@@ -7,30 +7,6 @@
   {% endfor %}
 </div>
 
-
-{% stylesheet %}
-.slider{
-  border: 1px solid red;
-}
-{% endstylesheet %}
-
-
-{% javascript %}
-$(document).ready(function(){
-  $('.slider').slick({
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true
-
-  });
-});
-{% endjavascript %}
-
-
-
 {% schema %}
 {
   "name": "Slider",
@@ -66,3 +42,18 @@ $(document).ready(function(){
   }]
 }
 {% endschema %}
+
+
+
+{% javascript %}
+$(document).ready(function(){
+  $('.slider').slick({
+    dots: true,
+    arrows:false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  });
+});
+{% endjavascript %}

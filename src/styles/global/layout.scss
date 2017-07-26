@@ -10,31 +10,36 @@ html {
   padding: 0 $gutter;
   margin: 0 auto;
 }
+/*=================================================================*/
+/*============================== ME ==============================*/
+/*=================================================================*/
 
-/*================ ME ================*/
-.center{
-  text-align: center;
+/*================ Banner With Animated Background ================*/
+
+#top-header > div:nth-child(3) > a {
+	color: white;
+	text-decoration: none;
 }
 
-/*================ Top Banner With Animated Background ================*/
-
-.TopBanner a{color: white;}
-
-.TopBanner{
-  font-size: 0.8em;
-  letter-spacing: 0.1em;
-  color: white;
-  height: 40px;
-  background:#72c602;
-	background:-webkit-linear-gradient(left,#BBA2C8 50%,#E895AF);
-	background:linear-gradient(-28deg, #BBA2C8 0%, #E895AF 100%);
-          transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  background-size: 200% 200%;
-          animation: MoveBG 20s ease infinite;
-  -webkit-animation: MoveBG 20s ease infinite;
-     -moz-animation: MoveBG 20s ease infinite;
-       -o-animation: MoveBG 20s ease infinite;
+#top-header {
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	color: white;
+	height: 40px;
+	background: #72c602;
+	background: -webkit-linear-gradient(left, #bba2c8 50%, #e895af);
+	background: linear-gradient(-28deg, #bba2c8 0%, #e895af 100%);
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	background-size: 200% 200%;
+	animation: MoveBG 20s ease infinite;
+	-webkit-animation: MoveBG 20s ease infinite;
+	-moz-animation: MoveBG 20s ease infinite;
+	-o-animation: MoveBG 20s ease infinite;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0px 30px;
 }
 
 @-webkit-keyframes MoveBG {
@@ -52,55 +57,46 @@ html {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-
-/*================ Header ================*/
-
-
-.site-nav {
-	list-style: none;
-	text-align: center;
+#lower-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 19px 30px;
 }
 
-// .site-nav li {
-//     float: left;
-//     padding-left: 10px;
-// }
-.site-nav li a{
-    text-decoration: none;
+#lower-header h1 a {
+ 	color: #333;
+ 	text-decoration: none;
+ 	font-size: 0.5em;
+ 	font-weight: 400;
+ 	text-transform: uppercase;
+ 	letter-spacing: 2px;
 }
 
-.site-nav li a::after {
+#lower-header .site-nav {
+	flex-direction: row;
+	justify-content: space-between;
+	display: flex;
+	width: 475px;
+	padding: 0;
+}
+
+#lower-header .site-nav li{list-style: none;}
+#lower-header .site-nav li a {
+   text-decoration: none;
+   color: #333;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-size: 0.8em;
+ }
+
+.site-nav--active > a:nth-child(1){font-weight: 600;}
+
+#lower-header .site-nav li a::after {
 	content: "";
 	display: block;
 	width: 100%;
 	height: 2px;
-	background: #333;
+	background: #666;
 	margin-top: 4px;
 }
-
-.country {
-  padding-left: 10px;
-}
-
-#topShip {
-  text-align: center;
-}
-#topCart {
-  text-align: right;
-  padding-top: 10px;
-  padding-right: 15px;
-}
-
-
-
-/*================ Navigation ================*/
-
-#searchForm {
-  float: right;
-}
-
-
-
-
-
-/*================ Footer ================*/

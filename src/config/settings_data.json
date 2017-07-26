@@ -34,6 +34,7 @@
         "featured-product": {
           "type": "featured-product"
         },
+<<<<<<< HEAD
         "shop-circle": {
           "type": "image",
           "blocks": {
@@ -59,6 +60,10 @@
             "img-2",
             "img-3"
           ]
+=======
+        "featured-fuck": {
+          "type": "featured-fuck"
+>>>>>>> 78526915d8c2c051e3433f74e4d5a8ead85142b6
         },
         "featured-collection": {
           "type": "featured-collection",
