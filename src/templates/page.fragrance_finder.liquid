@@ -1,0 +1,127 @@
+<style>
+.whateverrrrRRRRR .slick-slide img {width: 80px;}
+.whateverrrrRRRRR a.slick-slide {
+	color: red;
+	text-decoration: none;
+}
+.whateverrrrRRRRR a.slick-slide span {
+	border: 1px solid red;
+	display: inline-block;
+	height: 110px;
+	background: yellow;
+	padding: 0px 60px;
+}
+</style>
+
+<div class="grid__item">
+   <div class="grid">
+     <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
+     <div class="grid__item medium-up--eight-tenths">
+       <div class="whateverrrrRRRRR">
+       {%- assign collection = collections.new-arrivals -%}
+         {% for product in collection.products limit: 12 %}
+           <a href="{{ product.url | within: collection }}">
+             <span>{{ product.featured_image.src | img_url: '80x80' | img_tag: product.title }}</span>
+             <h2>{{ product.vendor }}</h2>
+             <p>{{ product.title }}</p>
+             <p>
+               {% if product.compare_at_price > product.price %}
+                 {% if product.price_varies %}
+                   {%- assign sale_price = product.price | money -%}
+                   {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                 {% else %}
+                   {{ 'products.product.on_sale' | t }}
+                   {{ product.price | money }}
+                 {% endif %}
+               {% else %}
+                 {% if product.price_varies %}
+                   {%- assign price = product.price | money -%}
+                   {{ 'products.product.from_text_html' | t: price: price }}
+                 {% else %}
+                   {{ product.price | money }}
+                 {% endif %}
+               {% endif %}
+             </p>
+           {% else %}
+           </a>
+         {% endfor %}
+       </div>
+     </div>
+     <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
+   </div>
+ </div>
+
+ <div class="grid__item">
+    <div class="grid">
+      <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
+      <div class="grid__item medium-up--eight-tenths">
+        <div class="whateverrrrRRRRR">
+        {%- assign collection = collections.new-arrivals -%}
+          {% for product in collection.products limit: 12 %}
+            <a href="{{ product.url | within: collection }}">
+              <span>{{ product.featured_image.src | img_url: '80x80' | img_tag: product.title }}</span>
+              <h2>{{ product.vendor }}</h2>
+              <p>{{ product.title }}</p>
+              <p>
+                {% if product.compare_at_price > product.price %}
+                  {% if product.price_varies %}
+                    {%- assign sale_price = product.price | money -%}
+                    {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                  {% else %}
+                    {{ 'products.product.on_sale' | t }}
+                    {{ product.price | money }}
+                  {% endif %}
+                {% else %}
+                  {% if product.price_varies %}
+                    {%- assign price = product.price | money -%}
+                    {{ 'products.product.from_text_html' | t: price: price }}
+                  {% else %}
+                    {{ product.price | money }}
+                  {% endif %}
+                {% endif %}
+              </p>
+            {% else %}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
+    </div>
+  </div>
+  <div class="grid__item">
+     <div class="grid">
+       <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
+       <div class="grid__item medium-up--eight-tenths">
+         <div class="whateverrrrRRRRR">
+         {%- assign collection = collections.new-arrivals -%}
+           {% for product in collection.products limit: 12 %}
+             <a href="{{ product.url | within: collection }}">
+               <span>{{ product.featured_image.src | img_url: '80x80' | img_tag: product.title }}</span>
+               <h2>{{ product.vendor }}</h2>
+               <p>{{ product.title }}</p>
+               <p>
+                 {% if product.compare_at_price > product.price %}
+                   {% if product.price_varies %}
+                     {%- assign sale_price = product.price | money -%}
+                     {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                   {% else %}
+                     {{ 'products.product.on_sale' | t }}
+                     {{ product.price | money }}
+                   {% endif %}
+                 {% else %}
+                   {% if product.price_varies %}
+                     {%- assign price = product.price | money -%}
+                     {{ 'products.product.from_text_html' | t: price: price }}
+                   {% else %}
+                     {{ product.price | money }}
+                   {% endif %}
+                 {% endif %}
+               </p>
+             {% else %}
+             </a>
+           {% endfor %}
+         </div>
+       </div>
+       <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
+     </div>
+   </div>
