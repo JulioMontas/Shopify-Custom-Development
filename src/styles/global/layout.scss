@@ -135,6 +135,9 @@ html {
 }
 
 .tilter__figure > * {transform: translateZ(0px); /* Force correct stacking order */}
+
+
+
 .tilter__figure {position: relative;}
 .tilter__figure::before {
 	content: '';
