@@ -1,6 +1,6 @@
-<div class="rte page-width">
+<div class="rte">
   {{ page.content }}
-  <div class="editorial-gradient page-width">
+  <div class="editorial-gradient">
     <div class="editorial-gradient-text grid">
       <h1 class="grid__item">Editorial</h1>
       <div class="gradient-phrase grid">
@@ -63,33 +63,32 @@
 </div>
 
 <style>
-* { margin: 0 auto; }
-
 .button-default {
   align-content: center;
   width: 200px;
   height: 60px;
   border: 2px solid #fff;
-  padding-top: 1.6%;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #000;
   text-transform: uppercase;
+  margin-top: 0;
 }
 a {
   color: #fff;
   text-decoration: none;
 }
-.page-width {
-  max-width: 1440px;
-  align-content: center;
-  text-align: center;
-  color: white;
-}
 .editorial-gradient {
-	height: 864px;
+	height: 750px;
 	background-image: linear-gradient(41deg, #bba2c8, #e895af);
   padding-top: 4%;
+  /*align-content: center;*/
+  text-align: center;
+  color: white;
+  line-height: 4rem;
+}
+.editorial-box {
+  margin-top: -5%;
 }
 .editorial-gradient-text h1 {
   text-decoration: underline;
@@ -100,9 +99,8 @@ a {
 .subscribe {
   margin: 0 auto;
   color: #fff;
-  margin-top: 20%;
 }
-.editorial-box {
+.editorial-box div {
 }
 .editorial-feature {
   width: 453px;
@@ -110,16 +108,20 @@ a {
   border-radius: 5px;
   background-image: url('https://dummyimage.com/453x250/000/');
   background-size: cover;
-  padding-left: 15%;
-  padding-right: 15%;
-  margin: -30% auto 0 auto;
-  padding-top: 10%;
+  padding-left: 7%;
+  padding-right: 9%;
+  margin-top: -25%;
+  padding-top: 20%;
+  color: #fff;
+  align-content: center;
+  text-align: center;
+  margin-right: 15%;
 }
 .editorial-feature hr {
-  margin-top: 17%;
+  margin-top: 15%;
 }
 .date-author {
-  margin-top: -6%;
+  margin-top: 2%;
 }
 .month-year-posted {
   float: left;
@@ -131,6 +133,9 @@ a {
 	border: solid 2px #333333;
   font-size: 0.8rem;
   color: #000;
+  text-align: center;
+  padding-top: 2%;
+  margin-top: 2%;
 }
 .more-press-articles a {
   color: #000;
