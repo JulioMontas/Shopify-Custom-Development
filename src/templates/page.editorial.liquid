@@ -1,138 +1,98 @@
-<div class="rte page-width">
-  {{ page.content }}
-  <div class="editorial-gradient page-width">
-    <div class="editorial-gradient-text grid">
-      <h1 class="grid__item">Editorial</h1>
-      <div class="gradient-phrase grid">
-        <h2 class="grid__item">Something amazing is launching <br>this fall 2017.</h2>
-      </div>
-      <div class="subscribe button-default">
-        <a href="#">Subscribe</a>
-      </div>
-    </div>
-  </div> <!-- Gradient Div -->
-  <div class="grid three-featured-editorials">
-    <div class="grid__item medium-up--one-third editorial-box">
-      <div class="editorial-feature">
-        <p>Night Creams Will Help Your Skin To Relax Become Younger</p>
-        <hr>
-        <div class="date-author">
-          <div class="month-year-posted">
-            <h5>August 2017</h5>
-          </div>
-          <div class="person-posted">
-            <h5>WWD</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="grid__item medium-up--one-third editorial-box">
-      <div class="editorial-feature">
-        <p>Night Creams Will Help Your Skin To Relax Become Younger</p>
-        <hr>
-        <div class="date-author">
-          <div class="month-year-posted">
-            <h5>August 2017</h5>
-          </div>
-          <div class="person-posted">
-            <h5>WWD</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="grid__item medium-up--one-third editorial-box">
-      <div class="editorial-feature">
-        <p>Night Creams Will Help Your Skin To Relax Become Younger</p>
-        <hr>
-        <div class="date-author">
-          <div class="month-year-posted">
-            <h5>August 2017</h5>
-          </div>
-          <div class="person-posted">
-            <h5>WWD</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="more-press-articles button-default">
-    <a href="#">More: Press Articles</a>
-  </div>
-
-</div>
-
 <style>
-* { margin: 0 auto; }
-
-.button-default {
-  align-content: center;
-  width: 200px;
-  height: 60px;
-  border: 2px solid #fff;
-  padding-top: 1.6%;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #000;
-  text-transform: uppercase;
+.wide-backgrond{
+  height: 70vh;
+  background-image: linear-gradient(41deg, #bba2c8, #e895af);
+  color:white;
+  letter-spacing: 1px;
 }
-a {
-  color: #fff;
-  text-decoration: none;
-}
-.page-width {
-  max-width: 1440px;
-  align-content: center;
+.wide-backgrond section{
   text-align: center;
-  color: white;
+  padding-top: 8%;
 }
-.editorial-gradient {
-	height: 864px;
-	background-image: linear-gradient(41deg, #bba2c8, #e895af);
-  padding-top: 4%;
+.wide-backgrond section h3 {
+	font-size: 4em;
+	margin-top: 0;
+	text-transform: uppercase;
+	font-weight: 400;
 }
-.editorial-gradient-text h1 {
-  text-decoration: underline;
+.wide-backgrond section p {
+	font-size: 3em;
+	font-weight: 100;
 }
-.gradient-phrase {
-  font-size: 1.25rem;
+.wide-backgrond section a {
+	text-decoration: none;
+	color: white;
+	border: 2px solid white;
+	display: block;
+	width: 170px;
+	margin: 0 auto;
+	padding: 15px 0px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 2px;
 }
-.subscribe {
-  margin: 0 auto;
-  color: #fff;
-  margin-top: 20%;
+.wide-backgrond section a:hover {
+  background: rgba(255,255,255,0.0);
 }
-.editorial-box {
+.blog-articles {
+	margin-top: -120px;
 }
-.editorial-feature {
-  width: 453px;
-  height: 250px;
-  border-radius: 5px;
-  background-image: url('https://dummyimage.com/453x250/000/');
-  background-size: cover;
-  padding-left: 15%;
-  padding-right: 15%;
-  margin: -30% auto 0 auto;
-  padding-top: 10%;
-}
-.editorial-feature hr {
-  margin-top: 17%;
-}
-.date-author {
-  margin-top: -6%;
-}
-.month-year-posted {
-  float: left;
-}
-.person-posted {
-  float: right;
-}
-.more-press-articles {
-	border: solid 2px #333333;
-  font-size: 0.8rem;
-  color: #000;
-}
-.more-press-articles a {
-  color: #000;
+.blog-articles ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
 }
 </style>
+
+<div class="wide-backgrond">
+  <section>
+    <h3>Press</h3>
+    <p>Something Amazing is Launching This Fall 2017</p>
+    <a href="#">Subscribe</a>
+  </section>
+</div>
+<nav class="blog-articles page-width">
+  <ul>
+    <li>
+      <a href="#">
+        <figure>
+          <img src="https://dummyimage.com/453x250/ccc/333" alt="" />
+          <figcaption>
+            <h3>Night Creams Will Help Your Skin To Relax Become Younger</h3>
+            <span class="line"></span>
+            <p>July 2017</p>
+            <p>WWD</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <figure>
+          <img src="https://dummyimage.com/453x250/ccc/333" alt="" />
+          <figcaption>
+            <h3>Night Creams Will Help Your Skin To Relax Become Younger</h3>
+            <span class="line"></span>
+            <p>July 2017</p>
+            <p>WWD</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <figure>
+          <img src="https://dummyimage.com/453x250/ccc/333" alt="" />
+          <figcaption>
+            <h3>Night Creams Will Help Your Skin To Relax Become Younger</h3>
+            <span class="line"></span>
+            <p>July 2017</p>
+            <p>WWD</p>
+          </figcaption>
+        </figure>
+      </a>
+    </li>
+  </ul>
+</nav>
