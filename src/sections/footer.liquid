@@ -1,4 +1,4 @@
-<footer class="">
+<footer class="page-width">
 
   {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
   <ul>
@@ -46,8 +46,7 @@
       {% endfor %}
     </ul>
   {% endif %}
-
-  <div>
+  <div class="subfooter">
     <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
   </div>
 </footer>
