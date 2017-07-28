@@ -16,6 +16,11 @@
         "label": "Base size",
         "default": "16px",
         "options": [
+          { 
+            "value": "'Roboto Condensed', sans-serif",
+            "label": "Roboto Condensed",
+            "group": "My added fonts"
+          },
           {
             "value": "14px",
             "label": "14px"

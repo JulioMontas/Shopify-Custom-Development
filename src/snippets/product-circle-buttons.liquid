@@ -1,26 +1,42 @@
+{% if template.name == 'index' %}
 <style>
 .product-circle-buttons{text-align: center;}
 
 .product-circle-buttons section:nth-child(1) p {
 	font-size: 1.7em;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	line-height: 1.7em;
 	font-weight: bold;
+	margin-bottom: 80px;
 }
 .product-circle-buttons nav ul{
   display: flex;
   justify-content: space-between;
   padding: 0;
+	margin-bottom: 150px;
 }
 .product-circle-buttons nav ul li{
   list-style: none;
   width: 250px;
 }
-.product-circle-buttons nav ul li a{text-decoration: none;}
+.product-circle-buttons nav ul li a{
+	text-decoration: none;
+	opacity: 0.5;
+	transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+}
+.product-circle-buttons nav ul li a:hover{
+	text-decoration: none;
+	opacity: 1;
+}
 
-.product-circle-buttons nav ul li a img{border-radius: 150px;}
+.product-circle-buttons nav ul li a img{
+	border-radius: 90px;
+	width: 185px;
+}
 
 .product-circle-buttons nav ul li a h3 {
 	text-transform: uppercase;
@@ -44,36 +60,35 @@
 }
 </style>
 
-{% if template.name == 'index' %}
 <div class="product-circle-buttons page-width">
   <section><p>Luxury is a mood best enhanced by a selection of the finest in fragrance, candles, skincare, and bath & body products.</p></section>
   <section>
     <nav>
       <ul>
         <li>
-          <a href="#">
-            <img src="https://dummyimage.com/185x185/000/fff.jpg" alt="">
+          <a href="pages/fragrance-finder">
+            <img src="https://cdn.shopify.com/s/files/1/2191/4809/files/FragranceFinder_185x185_d1b372bc-a335-4319-bdfa-17a7cbac7e54.png?13970401064797751709" alt="">
             <h3>Fragrance Finder</h3>
             <p>Find the perfect scent to suit every taste with our expert guide to the fragrance families.</p>
           </a>
         </li>
         <li>
-          <a href="#">
-            <img src="https://dummyimage.com/185x185/000/fff.jpg" alt="">
+          <a href="pages/home-fragrances">
+            <img src="https://cdn.shopify.com/s/files/1/2191/4809/files/HomeFragrances_185x185_b5c14691-a1b9-4bcc-ac2c-8e8ed61650e1.png?9512699656170122691" alt="">
             <h3>Home Fragrances</h3>
             <p>Create an atmosphere for every occasion with our elegant, stylish and long lasting candles.</p>
           </a>
         </li>
         <li>
-          <a href="#">
-            <img src="https://dummyimage.com/185x185/000/fff.jpg" alt="">
+          <a href="pages/skincare">
+            <img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Skincare_185x185_1bc7b0d4-ab7a-479e-ba65-d55e10589b3b.png?958997505260197542" alt="">
             <h3>Skincare</h3>
             <p>Achieve a radiant, youthful complexion with cleansers, moisturizers, and scrubs made with the highest quality ingredients.</p>
           </a>
         </li>
         <li>
-          <a href="#">
-            <img src="https://dummyimage.com/185x185/000/fff.jpg" alt="">
+          <a href="pages/bath-and-body">
+            <img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Bath_Body_185x185_460215ab-3c50-4544-a4d0-d1be67469738.png?4212393683032353737" alt="">
             <h3>Bath & Body</h3>
             <p>Our luxurious soaps, shower gels and moisturizers will pamper you while indulging your senses.</p>
           </a>
