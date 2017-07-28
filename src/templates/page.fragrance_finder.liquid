@@ -1,16 +1,50 @@
  <style>
-.whateverrrrRRRRR .slick-slide img {width: 80px;}
-.whateverrrrRRRRR a.slick-slide {
-	color: red;
-	text-decoration: none;
-}
-.whateverrrrRRRRR a.slick-slide span {
-	border: 1px solid red;
-	display: inline-block;
-	height: 110px;
-	background: yellow;
-	padding: 0px 60px;
-}
+ .list-of-four a.slick-slide {
+ 	text-decoration: none;
+ 	letter-spacing: 1px;
+ 	text-align: center;
+ }
+ .list-of-four a.slick-slide span {
+ 	/*border: 1px solid red;
+ 	background: yellow;*/
+ 	display: inline-block;
+ 	height: 110px;
+ 	vertical-align: bottom;
+ }
+ .center{
+ 	text-align: center;
+ }
+ .center h2 {
+ 	text-transform: uppercase;
+ 	font-style: italic;
+ 	font-size: 1.4em;
+ 	margin-bottom: 2.5em;
+ 	color: #333;
+ }
+ .list-of-four {
+ 	margin-bottom: 1em;
+ }
+ .list-of-four h2 {
+ 	color: #333;
+ 	text-transform: uppercase;
+ 	font-size: 0.9em;
+ }
+ .list-of-four p {
+ 	color: #9D9D9D;
+ 	font-size: 0.9em;
+ 	line-height: 20px;
+ 	margin: -5px 20px 11px;
+ }
+ .products-collections section a p:nth-child(4) {
+ 	color: #5343C2;
+ 	font-style: italic;
+ }
+
+ /*Arrows position */
+ .products-collections section div button:nth-child(1) {margin-left: -25px;}
+ .products-collections section div button:nth-child(3) {margin-right: -25px;}
+
+/* Flip Corner Images */
 .flip{
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
@@ -19,84 +53,229 @@
   filter: FlipH;
   -ms-filter: "FlipH";
 }
+
+/* Dropdown Menu */
+.dropbtn {
+	color: #333;
+	font-size: 0.8em;
+	border: 2px solid #666;
+	cursor: pointer;
+	background: none;
+	padding: 16px 50px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color:#999;
+  border: 2px solid #999;
+}
+.center{
+  margin: 0 auto;
+}
+.center p {
+	margin: 40px 28% 50px;
+	line-height: 28px;
+	font-weight: 100;
+	font-style: italic;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+}
+.fragrance-finder{
+  margin-bottom: 10em;
+}
 </style>
 
-<div class="grid__item">
+<div class="grid__item fragrance-finder">
    <div class="grid">
      <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
      <div class="grid__item medium-up--eight-tenths">
-       <div class="page-width">
-         <div class="whateverrrrRRRRR ">
-         {%- assign collection = collections.new-arrivals -%}
-           {% for product in collection.products limit: 12 %}
-             <a href="{{ product.url | within: collection }}">
-               <span>{{ product.featured_image.src | img_url: '80x80' | img_tag: product.title }}</span>
-               <h2>{{ product.vendor }}</h2>
-               <p>{{ product.title }}</p>
-               <p>
-                 {% if product.compare_at_price > product.price %}
-                   {% if product.price_varies %}
-                     {%- assign sale_price = product.price | money -%}
-                     {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-                   {% else %}
-                     {{ 'products.product.on_sale' | t }}
-                     {{ product.price | money }}
-                   {% endif %}
-                 {% else %}
-                   {% if product.price_varies %}
-                     {%- assign price = product.price | money -%}
-                     {{ 'products.product.from_text_html' | t: price: price }}
-                   {% else %}
-                     {{ product.price | money }}
-                   {% endif %}
-                 {% endif %}
-               </p>
-             {% else %}
-           {% endfor %}
-           </a>
-         </div>
+       <div class="page-width">``
+         <div class="products-collections">
+       		<section>
+       			<div class="center"><p>Evoke the experience of the natural world with herbal notes of sage, rosemary, cumin, lavender, basil and other greens.</p></div>
+       			<div class="list-of-four page-width">
+       			{%- assign collection = collections.new-arrivals -%}
+       				{% for product in collection.products limit: 12 %}
+       				  <a href="{{ product.url | within: collection }}">
+       						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+       						<h2>{{ product.vendor }}</h2>
+       						<p>{{ product.title }}</p>
+       						<p>
+       					    {% if product.compare_at_price > product.price %}
+       					      {% if product.price_varies %}
+       					        {%- assign sale_price = product.price | money -%}
+       					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+       					      {% else %}
+       					        {{ 'products.product.on_sale' | t }}
+       					        {{ product.price | money }}
+       					      {% endif %}
+       					    {% else %}
+       					      {% if product.price_varies %}
+       					        {%- assign price = product.price | money -%}
+       					        {{ 'products.product.from_text_html' | t: price: price }}
+       					      {% else %}
+       					        {{ product.price | money }}
+       					      {% endif %}
+       					    {% endif %}
+       					  </p>
+       					{% else %}
+       				{% endfor %}
+       				</a>
+       			</div>
+            <div class="center">
+              <div class="dropdown">
+                <button class="dropbtn">Aromatic</button>
+                <div class="dropdown-content">
+                  <a href="#">Aromatic</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
        </div>
      </div>
      <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
    </div>
  </div>
 
- <div class="grid__item">
+ <div class="grid__item fragrance-finder">
     <div class="grid">
-      <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
+      <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/chypre.jpg?2782225890531274697" alt=""></div>
       <div class="grid__item medium-up--eight-tenths">
-        <div class="page-width">
-          <div class="whateverrrrRRRRR ">
-          {%- assign collection = collections.new-arrivals -%}
-            {% for product in collection.products limit: 12 %}
-              <a href="{{ product.url | within: collection }}">
-                <span>{{ product.featured_image.src | img_url: '80x80' | img_tag: product.title }}</span>
-                <h2>{{ product.vendor }}</h2>
-                <p>{{ product.title }}</p>
-                <p>
-                  {% if product.compare_at_price > product.price %}
-                    {% if product.price_varies %}
-                      {%- assign sale_price = product.price | money -%}
-                      {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-                    {% else %}
-                      {{ 'products.product.on_sale' | t }}
-                      {{ product.price | money }}
-                    {% endif %}
-                  {% else %}
-                    {% if product.price_varies %}
-                      {%- assign price = product.price | money -%}
-                      {{ 'products.product.from_text_html' | t: price: price }}
-                    {% else %}
-                      {{ product.price | money }}
-                    {% endif %}
-                  {% endif %}
-                </p>
-              {% else %}
-            {% endfor %}
-            </a>
-          </div>
+        <div class="page-width">``
+          <div class="products-collections">
+        		<section>
+        			<div class="center"><p>Wrap yourself in the sensual, woody elegance of bergamot, labdanum, musk and oakmoss.</p></div>
+        			<div class="list-of-four page-width">
+        			{%- assign collection = collections.new-arrivals -%}
+        				{% for product in collection.products limit: 12 %}
+        				  <a href="{{ product.url | within: collection }}">
+        						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+        						<h2>{{ product.vendor }}</h2>
+        						<p>{{ product.title }}</p>
+        						<p>
+        					    {% if product.compare_at_price > product.price %}
+        					      {% if product.price_varies %}
+        					        {%- assign sale_price = product.price | money -%}
+        					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+        					      {% else %}
+        					        {{ 'products.product.on_sale' | t }}
+        					        {{ product.price | money }}
+        					      {% endif %}
+        					    {% else %}
+        					      {% if product.price_varies %}
+        					        {%- assign price = product.price | money -%}
+        					        {{ 'products.product.from_text_html' | t: price: price }}
+        					      {% else %}
+        					        {{ product.price | money }}
+        					      {% endif %}
+        					    {% endif %}
+        					  </p>
+        					{% else %}
+        				{% endfor %}
+        				</a>
+        			</div>
+             <div class="center">
+               <div class="dropdown">
+                 <button class="dropbtn">Chypre</button>
+                 <div class="dropdown-content">
+                   <a href="#">Chypre</a>
+                   <a href="#">Link 2</a>
+                   <a href="#">Link 3</a>
+                 </div>
+               </div>
+             </div>
+           </section>
+         </div>
         </div>
       </div>
-      <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic.jpg?4070009868547494848" alt=""></div>
+      <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/chypre.jpg?2782225890531274697" alt=""></div>
     </div>
   </div>
+  <div class="grid__item fragrance-finder">
+     <div class="grid">
+       <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/citrus.jpg?2782225890531274697" alt=""></div>
+       <div class="grid__item medium-up--eight-tenths">
+         <div class="page-width">``
+           <div class="products-collections">
+         		<section>
+         			<div class="center"><p>Add an uplifting dose of fresh zest with a burst of lemon, bergamot, orange, and mandarin fragrances, perfect for summer.</p></div>
+         			<div class="list-of-four page-width">
+         			{%- assign collection = collections.new-arrivals -%}
+         				{% for product in collection.products limit: 12 %}
+         				  <a href="{{ product.url | within: collection }}">
+         						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+         						<h2>{{ product.vendor }}</h2>
+         						<p>{{ product.title }}</p>
+         						<p>
+         					    {% if product.compare_at_price > product.price %}
+         					      {% if product.price_varies %}
+         					        {%- assign sale_price = product.price | money -%}
+         					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+         					      {% else %}
+         					        {{ 'products.product.on_sale' | t }}
+         					        {{ product.price | money }}
+         					      {% endif %}
+         					    {% else %}
+         					      {% if product.price_varies %}
+         					        {%- assign price = product.price | money -%}
+         					        {{ 'products.product.from_text_html' | t: price: price }}
+         					      {% else %}
+         					        {{ product.price | money }}
+         					      {% endif %}
+         					    {% endif %}
+         					  </p>
+         					{% else %}
+         				{% endfor %}
+         				</a>
+         			</div>
+              <div class="center">
+                <div class="dropdown">
+                  <button class="dropbtn">Citrus</button>
+                  <div class="dropdown-content">
+                    <a href="#">Citrus</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+         </div>
+       </div>
+       <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/citrus.jpg?2782225890531274697" alt=""></div>
+     </div>
+   </div>

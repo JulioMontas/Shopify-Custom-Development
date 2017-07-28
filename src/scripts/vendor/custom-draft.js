@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $('.whateverrrrRRRRR').slick({
+  $('.list-of-four').slick({
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1
