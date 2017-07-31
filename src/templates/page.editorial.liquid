@@ -36,14 +36,69 @@
 .wide-backgrond section a:hover {
   background: rgba(255,255,255,0.0);
 }
+
 .blog-articles {
-	margin-top: -120px;
+	margin-top: -150px;
+	display: flex;
+	justify-content: center;
 }
 .blog-articles ul{
   list-style: none;
   padding: 0;
   display: flex;
 }
+.blog-articles ul li a {
+	position: relative;
+	display: block;
+	flex: none;
+	width: 530px;
+	height: 300px;
+	margin: .8em .8em;
+	color: #fff;
+	perspective: 1000px;
+  letter-spacing: 1px;
+}
+
+.blog-articles ul li a figure,
+.blog-articles ul li a figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.blog-articles ul li a figure figcaption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 5em 2em;
+	text-align: center;
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+	height: 100%;
+}
+
+.blog-articles ul li a figure figcaption h3 {
+	font-size: 1.3em;
+	font-weight: 100;
+	line-height: 29px;
+}
+
+.blog-articles ul li a figure figcaption p {
+	justify-content: space-between;
+	display: flex;
+	font-weight: 100;
+	margin-top: 8px;
+}
+.blog-articles ul li a figure figcaption .line {
+	background: white;
+	height: 4px;
+	width: 100%;
+	display: block;
+	border-radius: 5px;
+}
+
 </style>
 
 <div class="wide-backgrond">
@@ -53,17 +108,16 @@
     <a href="#">Subscribe</a>
   </section>
 </div>
-<nav class="blog-articles page-width">
+<nav class="blog-articles">
   <ul>
     <li>
       <a href="#">
         <figure>
-          <img src="https://dummyimage.com/453x250/ccc/333" alt="" />
+          <img src="http://media.istockphoto.com/photos/happy-woman-picture-id606210836" alt="" />
           <figcaption>
             <h3>Night Creams Will Help Your Skin To Relax Become Younger</h3>
             <span class="line"></span>
-            <p>July 2017</p>
-            <p>WWD</p>
+            <p>July 2017 <span>WWD</span></p>
           </figcaption>
         </figure>
       </a>
@@ -71,12 +125,11 @@
     <li>
       <a href="#">
         <figure>
-          <img src="https://dummyimage.com/453x250/ccc/333" alt="" />
+          <img src="http://media.istockphoto.com/vectors/floral-seamless-vector-pattern-design-pink-white-vector-id520803054" alt="" />
           <figcaption>
-            <h3>Night Creams Will Help Your Skin To Relax Become Younger</h3>
+            <h3>Night Creams Will Help Your Skin To Relax Become Younger, Night Creams Will Help Your Skin To Relax Become Younger</h3>
             <span class="line"></span>
-            <p>July 2017</p>
-            <p>WWD</p>
+            <p>July 2017 <span>WWD</span></p>
           </figcaption>
         </figure>
       </a>
@@ -84,12 +137,11 @@
     <li>
       <a href="#">
         <figure>
-          <img src="https://dummyimage.com/453x250/ccc/333" alt="" />
+          <img src="https://dummyimage.com/450x280/333/ccc" alt="" />
           <figcaption>
             <h3>Night Creams Will Help Your Skin To Relax Become Younger</h3>
             <span class="line"></span>
-            <p>July 2017</p>
-            <p>WWD</p>
+            <p>July 2017 <span>WWD</span></p>
           </figcaption>
         </figure>
       </a>
