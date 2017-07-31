@@ -16,7 +16,7 @@
     <div class="custom-contact-form grid__item one-half">
       <div class="grid__item">
         <div class="">
-          <label class="form-field" for="ContactFormName">{{ 'contact.form.name' | t }}</label>
+          <label class="form-field" for="ContactFormName">{{ 'contact.form.name' | t }}</label><br>
           <input class="form-field" type="text"
             name="contact[name]"
             id="ContactFormName"
@@ -25,7 +25,7 @@
 
         </div>
         <div class="">
-          <label class="form-field" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label>
+          <label class="form-field" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label><br>
           <input class="form-field" type="email"
             name="contact[email]"
             id="ContactFormEmail"
@@ -36,7 +36,7 @@
             autocapitalize="off">
         </div>
         <div class="">
-          <label class="form-field" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+          <label class="form-field" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label><br>
           <input class="form-field" type="tel"
             name="contact[phone]"
             id="ContactFormPhone"
@@ -46,7 +46,7 @@
 
         </div>
         <div class="">
-          <label class="form-field" for="ContactFormMessage">{{ 'contact.form.message' | t }}</label>
+          <label class="form-field" for="ContactFormMessage">{{ 'contact.form.message' | t }}</label><br>
           <textarea class="form-field" rows="10"
             name="contact[body]"
             id="ContactFormMessage"
@@ -68,7 +68,7 @@
 </div>
 
 <style>
-  .form-field {
+  .form-field > label {
     display: block;
   }
   .custom-contact-form {
