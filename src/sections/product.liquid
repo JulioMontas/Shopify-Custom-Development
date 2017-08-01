@@ -102,6 +102,10 @@
   </div>
 
   <div class="rte">
+    {{ product.type }}
+  </div>
+
+  <div class="rte">
     {{ product.description }}
   </div>
 
@@ -115,6 +119,9 @@
     </script>
   {% endunless %}
 </div>
+
+<div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+
 
 {% schema %}
   {
