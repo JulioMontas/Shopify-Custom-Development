@@ -15,9 +15,9 @@
 
 
 /*!
- * custom-draft.js
+ * slick-settings.js
  */
-// =require vendor/custom-draft.js
+// =require vendor/slick-settings.js
 
 /*!
  * anime.min.js
