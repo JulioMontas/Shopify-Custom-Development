@@ -1,78 +1,47 @@
-<h1>{{ page.title }}</h1>
-
-<div class="rte page-width grid">
-  {{ page.content }}
-
-  {% form 'contact' %}
-
-    {% if form.posted_successfully? %}
-      <p class="form-success">
-        {{ 'contact.form.post_success' | t }}
-      </p>
-    {% endif %}
-
-    {{ form.errors | default_errors }}
-
-    <div class="custom-contact-form ">
-      <div class="grid__item">
-        <div class="form-block">
-          <label class="form-field" for="ContactFormName">{{ 'contact.form.name' | t }}</label><br>
-          <input class="form-field" type="text"
-            name="contact[name]"
-            id="ContactFormName"
-            placeholder="{{ 'contact.form.name' | t }}"
-            value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
-
-        </div>
-        <div class="form-block">
-          <label class="form-field" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label><br>
-          <input class="form-field" type="email"
-            name="contact[email]"
-            id="ContactFormEmail"
-            placeholder="{{ 'contact.form.email' | t }}"
-            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-            spellcheck="false"
-            autocomplete="off"
-            autocapitalize="off">
-        </div>
-        <div class="form-block">
-          <label class="form-field" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label><br>
-          <input class="form-field" type="tel"
-            name="contact[phone]"
-            id="ContactFormPhone"
-            placeholder="{{ 'contact.form.phone' | t }}"
-            value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-            pattern="[0-9\-]*">
-
-        </div>
-        <div class="form-block">
-          <label class="form-field" for="ContactFormMessage">{{ 'contact.form.message' | t }}</label><br>
-          <textarea class="form-field" rows="10"
-            name="contact[body]"
-            id="ContactFormMessage"
-            placeholder="{{ 'contact.form.message' | t }}"></textarea>
-            {% if form.body %}
-              {{ form.body }}
-            {% endif %}
-        </div>
-      </div>
-      <input type="submit" class="btn button-default form-block" value="{{ 'contact.form.send' | t }}">
-
-      {% endform %}
+{% form 'contact' %}
+<div class="contact-page page-width">
+  {% if form.posted_successfully? %}
+    <div class="successForm feedback">
+      {{ 'contact.form.post_success' | t }}
     </div>
-</div>
+  {% endif %}
+
+  {% if form.errors %}
+  <div class="errorForm feedback">
+    <!-- {{ form.errors.size }} or {{ form.errors | size }} -->
+    <p>Your contact form has {{ form.errors | size | pluralize: "an error", "a few errors" }}. To submit your form, make the following changes and try again:</p>
+    {% for field in form.errors %}
+      <p>The {{ field | capitalize | replace: 'Body', 'Message' }} field {{ form.errors.messages[field] }}.</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div id="contactFormWrapper">
+    <p><input type="text" required id="contactFormName" name="contact[name]" placeholder="Name"></p>
+    <p><input type="email" required id="contactFormEmail" name="contact[email]" placeholder="Email"></p>
+    <p><input type="phone" id="contactFormPhone" name="contact[phone]" placeholder="Phone"></p>
+    <p><input type="phone" id="contactFormOrderNumber" name="contact[order number]" placeholder="Order Number"></p>
+    <p>
+      <label>Question:</label>
+      <select id="contactFormQuestionType" name="contact[question type]">
+        <option>Order Status</option>
+        <option>My Account</option>
+        <option>General Information</option>
+        <option>Store Feedback</option>
+        <option>Other</option>
+      </select>
+    </p>
+    <p><textarea required rows="10" id="contactFormMessage" name="contact[message]" placeholder="Message"></textarea></p>
+    <p><input type="submit" id="contactFormSubmit" value="{{ 'contact.form.send' | t }}" /></p>
+  </div>
+</div><!-- End of contact-Page -->
+
+{% endform %}
 
 <style>
-  .custom-contact-form {
-    background-color: rgba(106, 106, 106, 0.2);
-  }
-  .button-default {
-    background-color: black;
-    color: white;
-    border-radius: 4px;
-    text-align: center;
-  }
-  .form-block {
-    text-align: center;
-  }
+.contact-form {margin:1em 0}
+.feedback {padding:0.5em 0.7em;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px}
+.feedback p {padding:0.5em 0 !important;margin:0 !important}
+.successForm {background:#bde0a8;color:green}
+.errorForm {background:#eebdbd;color:red}
 </style>
