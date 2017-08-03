@@ -1,5 +1,6 @@
 {% form 'contact' %}
 <div class="contact-page page-width">
+
   {% if form.posted_successfully? %}
     <div class="successForm feedback">
       {{ 'contact.form.post_success' | t }}
@@ -16,28 +17,34 @@
   </div>
   {% endif %}
 
-  <div id="contactFormWrapper">
-    <p><input type="text" required id="contactFormName" name="contact[name]" placeholder="Name"></p>
-    <p><input type="email" required id="contactFormEmail" name="contact[email]" placeholder="Email"></p>
-    <p><input type="phone" id="contactFormPhone" name="contact[phone]" placeholder="Phone"></p>
-    <p><input type="phone" id="contactFormOrderNumber" name="contact[order number]" placeholder="Order Number"></p>
-    <p>
-      <label>Question:</label>
-      <select id="contactFormQuestionType" name="contact[question type]">
-        <option>Order Status</option>
-        <option>My Account</option>
-        <option>General Information</option>
-        <option>Store Feedback</option>
-        <option>Other</option>
-      </select>
-    </p>
-    <p><textarea required rows="10" id="contactFormMessage" name="contact[message]" placeholder="Message"></textarea></p>
-    <p><input type="submit" id="contactFormSubmit" value="{{ 'contact.form.send' | t }}" /></p>
+  <div class="title">
+    <h2>Contact So-Avant-Garde</h2>
+    <p>Ask us any questions or comments in the below form and we will respond shortly.</p>
   </div>
-</div><!-- End of contact-Page -->
 
+  <div id="contactFormWrapper grid__item">
+    <div class="grid">
+      <p class="grid__item medium-up--one-half"><input type="text" required id="contactFormName" name="contact[name]" placeholder="Name"></p>
+      <p class="grid__item medium-up--one-half"><input type="email" required id="contactFormEmail" name="contact[email]" placeholder="Email"></p>
+      <p class="grid__item medium-up--one-half"><input type="tel" id="contactFormPhone" name="contact[phone]" placeholder="Phone"></p>
+      <p class="grid__item medium-up--one-half"><input type="text" id="contactFormOrderNumber" name="contact[order number]" placeholder="Order Number"></p>
+      <p class="grid__item">
+        <label>Question:</label>
+        <select id="contactFormQuestionType" name="contact[question type]">
+          <option>Order Status</option>
+          <option>My Account</option>
+          <option>General Information</option>
+          <option>Store Feedback</option>
+          <option>Other</option>
+        </select>
+      </p>
+      <p class="grid__item"><textarea required rows="10" id="contactFormMessage" name="contact[message]" placeholder="Message"></textarea></p>
+      <p class="grid__item"><input type="submit" id="contactFormSubmit" value="{{ 'contact.form.send' | t }}" /></p>
+    </div> <!-- End of .grid -->
+  </div> <!-- End of #contactFormWrapper -->
+
+</div> <!-- End of .contact-Page -->
 {% endform %}
-
 <style>
 .contact-form {margin:1em 0}
 .feedback {padding:0.5em 0.7em;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px}
