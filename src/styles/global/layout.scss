@@ -205,3 +205,16 @@ html {
   list-style: none;
   padding: 0;
 }
+
+/*================ Global ================*/
+/*==========================================================*/
+/*= You get to see it when you send a form =*/
+/*==========================================================*/
+
+.shopify-challenge__button.btn {
+	background: #5343c2;
+	padding: 1em 5em;
+	color: white;
+	border-radius: 5px;
+	letter-spacing: 1px;
+}
