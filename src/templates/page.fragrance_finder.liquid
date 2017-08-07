@@ -56,16 +56,6 @@
 
 /* Dropdown Menu */
 .dropbtn {
-<<<<<<< HEAD
-	color: #333;
-	font-size: 0.8em;
-	cursor: pointer;
-	background: none;
-	padding: 16px 50px;
-	border-radius: 5px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-=======
  color: #333;
  font-size: 0.8em;
  cursor: pointer;
@@ -74,7 +64,6 @@
  border-radius: 5px;
  text-transform: uppercase;
  letter-spacing: 1px;
->>>>>>> dev
 }
 
 
@@ -115,28 +104,17 @@
  margin: 0 auto;
 }
 .center p {
-<<<<<<< HEAD
-	margin: 90px 0% 60px;
-	font-weight: normal;
-	font-style: italic;
-	font-size: 1.1em;
-	letter-spacing: 1px;
-=======
  margin: 90px 0% 60px;
  font-weight: normal;
  font-style: italic;
  font-size: 1.1em;
  letter-spacing: 1px;
->>>>>>> dev
 }
 .fragrance-finder{
  margin-bottom: 10em;
 }
 .fragrance-finder:nth-child(2){
  margin-top: 2.5em;
-}
-.fragrance-finder:nth-child(2){
-  margin-top: 2.5em;
 }
 </style>
 
@@ -198,46 +176,6 @@
 
 <div class="grid__item fragrance-finder">
    <div class="grid">
-<<<<<<< HEAD
-     <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-     <div class="grid__item medium-up--eight-tenths">
-       <div class="page-width">
-         <div class="products-collections">
-       		<section>
-       			<div class="center"><p style="color:#673C7E;">Evoke the experience of the natural world with herbal notes of sage, rosemary, cumin, lavender, basil and other greens.</p></div>
-       			<div class="list-of-four page-width">
-       			{%- assign collection = collections.new-arrivals -%}
-       				{% for product in collection.products limit: 12 %}
-       				  <a href="{{ product.url | within: collection }}">
-       						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-       						<h2>{{ product.vendor }}</h2>
-       						<p>{{ product.title }}</p>
-       						<p>
-       					    {% if product.compare_at_price > product.price %}
-       					      {% if product.price_varies %}
-       					        {%- assign sale_price = product.price | money -%}
-       					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-       					      {% else %}
-       					        {{ 'products.product.on_sale' | t }}
-       					        {{ product.price | money }}
-       					      {% endif %}
-       					    {% else %}
-       					      {% if product.price_varies %}
-       					        {%- assign price = product.price | money -%}
-       					        {{ 'products.product.from_text_html' | t: price: price }}
-       					      {% else %}
-       					        {{ product.price | money }}
-       					      {% endif %}
-       					    {% endif %}
-       					  </p>
-       					{% else %}
-       				{% endfor %}
-       				</a>
-       			</div>
-            <div class="center">
-              <div class="dropdown">
-                <button class="dropbtn" style="border: 2px solid #673C7E;">Aromatic</button>
-=======
      <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/chypre_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
      <div class="grid__item medium-up--eight-tenths">
        <div class="page-width">
@@ -276,7 +214,6 @@
             <div class="center">
               <div class="dropdown">
                 <button class="dropbtn" style="border: 2px solid #536E4B;">Chypre</button>
->>>>>>> dev
                 <div class="dropdown-content">
                   <a href="/collections/fragrance-finder-chypre-all/">Chypre</a>
                   <a href="/collections/fragrance-finder-chypre-floral">Chypre Floral</a>
@@ -288,56 +225,12 @@
         </div>
        </div>
      </div>
-<<<<<<< HEAD
-     <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-=======
      <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/chypre_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
->>>>>>> dev
    </div>
  </div>
 
  <div class="grid__item fragrance-finder">
     <div class="grid">
-<<<<<<< HEAD
-      <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/chypre_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-      <div class="grid__item medium-up--eight-tenths">
-        <div class="page-width">
-          <div class="products-collections">
-        		<section>
-        			<div class="center"><p style="color:#536E4B;">Wrap yourself in the sensual, woody elegance of bergamot, labdanum, musk and oakmoss.</p></div>
-        			<div class="list-of-four page-width">
-        			{%- assign collection = collections.new-arrivals -%}
-        				{% for product in collection.products limit: 12 %}
-        				  <a href="{{ product.url | within: collection }}">
-        						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-        						<h2>{{ product.vendor }}</h2>
-        						<p>{{ product.title }}</p>
-        						<p>
-        					    {% if product.compare_at_price > product.price %}
-        					      {% if product.price_varies %}
-        					        {%- assign sale_price = product.price | money -%}
-        					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-        					      {% else %}
-        					        {{ 'products.product.on_sale' | t }}
-        					        {{ product.price | money }}
-        					      {% endif %}
-        					    {% else %}
-        					      {% if product.price_varies %}
-        					        {%- assign price = product.price | money -%}
-        					        {{ 'products.product.from_text_html' | t: price: price }}
-        					      {% else %}
-        					        {{ product.price | money }}
-        					      {% endif %}
-        					    {% endif %}
-        					  </p>
-        					{% else %}
-        				{% endfor %}
-        				</a>
-        			</div>
-             <div class="center">
-               <div class="dropdown">
-                 <button class="dropbtn" style="border: 2px solid #536E4B;">Chypre</button>
-=======
       <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/citrus_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
       <div class="grid__item medium-up--eight-tenths">
         <div class="page-width">
@@ -376,7 +269,6 @@
              <div class="center">
                <div class="dropdown">
                  <button class="dropbtn" style="border: 2px solid #F59B0C;">Citrus</button>
->>>>>>> dev
                  <div class="dropdown-content">
                    <a href="/collections/fragrance-finder-citrus-aromatic">Citrus Aromatic</a>
                  </div>
@@ -386,56 +278,12 @@
          </div>
         </div>
       </div>
-<<<<<<< HEAD
-      <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/chypre_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-=======
       <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/citrus_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
->>>>>>> dev
     </div>
   </div>
 
   <div class="grid__item fragrance-finder">
      <div class="grid">
-<<<<<<< HEAD
-       <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/citrus_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-       <div class="grid__item medium-up--eight-tenths">
-         <div class="page-width">
-           <div class="products-collections">
-         		<section>
-         			<div class="center"><p style="color:#F59B0C">Add an uplifting dose of fresh zest with a burst of lemon, bergamot, orange, and mandarin fragrances, perfect for summer.</p></div>
-         			<div class="list-of-four page-width">
-         			{%- assign collection = collections.new-arrivals -%}
-         				{% for product in collection.products limit: 12 %}
-         				  <a href="{{ product.url | within: collection }}">
-         						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-         						<h2>{{ product.vendor }}</h2>
-         						<p>{{ product.title }}</p>
-         						<p>
-         					    {% if product.compare_at_price > product.price %}
-         					      {% if product.price_varies %}
-         					        {%- assign sale_price = product.price | money -%}
-         					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-         					      {% else %}
-         					        {{ 'products.product.on_sale' | t }}
-         					        {{ product.price | money }}
-         					      {% endif %}
-         					    {% else %}
-         					      {% if product.price_varies %}
-         					        {%- assign price = product.price | money -%}
-         					        {{ 'products.product.from_text_html' | t: price: price }}
-         					      {% else %}
-         					        {{ product.price | money }}
-         					      {% endif %}
-         					    {% endif %}
-         					  </p>
-         					{% else %}
-         				{% endfor %}
-         				</a>
-         			</div>
-              <div class="center">
-                <div class="dropdown">
-                  <button class="dropbtn" style="border: 2px solid #F59B0C;">Citrus</button>
-=======
        <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Floral_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
        <div class="grid__item medium-up--eight-tenths">
          <div class="page-width">
@@ -474,7 +322,6 @@
               <div class="center">
                 <div class="dropdown">
                   <button class="dropbtn" style="border: 2px solid #E44690;">Floral</button>
->>>>>>> dev
                   <div class="dropdown-content">
                     <a href="/collections/fragrance-finder-floral-all">Floral</a>
                     <a href="/collections/fragrance-finder-floral-aquatic">Floral Aquatic</a>
@@ -491,56 +338,12 @@
           </div>
          </div>
        </div>
-<<<<<<< HEAD
-       <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/citrus_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-=======
        <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Floral_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
->>>>>>> dev
      </div>
    </div>
 
    <div class="grid__item fragrance-finder">
       <div class="grid">
-<<<<<<< HEAD
-        <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Floral_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-        <div class="grid__item medium-up--eight-tenths">
-          <div class="page-width">
-            <div class="products-collections">
-          		<section>
-          			<div class="center"><p style="color:#E44690;">Let your feminine, playful spirit shine with a bouquet of jasmine, peony, gardenia and lily.</p></div>
-          			<div class="list-of-four page-width">
-          			{%- assign collection = collections.new-arrivals -%}
-          				{% for product in collection.products limit: 12 %}
-          				  <a href="{{ product.url | within: collection }}">
-          						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-          						<h2>{{ product.vendor }}</h2>
-          						<p>{{ product.title }}</p>
-          						<p>
-          					    {% if product.compare_at_price > product.price %}
-          					      {% if product.price_varies %}
-          					        {%- assign sale_price = product.price | money -%}
-          					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-          					      {% else %}
-          					        {{ 'products.product.on_sale' | t }}
-          					        {{ product.price | money }}
-          					      {% endif %}
-          					    {% else %}
-          					      {% if product.price_varies %}
-          					        {%- assign price = product.price | money -%}
-          					        {{ 'products.product.from_text_html' | t: price: price }}
-          					      {% else %}
-          					        {{ product.price | money }}
-          					      {% endif %}
-          					    {% endif %}
-          					  </p>
-          					{% else %}
-          				{% endfor %}
-          				</a>
-          			</div>
-               <div class="center">
-                 <div class="dropdown">
-                   <button class="dropbtn" style="border: 2px solid #E44690;">Floral</button>
-=======
         <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/leather_-white_background-_320X1150_copy.jpg?4587741525595457670" alt=""></div>
         <div class="grid__item medium-up--eight-tenths">
           <div class="page-width">
@@ -579,7 +382,6 @@
                <div class="center">
                  <div class="dropdown">
                    <button class="dropbtn" style="border: 2px solid #A45B52;">Leather</button>
->>>>>>> dev
                    <div class="dropdown-content">
                      <a href="/collections/fragrance-finder-leather-all">Leather</a>
                    </div>
@@ -589,56 +391,12 @@
            </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Floral_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-=======
         <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/leather_-white_background-_320X1150_copy.jpg?4587741525595457670" alt=""></div>
->>>>>>> dev
       </div>
     </div>
 
     <div class="grid__item fragrance-finder">
        <div class="grid">
-<<<<<<< HEAD
-         <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/leather_-white_background-_320X1150_copy.jpg?4587741525595457670" alt=""></div>
-         <div class="grid__item medium-up--eight-tenths">
-           <div class="page-width">
-             <div class="products-collections">
-           		<section>
-           			<div class="center"><p style="color:#A45B52;">Evoke the smoky richness of leather with sharp and spicy notes of honey, tobacco, wood.</p></div>
-           			<div class="list-of-four page-width">
-           			{%- assign collection = collections.new-arrivals -%}
-           				{% for product in collection.products limit: 12 %}
-           				  <a href="{{ product.url | within: collection }}">
-           						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-           						<h2>{{ product.vendor }}</h2>
-           						<p>{{ product.title }}</p>
-           						<p>
-           					    {% if product.compare_at_price > product.price %}
-           					      {% if product.price_varies %}
-           					        {%- assign sale_price = product.price | money -%}
-           					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-           					      {% else %}
-           					        {{ 'products.product.on_sale' | t }}
-           					        {{ product.price | money }}
-           					      {% endif %}
-           					    {% else %}
-           					      {% if product.price_varies %}
-           					        {%- assign price = product.price | money -%}
-           					        {{ 'products.product.from_text_html' | t: price: price }}
-           					      {% else %}
-           					        {{ product.price | money }}
-           					      {% endif %}
-           					    {% endif %}
-           					  </p>
-           					{% else %}
-           				{% endfor %}
-           				</a>
-           			</div>
-                <div class="center">
-                  <div class="dropdown">
-                    <button class="dropbtn" style="border: 2px solid #A45B52;">Leather</button>
-=======
          <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Oriental_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
          <div class="grid__item medium-up--eight-tenths">
            <div class="page-width">
@@ -677,7 +435,6 @@
                 <div class="center">
                   <div class="dropdown">
                     <button class="dropbtn" style="border: 2px solid #E7A078;">Oriental</button>
->>>>>>> dev
                     <div class="dropdown-content">
                       <a href="/collections/fragrance-finder-oriental-all">Oriental</a>
                       <a href="/collections/fragrance-finder-oriental-floral">Oriental Floral</a>
@@ -692,56 +449,12 @@
             </div>
            </div>
          </div>
-<<<<<<< HEAD
-         <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/leather_-white_background-_320X1150_copy.jpg?4587741525595457670" alt=""></div>
-=======
          <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Oriental_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
->>>>>>> dev
        </div>
      </div>
 
      <div class="grid__item fragrance-finder">
         <div class="grid">
-<<<<<<< HEAD
-          <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Oriental_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-          <div class="grid__item medium-up--eight-tenths">
-            <div class="page-width">
-              <div class="products-collections">
-            		<section>
-            			<div class="center"><p style="color:#E7A078;">Create an intoxicating irresistible warmth with an accord of vanilla, musk, cinnamon, cardamom.</p></div>
-            			<div class="list-of-four page-width">
-            			{%- assign collection = collections.new-arrivals -%}
-            				{% for product in collection.products limit: 12 %}
-            				  <a href="{{ product.url | within: collection }}">
-            						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-            						<h2>{{ product.vendor }}</h2>
-            						<p>{{ product.title }}</p>
-            						<p>
-            					    {% if product.compare_at_price > product.price %}
-            					      {% if product.price_varies %}
-            					        {%- assign sale_price = product.price | money -%}
-            					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-            					      {% else %}
-            					        {{ 'products.product.on_sale' | t }}
-            					        {{ product.price | money }}
-            					      {% endif %}
-            					    {% else %}
-            					      {% if product.price_varies %}
-            					        {%- assign price = product.price | money -%}
-            					        {{ 'products.product.from_text_html' | t: price: price }}
-            					      {% else %}
-            					        {{ product.price | money }}
-            					      {% endif %}
-            					    {% endif %}
-            					  </p>
-            					{% else %}
-            				{% endfor %}
-            				</a>
-            			</div>
-                 <div class="center">
-                   <div class="dropdown">
-                     <button class="dropbtn" style="border: 2px solid #E7A078;">Oriental</button>
-=======
           <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/WOOD_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
           <div class="grid__item medium-up--eight-tenths">
             <div class="page-width">
@@ -780,7 +493,6 @@
                  <div class="center">
                    <div class="dropdown">
                      <button class="dropbtn" style="border: 2px solid #544849;">Woody</button>
->>>>>>> dev
                      <div class="dropdown-content">
                        <a href="/collections/fragrance-finder-woody-all">Woody</a>
                        <a href="/collections/fragrance-finder-woody-aromatic">Woody Aromatic</a>
@@ -798,65 +510,6 @@
              </div>
             </div>
           </div>
-<<<<<<< HEAD
-          <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Oriental_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-        </div>
-      </div>
-
-      <div class="grid__item fragrance-finder">
-         <div class="grid">
-           <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/WOOD_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-           <div class="grid__item medium-up--eight-tenths">
-             <div class="page-width">
-               <div class="products-collections">
-             		<section>
-             			<div class="center"><p style="color:#544849;">Add mystery with an earthy aroma of wood, patchouli, sandalwood, cedar and a hint of spice.</p></div>
-             			<div class="list-of-four page-width">
-             			{%- assign collection = collections.new-arrivals -%}
-             				{% for product in collection.products limit: 12 %}
-             				  <a href="{{ product.url | within: collection }}">
-             						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-             						<h2>{{ product.vendor }}</h2>
-             						<p>{{ product.title }}</p>
-             						<p>
-             					    {% if product.compare_at_price > product.price %}
-             					      {% if product.price_varies %}
-             					        {%- assign sale_price = product.price | money -%}
-             					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-             					      {% else %}
-             					        {{ 'products.product.on_sale' | t }}
-             					        {{ product.price | money }}
-             					      {% endif %}
-             					    {% else %}
-             					      {% if product.price_varies %}
-             					        {%- assign price = product.price | money -%}
-             					        {{ 'products.product.from_text_html' | t: price: price }}
-             					      {% else %}
-             					        {{ product.price | money }}
-             					      {% endif %}
-             					    {% endif %}
-             					  </p>
-             					{% else %}
-             				{% endfor %}
-             				</a>
-             			</div>
-                  <div class="center">
-                    <div class="dropdown">
-                      <button class="dropbtn" style="border: 2px solid #544849;">Woody</button>
-                      <div class="dropdown-content">
-                        <a href="#">...</a>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-             </div>
-           </div>
-           <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/WOOD_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
-         </div>
-       </div>
-=======
           <div class="grid__item medium-up--one-tenth"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/WOOD_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
         </div>
       </div>
->>>>>>> dev
