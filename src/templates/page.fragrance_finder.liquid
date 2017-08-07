@@ -127,7 +127,7 @@
          <section>
            <div class="center"><p style="color:#673C7E;">Evoke the experience of the natural world with herbal notes of sage, rosemary, cumin, lavender, basil and other greens.</p></div>
            <div class="list-of-four page-width">
-           {%- assign collection = collections.new-arrivals -%}
+           {%- assign collection = collections.fragrance-finder-aromatic-all -%}
              {% for product in collection.products limit: 12 %}
                <a href="{{ product.url | within: collection }}">
                  <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -159,10 +159,10 @@
              <div class="dropdown">
                <button class="dropbtn" style="border: 2px solid #673C7E;">Aromatic</button>
                <div class="dropdown-content">
-                 <a href="#">Aromatic</a>
-                 <a href="#">Aromatic Aquatic</a>
-                 <a href="#">Aromatic Fougere</a>
-                 <a href="#">Aromatic Fruity</a>
+                 <a href="/collections/fragrance-finder-aromatic-all/">Aromatic</a>
+                 <a href="/collections/fragrance-finder-aromatic-aquatic/">Aromatic Aquatic</a>
+                 <a href="/collections/fragrance-finder-aromatic-fougere/">Aromatic Fougere</a>
+                 <a href="/collections/fragrance-finder-aromatic-fruity/">Aromatic Fruity</a>
                </div>
              </div>
            </div>
@@ -183,7 +183,7 @@
            <section>
              <div class="center"><p style="color:#536E4B;">Wrap yourself in the sensual, woody elegance of bergamot, labdanum, musk and oakmoss.</p></div>
              <div class="list-of-four page-width">
-             {%- assign collection = collections.new-arrivals -%}
+             {%- assign collection = collections.fragrance-finder-chypre-all -%}
                {% for product in collection.products limit: 12 %}
                  <a href="{{ product.url | within: collection }}">
                    <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -215,9 +215,9 @@
               <div class="dropdown">
                 <button class="dropbtn" style="border: 2px solid #536E4B;">Chypre</button>
                 <div class="dropdown-content">
-                  <a href="#">Chypre</a>
-                  <a href="#">Chypre Floral</a>
-                  <a href="#">Chypre Fruity</a>
+                  <a href="/collections/fragrance-finder-chypre-all/">Chypre</a>
+                  <a href="/collections/fragrance-finder-chypre-floral">Chypre Floral</a>
+                  <a href="/collections/fragrance-finder-chypre-fruity/">Chypre Fruity</a>
                 </div>
               </div>
             </div>
@@ -238,7 +238,7 @@
            <section>
              <div class="center"><p style="color:#F59B0C">Add an uplifting dose of fresh zest with a burst of lemon, bergamot, orange, and mandarin fragrances, perfect for summer.</p></div>
              <div class="list-of-four page-width">
-             {%- assign collection = collections.new-arrivals -%}
+             {%- assign collection = collections.fragrance-finder-citrus-all -%}
                {% for product in collection.products limit: 12 %}
                  <a href="{{ product.url | within: collection }}">
                    <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -270,7 +270,7 @@
                <div class="dropdown">
                  <button class="dropbtn" style="border: 2px solid #F59B0C;">Citrus</button>
                  <div class="dropdown-content">
-                   <a href="#">Citrus Aromatic</a>
+                   <a href="/collections/fragrance-finder-citrus-aromatic">Citrus Aromatic</a>
                  </div>
                </div>
              </div>
@@ -291,7 +291,7 @@
              <section>
                <div class="center"><p style="color:#E44690;">Let your feminine, playful spirit shine with a bouquet of jasmine, peony, gardenia and lily.</p></div>
                <div class="list-of-four page-width">
-               {%- assign collection = collections.new-arrivals -%}
+               {%- assign collection = collections.fragrance-finder-floral-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -323,7 +323,14 @@
                 <div class="dropdown">
                   <button class="dropbtn" style="border: 2px solid #E44690;">Floral</button>
                   <div class="dropdown-content">
-                    <a href="#">...</a>
+                    <a href="/collections/fragrance-finder-floral-all">Floral</a>
+                    <a href="/collections/fragrance-finder-floral-aquatic">Floral Aquatic</a>
+                    <a href="/collections/fragrance-finder-floral-fruity">Floral Fruity</a>
+                    <a href="/collections/fragrance-finder-floral-fruity-gormand">Floral Fruity Gormand</a>
+                    <a href="/collections/fragrance-finder-floral-green">Floral Green</a>
+                    <a href="/collections/fragrance-finder-floral-musk">Floral Musk</a>
+                    <a href="/collections/fragrance-finder-floral-woody-musk">Floral Woody Musk</a>
+                    <a href="/collections/fragrance-finder-floral-woody">Floral Woody</a>
                   </div>
                 </div>
               </div>
@@ -344,7 +351,7 @@
              <section>
                <div class="center"><p style="color:#A45B52;">Evoke the smoky richness of leather with sharp and spicy notes of honey, tobacco, wood.</p></div>
                <div class="list-of-four page-width">
-               {%- assign collection = collections.new-arrivals -%}
+               {%- assign collection = collections.fragrance-finder-leather-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -376,7 +383,7 @@
                  <div class="dropdown">
                    <button class="dropbtn" style="border: 2px solid #A45B52;">Leather</button>
                    <div class="dropdown-content">
-                     <a href="#">...</a>
+                     <a href="/collections/fragrance-finder-leather-all">Leather</a>
                    </div>
                  </div>
                </div>
@@ -397,7 +404,7 @@
                <section>
                  <div class="center"><p style="color:#E7A078;">Create an intoxicating irresistible warmth with an accord of vanilla, musk, cinnamon, cardamom.</p></div>
                  <div class="list-of-four page-width">
-                 {%- assign collection = collections.new-arrivals -%}
+                 {%- assign collection = collections.fragrance-finder-oriental-all -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
                        <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -429,7 +436,12 @@
                   <div class="dropdown">
                     <button class="dropbtn" style="border: 2px solid #E7A078;">Oriental</button>
                     <div class="dropdown-content">
-                      <a href="#">...</a>
+                      <a href="/collections/fragrance-finder-oriental-all">Oriental</a>
+                      <a href="/collections/fragrance-finder-oriental-floral">Oriental Floral</a>
+                      <a href="/collections/fragrance-finder-oriental-fougere">Oriental Fougere</a>
+                      <a href="/collections/fragrance-finder-oriental-spicy">Oriental Spicy</a>
+                      <a href="/collections/fragrance-finder-oriental-woody">Oriental Woody</a>
+                      <a href="/collections/fragrance-finder-oriental-vanilla">Oriental Vanilla</a>
                     </div>
                   </div>
                 </div>
@@ -450,7 +462,7 @@
                <section>
                  <div class="center"><p style="color:#544849;">Add mystery with an earthy aroma of wood, patchouli, sandalwood, cedar and a hint of spice.</p></div>
                  <div class="list-of-four page-width">
-                 {%- assign collection = collections.new-arrivals -%}
+                 {%- assign collection = collections.fragrance-finder-woody-all -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
                        <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -482,7 +494,15 @@
                    <div class="dropdown">
                      <button class="dropbtn" style="border: 2px solid #544849;">Woody</button>
                      <div class="dropdown-content">
-                       <a href="#">...</a>
+                       <a href="/collections/fragrance-finder-woody-all">Woody</a>
+                       <a href="/collections/fragrance-finder-woody-aromatic">Woody Aromatic</a>
+                       <a href="/collections/fragrance-finder-woody-aquatic">Woody Aquatic</a>
+                       <a href="/collections/fragrance-finder-woody-citrus">Woody Citrus</a>
+                       <a href="/collections/fragrance-finder-woody-floral">Woody Floral</a>
+                       <a href="/collections/fragrance-finder-woody-floral-green">Woody Floral Green</a>
+                       <a href="/collections/fragrance-finder-woody-floral-cedarwood">Woody Floral Cedarwood</a>
+                       <a href="/collections/fragrance-finder-woody-spicy">Woody Spicy</a>
+                       <a href="/collections/fragrance-finder-woody-vetiver">Woody Vetiver</a>
                      </div>
                    </div>
                  </div>
