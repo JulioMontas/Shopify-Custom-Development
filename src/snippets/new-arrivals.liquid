@@ -83,7 +83,7 @@
 		<section>
 			<div class="center"><h2>Trending</h2></div>
 			<div class="list-of-five page-width">
-			{%- assign collection = collections.new-arrivals -%}
+			{%- assign collection = collections.trending -%}
 				{% for product in collection.products limit: 12 %}
 				  <a href="{{ product.url | within: collection }}">
 						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -115,7 +115,7 @@
 		<section>
 			<div class="center"><h2>More to Adore</h2></div>
 			<div class="list-of-five page-width">
-			{%- assign collection = collections.new-arrivals -%}
+			{%- assign collection = collections.more-to-adore -%}
 				{% for product in collection.products limit: 12 %}
 				  <a href="{{ product.url | within: collection }}">
 						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
