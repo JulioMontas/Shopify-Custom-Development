@@ -1,3 +1,3 @@
-<div class="pagination">
-  {{ paginate | default_pagination }}
+<div class="pagination page-width">
+  {{ paginate | default_pagination: next: 'Older', previous: 'Newer' }}
 </div>
