@@ -10,12 +10,11 @@
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
 
   <div class="grid__item">
-    <div class="grid page-width">
+    <div class="grid page-width" style="margin-bottom: 5em;">
       <div class="grid__item medium-up--one-half productPage-images">
         <h3>{{ current_variant.price | money }}</h3>
         <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
-
-        {% if product.images.size > 1 %}
+        <!-- {% if product.images.size > 1 %}
           <ul>
             {% for image in product.images %}
               <li>
@@ -25,9 +24,7 @@
               </li>
             {% endfor %}
           </ul>
-        {% endif %}
-
-
+        {% endif %} -->
       </div>
 
       <div class="grid__item medium-up--one-half productPage-description">
@@ -89,8 +86,12 @@
               {% endfor %}
             </select>
 
-            <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
-            <input type="number" id="Quantity" name="quantity" value="1" min="1">
+            <!-- <label for="Quantity">{{ 'products.product.quantity' | t }}</label> -->
+
+            <div class="quantity">
+              <input type="number" name="quantity" value="1" min="1">
+            </div>
+            <!-- End of quantity -->
               {% if product.compare_at_price_max > product.price %}
                 <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
                 <s data-compare-price>
@@ -113,7 +114,9 @@
   {% endunless %}
 </div>
 
-<div class="page-width" style="margin: 0 auto" id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+<div class="page-width reviewSection">
+  <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+</div>
 
 {% schema %}
   {
@@ -129,27 +132,191 @@
   }
 {% endschema %}
 
+{% javascript %}
+jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+jQuery('.quantity').each(function() {
+  var spinner = jQuery(this),
+    input = spinner.find('input[type="number"]'),
+    btnUp = spinner.find('.quantity-up'),
+    btnDown = spinner.find('.quantity-down'),
+    min = input.attr('min'),
+    max = input.attr('max');
+
+  btnUp.click(function() {
+    var oldValue = parseFloat(input.val());
+    if (oldValue >= max) {
+      var newVal = oldValue;
+    } else {
+      var newVal = oldValue + 1;
+    }
+    spinner.find("input").val(newVal);
+    spinner.find("input").trigger("change");
+  });
+
+  btnDown.click(function() {
+    var oldValue = parseFloat(input.val());
+    if (oldValue <= min) {
+      var newVal = oldValue;
+    } else {
+      var newVal = oldValue - 1;
+    }
+    spinner.find("input").val(newVal);
+    spinner.find("input").trigger("change");
+  });
+});
+{% endjavascript %}
+
+
 {% stylesheet %}
-.productPage-description{
-  letter-spacing:1px;
+.reviewSection .spr-container{
+  padding: 0px;
+	border-style: none;
 }
+
+.reviewSection .spr-header-title::before {
+	content: '';
+	display: block;
+	width: 1110px;
+	height: 1px;
+	background: #ccc;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 50%;
+	z-index: -1;
+}
+
+.reviewSection .spr-header-title {
+	text-align: center;
+	font-size: 1.25em;
+	color: #333;
+	font-weight: 100;
+	letter-spacing: 1px;
+	z-index: 131;
+	position: relative;
+}
+
+.reviewSection .spr-header-title::after {
+	background: white;
+	/* content: ""; */
+	display: table;
+	width: 180px;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: -26px;
+	z-index: 139;
+}
+
+.reviewSection .spr-icon {
+	color: #5343C2;
+}
+
+.reviewSection .spr-summary-actions a {
+	text-decoration: none;
+}
+
+
+
+
+
+.productPage-description{letter-spacing:1px;}
+
+.productPage-images h3,
 .productPage-description h2 {
   color:#5343C2;
-  font-size:1.4em;
 }
+
+.productPage-images h3 {font-size:1.2em;}
+
+.productPage-description h2 {font-size:1.4em;}
 
 div.grid__item:nth-child(2) > p:nth-child(2){
   color:#999;
   font-size:1em;
   margin-top: -0.8em;
 }
-.productPage-description div p:nth-child(1) {
-	margin-top: 1.5em;
-}
+.productPage-description div p:nth-child(1) {margin-top: 1.5em;}
+
 .productPage-description div p {
-	color: #666;
-	font-size: 1em;
-	line-height: 24px;
+	color: #333;
+	font-size: 0.9em;
+	line-height: 22px;
 }
 
+
+
+
+
+.grid__item div form button {
+	background: #5343C2;
+	width: 100%;
+	padding: 15px 0;
+	border: none;
+	color: white;
+	border-radius: 5px 5px 0 0;
+}
+
+
+.quantity {position: relative;}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{-moz-appearance: textfield;}
+
+.quantity input {
+	width: 100%;
+	height: 42px;
+	line-height: 1.65;
+	float: left;
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #eee;
+	border-radius: 0 0 5px 5px;
+	text-align: center;
+}
+
+.quantity input:focus {outline: 0;}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  width: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  line-height: 1.7;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+}
 {% endstylesheet %}
