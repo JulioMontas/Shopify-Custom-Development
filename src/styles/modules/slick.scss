@@ -44,7 +44,7 @@
   top: 0;
   left: 0;
   display: block;
-  max-height: 731px;
+  max-height: 100vh;
   overflow: hidden;
 }
 
@@ -229,20 +229,15 @@
     font-family: 'FontAwesome';
     font-size: 16px;
     line-height: 1;
-
     position: absolute;
     top: 0;
     left: 0;
-
     width: 16px;
     height: 16px;
-
     content: '\f111';
     text-align: center;
-
     opacity: .25;
     color: black;
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: opacity 0.25s;
@@ -250,7 +245,7 @@
 
 .slick-dots li.slick-active button:before {
     opacity: .75;
-    color: black;
+    // color: black;
 }
 
 /**
@@ -264,9 +259,9 @@
   padding-bottom: 5%;
   will-change: transform;
 
-  &.is-animating {
-    animation: scale 5s ease-in-out forwards;
-  }
+  // &.is-animating {
+  //   animation: scale 5s ease-in-out forwards;
+  // }
 
   &:before {
     content: "";
@@ -296,9 +291,8 @@
  * Wrapper
  */
 
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 45em;
-  width: 90%;
-}
+// .wrapper {
+//   margin-right: auto;
+//   margin-left: auto;
+//   width: 90%;
+// }
