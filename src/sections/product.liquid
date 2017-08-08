@@ -11,7 +11,7 @@
 
   <div class="grid__item">
     <div class="grid page-width">
-      <div class="grid__item medium-up--one-half">
+      <div class="grid__item medium-up--one-half productPage-images">
         <h3>{{ current_variant.price | money }}</h3>
         <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
 
@@ -30,10 +30,10 @@
 
       </div>
 
-      <div class="grid__item medium-up--one-half">
+      <div class="grid__item medium-up--one-half productPage-description">
         <h2>{{ product.title }}</h2>
         <p>{{ product.vendor }}</p>
-        <div class="rte">{{ product.description }}</div>
+        <div>{{ product.description }}</div>
 
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
@@ -128,3 +128,28 @@
     ]
   }
 {% endschema %}
+
+{% stylesheet %}
+.productPage-description{
+  letter-spacing:1px;
+}
+.productPage-description h2 {
+  color:#5343C2;
+  font-size:1.4em;
+}
+
+div.grid__item:nth-child(2) > p:nth-child(2){
+  color:#999;
+  font-size:1em;
+  margin-top: -0.8em;
+}
+.productPage-description div p:nth-child(1) {
+	margin-top: 1.5em;
+}
+.productPage-description div p {
+	color: #666;
+	font-size: 1em;
+	line-height: 24px;
+}
+
+{% endstylesheet %}
