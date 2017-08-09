@@ -1,10 +1,5 @@
 {
-  "current": {
-    "sections": {
-    },
-    "content_for_index": [
-    ]
-  },
+  "current": "Default",
   "presets": {
     "Default": {
       "sections": {
@@ -19,60 +14,28 @@
             },
             "collection-list-2": {
               "type": "collection"
-            },
-            "asdf": {
-              "type": "collection"
             }
           },
           "block_order": [
             "collection-list-0",
             "collection-list-1",
-            "collection-list-2",
-            "asdf"
+            "collection-list-2"
           ]
-        },
-        "featured-product": {
-          "type": "featured-product"
-        },
-<<<<<<< HEAD
-        "shop-circle": {
-          "type": "image",
-          "blocks": {
-            "img-0": {
-              "type": "image",
-              "id": "hello",
-              "label": "Slide 3 Image",
-              "info": "Put slide 3 image"
-            },
-            "img-1": {
-              "type": "image"
-            },
-            "img-2": {
-              "type": "image"
-            },
-            "img-3": {
-              "type": "image"
-            }
-          },
-          "block_order": [
-            "img-0",
-            "img-1",
-            "img-2",
-            "img-3"
-          ]
-=======
-        "featured-fuck": {
-          "type": "featured-fuck"
->>>>>>> 78526915d8c2c051e3433f74e4d5a8ead85142b6
         },
         "featured-collection": {
           "type": "featured-collection",
           "settings": {
             "collection": "frontpage"
           }
+        },
+        "featured-product": {
+          "type": "featured-product"
         }
       },
       "content_for_index": [
+        "collection-list",
+        "featured-collection",
+        "featured-product"
       ]
     }
   }
