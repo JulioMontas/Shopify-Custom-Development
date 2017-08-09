@@ -1,5 +1,62 @@
 {% if cart.item_count > 0 %}
-  <h1>{{ 'cart.general.title' | t }}</h1>
+
+<style media="screen">
+
+/*Move the text Product to the left*/
+.small--hide > tr:nth-child(1) > th:nth-child(1) {text-align: left;}
+
+/* Image style */
+tr.responsive-table-row  td:nth-child(1) {text-align: center;}
+
+/* Product */
+tr.responsive-table-row td{padding: 40px;}
+
+/* Product Link */
+tr.responsive-table-row td:nth-child(2) > a:nth-child(1){
+  text-decoration: none;
+  color: #5343C2;}
+
+/* Product Vendor */
+tr.responsive-table-row td:nth-child(2) > p:nth-child(2){
+  font-size: 0.9em;
+  margin-top: 5px;}
+
+/* Product Remove btn */
+tr.responsive-table-row td a:nth-child(3) {
+	text-decoration: none;
+	color: #5343C2;
+	border: 1px solid #c9c9c9;
+	padding: 5px 30px 6px;
+	border-radius: 5px;}
+
+
+.small--hide::after {
+	display: block;
+	content: "";
+	width: 1064px;
+	height: 1px;
+	background: #e8e9eb;
+	position: absolute;
+	top: 230px;
+}
+
+
+
+/* Price */
+/*Total*/
+tr.responsive-table-row > td:nth-child(3),
+tr.responsive-table-row td:nth-child(5) {
+	font-size: 0.9em;
+	color: #666;
+}
+
+
+
+</style>
+
+
+<div class="page-width">
+  <h4>{{ 'cart.general.title' | t }}</h4>
 
   <form action="/cart" method="post" novalidate>
     <table class="responsive-table">
@@ -26,7 +83,7 @@
           <tr class="responsive-table-row">
             <td data-label="{{ 'customer.order.product' | t }}">
               <a href="{{ item.url | within: collections.all }}">
-                <img src="{{ item | img_url: '240x240' }}" alt="{{ item.title | escape }}">
+                <img src="{{ item | img_url: '110x110' }}" alt="{{ item.title | escape }}">
               </a>
             </td>
             <td>
@@ -120,4 +177,5 @@
   <div class="supports-no-cookies">
     <p>{{ 'cart.general.cookies_required' | t }}</p>
   </div>
+</div>
 {% endif %}
