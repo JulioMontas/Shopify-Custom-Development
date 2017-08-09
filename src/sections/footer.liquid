@@ -1,6 +1,6 @@
 <footer class="page-width">
-
-  {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
+  <!-- We not using this until next month -->
+  <!-- {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
   <ul>
     {% for social in social_accounts %}
       {%- assign social_handle = social | handleize -%}
@@ -17,9 +17,9 @@
       {% endif %}
 
     {% endfor %}
-  </ul>
+  </ul> -->
 
-  {% if section.settings.show_payment_icons %}
+  <!-- {% if section.settings.show_payment_icons %}
     {% unless shop.enabled_payment_types == empty %}
       {%- assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' -%}
 
@@ -36,19 +36,17 @@
         {% endfor %}
       </ul>
     {% endunless %}
-  {% endif %}
+  {% endif %} -->
 
   {%- assign footer_linklist = section.settings.footer_linklist -%}
   {% if linklists[footer_linklist].links.size > 0 %}
     <ul>
+        <li><small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}</small></li>
       {% for link in linklists[footer_linklist].links %}
         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
     </ul>
   {% endif %}
-  <div class="subfooter">
-    <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
-  </div>
 </footer>
 
 {% schema %}
@@ -69,5 +67,26 @@
       }
     ]
   }
-
 {% endschema %}
+
+{% stylesheet %}
+
+#shopify-section-footer, footer.page-width {
+  background: #FAFAFA;
+  padding-top: 1px;
+  letter-spacing: 0.5px;}
+
+footer ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px;}
+
+footer ul li{list-style: none;}
+
+footer ul:nth-child(1) > li:nth-child(2) a {font-size: 0.8em;}
+
+footer ul li a {
+	text-decoration:none;
+  color:#5343C2;}
+
+{% endstylesheet %}
