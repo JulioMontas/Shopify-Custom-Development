@@ -118,6 +118,12 @@
   <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
 </div>
 
+<div class="page-width">
+  {% if section.settings.show_share_buttons %}
+    {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+  {% endif %}
+</div>
+
 {% schema %}
   {
     "name": "Product pages",
@@ -168,12 +174,16 @@ jQuery('.quantity').each(function() {
 
 
 {% stylesheet %}
+
 .reviewSection .spr-container{
   padding: 0px;
 	border-style: none;
 }
 
-.reviewSection .spr-header-title::before {
+
+
+.reviewSection .spr-header-title::before,
+.social-sharing h2::before {
 	content: '';
 	display: block;
 	width: 1110px;
@@ -185,7 +195,8 @@ jQuery('.quantity').each(function() {
 	z-index: -1;
 }
 
-.reviewSection .spr-header-title {
+.reviewSection .spr-header-title,
+.social-sharing h2 {
 	text-align: center;
 	font-size: 1.25em;
 	color: #333;
@@ -195,16 +206,29 @@ jQuery('.quantity').each(function() {
 	position: relative;
 }
 
-.reviewSection .spr-header-title::after {
+
+.reviewSection .spr-header-title::after,
+.social-sharing > h2:nth-child(1)::after {
 	background: white;
-	/* content: ""; */
+	content: "";
 	display: table;
-	width: 180px;
 	height: 30px;
 	margin: 0 auto;
 	margin-top: -26px;
 	z-index: 139;
 }
+
+.reviewSection .spr-header-title::after {
+	width: 180px;
+}
+
+.social-sharing > h2:nth-child(1)::after {
+	width: 75px;
+}
+
+
+
+
 
 .reviewSection .spr-icon {
 	color: #5343C2;
@@ -319,4 +343,23 @@ input[type=number]{-moz-appearance: textfield;}
   bottom: -1px;
   height: 50%;
 }
+
+
+
+
+
+
+.social-sharing {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.social-sharing a:nth-child(1) {
+	margin-left:0;
+}
+
+.social-sharing a {
+	margin-left:15px;
+}
+
 {% endstylesheet %}
