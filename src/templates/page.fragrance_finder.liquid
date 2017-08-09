@@ -1,124 +1,4 @@
-<style>
-.list-of-four a.slick-slide {
- text-decoration: none;
- letter-spacing: 1px;
- text-align: center;
-}
-.list-of-four a.slick-slide span {
- /*border: 1px solid red;
- background: yellow;*/
- display: inline-block;
- height: 110px;
- vertical-align: bottom;
-}
-.center{
- text-align: center;
-}
-.center h2 {
- text-transform: uppercase;
- font-style: italic;
- font-size: 1.4em;
- margin-bottom: 2.5em;
- color: #333;
-}
-.list-of-four {
- margin-bottom: 1em;
-}
-.list-of-four h2 {
- color: #333;
- text-transform: uppercase;
- font-size: 0.9em;
-}
-.list-of-four p {
- color: #9D9D9D;
- font-size: 0.9em;
- line-height: 20px;
- margin: -5px 20px 11px;
-}
-.products-collections section a p:nth-child(4) {
- color: #5343C2;
- font-style: italic;
-}
-
-/*Arrows position */
-.products-collections section div button:nth-child(1) {margin-left: -25px;}
-.products-collections section div button:nth-child(3) {margin-right: -25px;}
-
-/* Flip Corner Images */
-.flip{
- -moz-transform: scaleX(-1);
- -o-transform: scaleX(-1);
- -webkit-transform: scaleX(-1);
- transform: scaleX(-1);
- filter: FlipH;
- -ms-filter: "FlipH";
-}
-
-/* Dropdown Menu */
-.dropbtn {
- color: #333;
- font-size: 0.8em;
- cursor: pointer;
- background: none;
- padding: 16px 50px;
- border-radius: 5px;
- text-transform: uppercase;
- letter-spacing: 1px;
-}
-
-
-.dropdown {
-   position: relative;
-   display: inline-block;
-}
-
-.dropdown-content {
- display: none;
- position: absolute;
- background-color: #f9f9f9;
- min-width: 75%;
- z-index: 1;
- margin-left: -22px;
-}
-
-.dropdown-content a {
-   color: black;
-   padding: 12px 16px;
-   text-decoration: none;
-   display: block;
-}
-
-.dropdown-content a:hover {
- background-color: #f1f1f1
-}
-
-.dropdown:hover .dropdown-content {
-   display: block;
-}
-
-.dropdown:hover .dropbtn {
- color:#999;
- border: 2px solid #999;
-}
-.center{
- margin: 0 auto;
-}
-.center p {
- margin: 90px 0% 60px;
- font-weight: normal;
- font-style: italic;
- font-size: 1.1em;
- letter-spacing: 1px;
-}
-.fragrance-finder{
- margin-bottom: 10em;
-}
-.fragrance-finder:nth-child(2){
- margin-top: 2.5em;
-}
-</style>
-
-<div class="grid__item fragrance-finder">
+<div class="fragrance-finder">
   <div class="grid">
     <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/aromatic_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
     <div class="grid__item medium-up--eight-tenths">
@@ -155,17 +35,12 @@
              {% endfor %}
              </a>
            </div>
-           <div class="center">
-             <div class="dropdown">
-               <button class="dropbtn" style="border: 2px solid #673C7E;">Aromatic</button>
-               <div class="dropdown-content">
-                 <a href="/collections/fragrance-finder-aromatic-all/">Aromatic</a>
-                 <a href="/collections/fragrance-finder-aromatic-aquatic/">Aromatic Aquatic</a>
-                 <a href="/collections/fragrance-finder-aromatic-fougere/">Aromatic Fougere</a>
-                 <a href="/collections/fragrance-finder-aromatic-fruity/">Aromatic Fruity</a>
-               </div>
-             </div>
-           </div>
+           <ul class="finder-btn">
+             <li><a href="/collections/fragrance-finder-aromatic-all/">Aromatic</a></li>
+             <li><a href="/collections/fragrance-finder-aromatic-aquatic/">Aromatic Aquatic</a></li>
+             <li><a href="/collections/fragrance-finder-aromatic-fougere/">Aromatic Fougere</a></li>
+             <li><a href="/collections/fragrance-finder-aromatic-fruity/">Aromatic Fruity</a></li>
+           </ul>
          </section>
        </div>
       </div>
@@ -174,7 +49,7 @@
   </div>
 </div>
 
-<div class="grid__item fragrance-finder">
+<div class="fragrance-finder">
    <div class="grid">
      <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/chypre_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
      <div class="grid__item medium-up--eight-tenths">
@@ -211,16 +86,11 @@
                {% endfor %}
                </a>
              </div>
-            <div class="center">
-              <div class="dropdown">
-                <button class="dropbtn" style="border: 2px solid #536E4B;">Chypre</button>
-                <div class="dropdown-content">
-                  <a href="/collections/fragrance-finder-chypre-all/">Chypre</a>
-                  <a href="/collections/fragrance-finder-chypre-floral">Chypre Floral</a>
-                  <a href="/collections/fragrance-finder-chypre-fruity/">Chypre Fruity</a>
-                </div>
-              </div>
-            </div>
+              <ul class="finder-btn">
+                <li><a href="/collections/fragrance-finder-chypre-all/">Chypre</a></li>
+                <li><a href="/collections/fragrance-finder-chypre-floral">Chypre Floral</a></li>
+                <li><a href="/collections/fragrance-finder-chypre-fruity/">Chypre Fruity</a></li>
+              </ul>
           </section>
         </div>
        </div>
@@ -229,7 +99,7 @@
    </div>
  </div>
 
- <div class="grid__item fragrance-finder">
+ <div class="fragrance-finder">
     <div class="grid">
       <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/citrus_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
       <div class="grid__item medium-up--eight-tenths">
@@ -266,14 +136,9 @@
                {% endfor %}
                </a>
              </div>
-             <div class="center">
-               <div class="dropdown">
-                 <button class="dropbtn" style="border: 2px solid #F59B0C;">Citrus</button>
-                 <div class="dropdown-content">
-                   <a href="/collections/fragrance-finder-citrus-aromatic">Citrus Aromatic</a>
-                 </div>
-               </div>
-             </div>
+               <ul class="finder-btn">
+                 <li><a href="/collections/fragrance-finder-citrus-aromatic">Citrus Aromatic</a></li>
+               </ul>
            </section>
          </div>
         </div>
@@ -282,7 +147,7 @@
     </div>
   </div>
 
-  <div class="grid__item fragrance-finder">
+  <div class="fragrance-finder">
      <div class="grid">
        <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Floral_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
        <div class="grid__item medium-up--eight-tenths">
@@ -319,21 +184,16 @@
                  {% endfor %}
                  </a>
                </div>
-              <div class="center">
-                <div class="dropdown">
-                  <button class="dropbtn" style="border: 2px solid #E44690;">Floral</button>
-                  <div class="dropdown-content">
-                    <a href="/collections/fragrance-finder-floral-all">Floral</a>
-                    <a href="/collections/fragrance-finder-floral-aquatic">Floral Aquatic</a>
-                    <a href="/collections/fragrance-finder-floral-fruity">Floral Fruity</a>
-                    <a href="/collections/fragrance-finder-floral-fruity-gormand">Floral Fruity Gormand</a>
-                    <a href="/collections/fragrance-finder-floral-green">Floral Green</a>
-                    <a href="/collections/fragrance-finder-floral-musk">Floral Musk</a>
-                    <a href="/collections/fragrance-finder-floral-woody-musk">Floral Woody Musk</a>
-                    <a href="/collections/fragrance-finder-floral-woody">Floral Woody</a>
-                  </div>
-                </div>
-              </div>
+                <ul class="finder-btn">
+                  <li><a href="/collections/fragrance-finder-floral-all">Floral</a></li>
+                  <li><a href="/collections/fragrance-finder-floral-aquatic">Floral Aquatic</a></li>
+                  <li><a href="/collections/fragrance-finder-floral-fruity">Floral Fruity</a></li>
+                  <li><a href="/collections/fragrance-finder-floral-fruity-gormand">Floral Fruity Gormand</a></li>
+                  <li><a href="/collections/fragrance-finder-floral-green">Floral Green</a></li>
+                  <li><a href="/collections/fragrance-finder-floral-musk">Floral Musk</a></li>
+                  <li><a href="/collections/fragrance-finder-floral-woody-musk">Floral Woody Musk</a></li>
+                  <li><a href="/collections/fragrance-finder-floral-woody">Floral Woody</a></li>
+                </ul>
             </section>
           </div>
          </div>
@@ -342,7 +202,7 @@
      </div>
    </div>
 
-   <div class="grid__item fragrance-finder">
+   <div class="fragrance-finder">
       <div class="grid">
         <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/leather_-white_background-_320X1150_copy.jpg?4587741525595457670" alt=""></div>
         <div class="grid__item medium-up--eight-tenths">
@@ -379,14 +239,9 @@
                  {% endfor %}
                  </a>
                </div>
-               <div class="center">
-                 <div class="dropdown">
-                   <button class="dropbtn" style="border: 2px solid #A45B52;">Leather</button>
-                   <div class="dropdown-content">
-                     <a href="/collections/fragrance-finder-leather-all">Leather</a>
-                   </div>
-                 </div>
-               </div>
+                 <ul class="finder-btn">
+                   <li><a href="/collections/fragrance-finder-leather-all">Leather</a></li>
+                 </ul>
              </section>
            </div>
           </div>
@@ -395,7 +250,7 @@
       </div>
     </div>
 
-    <div class="grid__item fragrance-finder">
+    <div class="fragrance-finder">
        <div class="grid">
          <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Oriental_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
          <div class="grid__item medium-up--eight-tenths">
@@ -432,19 +287,14 @@
                    {% endfor %}
                    </a>
                  </div>
-                <div class="center">
-                  <div class="dropdown">
-                    <button class="dropbtn" style="border: 2px solid #E7A078;">Oriental</button>
-                    <div class="dropdown-content">
-                      <a href="/collections/fragrance-finder-oriental-all">Oriental</a>
-                      <a href="/collections/fragrance-finder-oriental-floral">Oriental Floral</a>
-                      <a href="/collections/fragrance-finder-oriental-fougere">Oriental Fougere</a>
-                      <a href="/collections/fragrance-finder-oriental-spicy">Oriental Spicy</a>
-                      <a href="/collections/fragrance-finder-oriental-woody">Oriental Woody</a>
-                      <a href="/collections/fragrance-finder-oriental-vanilla">Oriental Vanilla</a>
-                    </div>
-                  </div>
-                </div>
+                  <ul class="finder-btn">
+                    <li><a href="/collections/fragrance-finder-oriental-all">Oriental</a></li>
+                    <li><a href="/collections/fragrance-finder-oriental-floral">Oriental Floral</a></li>
+                    <li><a href="/collections/fragrance-finder-oriental-fougere">Oriental Fougere</a></li>
+                    <li><a href="/collections/fragrance-finder-oriental-spicy">Oriental Spicy</a></li>
+                    <li><a href="/collections/fragrance-finder-oriental-woody">Oriental Woody</a></li>
+                    <li><a href="/collections/fragrance-finder-oriental-vanilla">Oriental Vanilla</a></li>
+                  </ul>
               </section>
             </div>
            </div>
@@ -453,7 +303,7 @@
        </div>
      </div>
 
-     <div class="grid__item fragrance-finder">
+     <div class="fragrance-finder">
         <div class="grid">
           <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/WOOD_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
           <div class="grid__item medium-up--eight-tenths">
@@ -490,22 +340,17 @@
                    {% endfor %}
                    </a>
                  </div>
-                 <div class="center">
-                   <div class="dropdown">
-                     <button class="dropbtn" style="border: 2px solid #544849;">Woody</button>
-                     <div class="dropdown-content">
-                       <a href="/collections/fragrance-finder-woody-all">Woody</a>
-                       <a href="/collections/fragrance-finder-woody-aromatic">Woody Aromatic</a>
-                       <a href="/collections/fragrance-finder-woody-aquatic">Woody Aquatic</a>
-                       <a href="/collections/fragrance-finder-woody-citrus">Woody Citrus</a>
-                       <a href="/collections/fragrance-finder-woody-floral">Woody Floral</a>
-                       <a href="/collections/fragrance-finder-woody-floral-green">Woody Floral Green</a>
-                       <a href="/collections/fragrance-finder-woody-floral-cedarwood">Woody Floral Cedarwood</a>
-                       <a href="/collections/fragrance-finder-woody-spicy">Woody Spicy</a>
-                       <a href="/collections/fragrance-finder-woody-vetiver">Woody Vetiver</a>
-                     </div>
-                   </div>
-                 </div>
+                   <ul class="finder-btn">
+                     <li><a href="/collections/fragrance-finder-woody-all">Woody</a></li>
+                     <li><a href="/collections/fragrance-finder-woody-aromatic">Woody Aromatic</a></li>
+                     <li><a href="/collections/fragrance-finder-woody-aquatic">Woody Aquatic</a></li>
+                     <li><a href="/collections/fragrance-finder-woody-citrus">Woody Citrus</a></li>
+                     <li><a href="/collections/fragrance-finder-woody-floral">Woody Floral</a></li>
+                     <li><a href="/collections/fragrance-finder-woody-floral-green">Woody Floral Green</a></li>
+                     <li><a href="/collections/fragrance-finder-woody-floral-cedarwood">Woody Floral Cedarwood</a></li>
+                     <li><a href="/collections/fragrance-finder-woody-spicy">Woody Spicy</a></li>
+                     <li><a href="/collections/fragrance-finder-woody-vetiver">Woody Vetiver</a></li>
+                   </ul>
                </section>
              </div>
             </div>
