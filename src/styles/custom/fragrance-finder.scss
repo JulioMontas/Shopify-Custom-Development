@@ -77,7 +77,6 @@
 
 
 @include media-query($medium-up) {
-  .grid__item.medium-up--one-tenth {
-  	display: block;
-  }
+  .grid__item.medium-up--one-tenth {display: block;}
+  .fragrance-finder {margin-bottom: 10em;}
 }
