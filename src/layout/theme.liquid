@@ -67,7 +67,46 @@
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
+
+
   {% section 'header' %}
+
+  <div class="header-dropdown" style="display:none;">
+    <div class="page-width">
+      <section>
+        <h3>Explore</h3>
+        <ul>
+        {% for link in linklists.top-header.links %}
+           <li>{{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+        </ul>
+      </section>
+      <section>
+        <h3>Fragrances</h3>
+        <ul>
+        {% for link in linklists.top-header.links %}
+           <li>{{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+        </ul>
+      </section>
+      <section>
+        <h3>Home Fragrances</h3>
+        <ul>
+        {% for link in linklists.top-header.links %}
+           <li>{{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+        </ul>
+      </section>
+      <section>
+        <h3>Bath & Body</h3>
+        <ul>
+        {% for link in linklists.top-header.links %}
+           <li>{{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+        </ul>
+      </section>
+    </div>
+  </div>
 
   <main role="main" id="MainContent">
     {{ content_for_layout }}
