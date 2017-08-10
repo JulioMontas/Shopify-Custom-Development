@@ -1,141 +1,76 @@
-<style>
-.wide-backgrond{
-  height: 70vh;
-  background-image: linear-gradient(41deg, #bba2c8, #e895af);
-  color:white;
-  letter-spacing: 1px;
-}
-.wide-backgrond section {
-	text-align: center;
-	padding-top: 12%;
-}
-.wide-backgrond section p {
-	font-size: 2.5em;
-	font-weight: normal;
-	margin-bottom: 2em;
-	font-style: italic;
-}
-.wide-backgrond section a {
-	text-decoration: none;
-	color: white;
-	border: 2px solid white;
-	display: block;
-	width: 170px;
-	margin: 0 auto;
-	padding: 15px 0px;
-	background: rgba(255,255,255,0.2);
-	border-radius: 5px;
-	text-transform: uppercase;
-	font-size: 0.8em;
-	letter-spacing: 2px;
-}
-.wide-backgrond section a:hover {
-  background: rgba(255,255,255,0.0);
-}
-
-.blog-articles {
-	margin-top: -11em;
-	display: flex;
-	justify-content: center;
-}
-.blog-articles ul{
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
-.blog-articles ul li a {
-	position: relative;
-	display: block;
-	flex: none;
-	width: 450px;
-	height: 250px;
-	margin: .8em .8em;
-	color: #fff;
-	perspective: 1000px;
-	letter-spacing: 1px;
-}
-.blog-articles ul li a figure,
-.blog-articles ul li a figure img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border-radius: 5px;
-}
-.blog-articles ul li a figure figcaption {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	padding: 7.8em 2em;
-	text-align: center;
-	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
-	border-radius: 5px;
-	height: 100%;
-}
-.blog-articles ul li a figure figcaption h3 {
-	font-size: 1em;
-	font-weight: 100;
-	line-height: 21px;
-}
-.blog-articles ul li a figure figcaption p {
-	justify-content: space-between;
-	display: flex;
-	font-weight: 100;
-	margin-top: 8px;
-	color: #afafaf;
-}
-.blog-articles ul li a figure figcaption .line {
-	background: #afafaf;
-	height: 4px;
-	width: 100%;
-	display: block;
-	border-radius: 5px;
-}
-</style>
-
-<div class="wide-backgrond">
-  <section>
-    <p>Something Amazing is Launching This Fall 2017</p>
-    <!-- <a href="#">Subscribe</a> -->
-  </section>
-</div>
-<nav class="blog-articles">
-  <ul>
-    <li>
-      <a href="#">
-        <figure>
-          <img src="http://media.istockphoto.com/photos/happy-woman-picture-id606210836" alt="" />
-          <figcaption>
-            <h3>Night Creams Will Help Your Skin To Relax Become Younger</h3>
-            <span class="line"></span>
-            <p>July 2017 <span>WWD</span></p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <figure>
-          <img src="http://media.istockphoto.com/vectors/floral-seamless-vector-pattern-design-pink-white-vector-id520803054" alt="" />
-          <figcaption>
-            <h3>Night Creams Will Help Your Skin To Relax Become Younger, Night Creams Will Help.</h3>
-            <span class="line"></span>
-            <p>July 2017 <span>WWD</span></p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <figure>
-          <img src="http://media.istockphoto.com/photos/beautiful-woman-holding-artificial-heart-picture-id605768930" alt="" />
-          <figcaption>
-            <h3>Night Creams Will Help Your Skin To Relax Become Younger</h3>
-            <span class="line"></span>
-            <p>July 2017 <span>WWD</span></p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-  </ul>
-</nav>
+<div class="pressPage">
+  <div class="wide-intro">
+    <section>
+      <h2>Press</h2>
+      <p>Short description of what you can find in this page</p>
+    </section>
+  </div> <!-- End of .wide-intro -->
+  <div class="archive-list">
+    <section>
+      <table class="responsive-table">
+        <thead class="small--hide">
+          <tr>
+            <th colspan="1">Publication</th>
+            <th colspan="1">Article</th>
+            <th colspan="1">Published</th>
+            <th colspan="1">Media</th>
+          </tr>
+          <tbody>
+            <tr class="responsive-table-row">
+              <td data-label="Publication" class="publication"><p>Popsugar</p></td>
+              <td data-label="Article" class="article"><p>These Are the 6 Trendiest Fragrance Notes For Summer 2017</p></td>
+              <td data-label="Published" class="published"><p>7/1/2017</p></td>
+              <td data-label="Media" class="media">
+                <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr class="responsive-table-row">
+              <td data-label="Publication" class="publication"><p>Bustle</p></td>
+              <td data-label="Article" class="article"><p>9 Millennial Pink Beauty Products That Will Turn Your Medicine Cabinet Into An Instagram Moment</p></td>
+              <td data-label="Published" class="published"><p>7/1/2017</p></td>
+              <td data-label="Media" class="media">
+                <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr class="responsive-table-row">
+              <td data-label="Publication" class="publication"><p>Wag Mag</p></td>
+              <td data-label="Article" class="article"><p>The Sweet Scent of Success</p></td>
+              <td data-label="Published" class="published"><p>6/1/2017</p></td>
+              <td data-label="Media" class="media">
+                <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr class="responsive-table-row">
+              <td data-label="Publication" class="publication"><p>Luxury Daily</p></td>
+              <td data-label="Article" class="article"><p>Lalique's Latest Perfume Trio Inspired by Heritage, Crystal-making Process </p></td>
+              <td data-label="Published" class="published"><p>5/1/2017</p></td>
+              <td data-label="Media" class="media">
+                <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr class="responsive-table-row">
+              <td data-label="Publication" class="publication"><p>Now Smell This</p></td>
+              <td data-label="Article" class="article"><p>Lalique Mon Premier Cristal - new perfumes</p></td>
+              <td data-label="Published" class="published"><p>5/1/2017</p></td>
+              <td data-label="Media" class="media">
+                <a href="#"><i class="fa fa-file-image-o" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            <tr class="responsive-table-row">
+              <td data-label="Publication" class="publication"><p>Ca Fleure Bon</p></td>
+              <td data-label="Article" class="article"><p>New Fragrance Review: Parfums de Marly Delina (Quentin Bisch) 2017 + A Horse of A Different Color Draw</p></td>
+              <td data-label="Published" class="published"><p>5/1/2017</p></td>
+              <td data-label="Media" class="media">
+                <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </thead>
+      </table>
+    </section>
+  </div> <!-- End of .archive-list -->
+</div><!-- End of .pressPage -->

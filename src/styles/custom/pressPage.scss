@@ -1,0 +1,47 @@
+.pressPage{letter-spacing: 1px;}
+
+.pressPage .wide-intro{
+  height: 40vh;
+  background-image: linear-gradient(41deg, #bba2c8, #e895af);
+  color:white;
+}
+.pressPage .wide-intro section {
+	text-align: center;
+	padding-top: 8.5%;
+	line-height: 0.8em;
+}
+.pressPage .wide-intro section h2 {
+	font-size: 1.8em;
+	text-transform: uppercase;
+}
+.pressPage .wide-intro section p {
+	font-size: 1.3em;
+	font-weight: 100;
+	font-style: italic;
+}
+.pressPage .archive-list .responsive-table {
+	width: 100%;
+	margin-top: -3.4em;
+}
+.pressPage .archive-list .responsive-table .small--hide {
+	height: 55px;
+	color: #FFF;
+}
+.pressPage .archive-list .responsive-table-row {background: #FFF;}
+.pressPage .archive-list .responsive-table-row:nth-of-type(odd) {background: #FAFAFA;}
+.pressPage .archive-list .responsive-table-row td {text-align: center;}
+
+.pressPage .archive-list .responsive-table-row .publication p {
+  font-size: 1em;
+  font-weight: bold;
+}
+.pressPage .archive-list .responsive-table-row .article p {
+  font-size: 0.9em;
+  font-weight: normal;
+  color:#666;
+}
+.pressPage .archive-list .responsive-table-row .published p {
+  font-size: 0.8em;
+  font-weight: normal;
+  color:#666;
+}
