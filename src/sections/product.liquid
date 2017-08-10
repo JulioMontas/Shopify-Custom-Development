@@ -9,22 +9,11 @@
   <meta itemprop="image" content="{{ featured_image | img_url: '600x600' }}">
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
 
-  <div class="grid__item">
+  <div class="grid__item productPage">
     <div class="grid page-width" style="margin-bottom: 5em;">
       <div class="grid__item medium-up--one-half productPage-images">
         <h3>{{ current_variant.price | money }}</h3>
         <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
-        <!-- {% if product.images.size > 1 %}
-          <ul>
-            {% for image in product.images %}
-              <li>
-                <a href="{{ image.src | img_url: '480x480' }}" data-product-single-thumbnail>
-                  <img src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}">
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %} -->
       </div>
 
       <div class="grid__item medium-up--one-half productPage-description">
