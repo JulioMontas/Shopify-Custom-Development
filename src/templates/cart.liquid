@@ -1,61 +1,5 @@
 {% if cart.item_count > 0 %}
-
-<style media="screen">
-
-/*Move the text Product to the left*/
-.small--hide > tr:nth-child(1) > th:nth-child(1) {text-align: left;}
-
-/* Image style */
-tr.responsive-table-row  td:nth-child(1) {text-align: center;}
-
-/* Product */
-tr.responsive-table-row td{padding: 40px;}
-
-/* Product Link */
-tr.responsive-table-row td:nth-child(2) > a:nth-child(1){
-  text-decoration: none;
-  color: #5343C2;}
-
-/* Product Vendor */
-tr.responsive-table-row td:nth-child(2) > p:nth-child(2){
-  font-size: 0.9em;
-  margin-top: 5px;}
-
-/* Product Remove btn */
-tr.responsive-table-row td a:nth-child(3) {
-	text-decoration: none;
-	color: #5343C2;
-	border: 1px solid #c9c9c9;
-	padding: 5px 30px 6px;
-	border-radius: 5px;}
-
-
-.small--hide::after {
-	display: block;
-	content: "";
-	width: 1064px;
-	height: 1px;
-	background: #e8e9eb;
-	position: absolute;
-	top: 230px;
-}
-
-
-
-/* Price */
-/*Total*/
-tr.responsive-table-row > td:nth-child(3),
-tr.responsive-table-row td:nth-child(5) {
-	font-size: 0.9em;
-	color: #666;
-}
-
-
-
-</style>
-
-
-<div class="page-width">
+<div class="page-width shoppingCart">
   <h4>{{ 'cart.general.title' | t }}</h4>
 
   <form action="/cart" method="post" novalidate>
@@ -143,27 +87,27 @@ tr.responsive-table-row td:nth-child(5) {
       </tbody>
     </table>
 
-    {% if settings.cart_notes_enable %}
+    <!-- {% if settings.cart_notes_enable %}
       <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
       <textarea name="note" id="CartSpecialInstructions">{{ cart.note }}</textarea>
-    {% endif %}
+    {% endif %} -->
 
-    <p>{{ 'cart.general.subtotal' | t }}</p>
-    <p>{{ cart.total_price | money }}</p>
+    <p class="money">{{ cart.total_price | money }}</p>
+    <p class="subtotal">{{ 'cart.general.subtotal' | t }}: </p>
     {% if cart.total_discounts > 0 %}
       <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
     {% endif %}
-    <p>{{ 'cart.general.shipping_at_checkout' | t }}</p>
-    <input type="submit" name="update" value="{{ 'cart.general.update' | t }}">
-    <input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}">
+    <p class="taxes">{{ 'cart.general.shipping_at_checkout' | t }}</p>
+    <input type="submit" name="update" value="{{ 'cart.general.update' | t }}"><input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}">
   </form>
 {% else %}
-  <h1>{{ 'cart.general.title' | t }}</h1>
+
 
   {% comment %}
   Cart empty state
   {% endcomment %}
-  <div class="supports-cookies">
+  <div class="supports-cookies page-width">
+    <h1>{{ 'cart.general.title' | t }}</h1>
     <p>{{ 'cart.general.empty' | t }}</p>
     <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
   </div>

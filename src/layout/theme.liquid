@@ -67,48 +67,46 @@
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
-
-
   {% section 'header' %}
 
   <div class="header-dropdown" style="display:none;">
     <div class="page-width">
       <section>
-        <h3>Fragrances</h3>
+        <h3><a href="/pages/fragrances">Fragrances</a></h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.fragrances.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
       </section>
       <section>
-        <h3>Home Fragrances</h3>
+        <h3><a href="/pages/home-fragrances">Home Fragrances</a></h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.home-fragrances.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
       </section>
       <section>
-        <h3>Skincare</h3>
+        <h3><a href="/pages/skincare">Skincare</a></h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.skincare.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
       </section>
       <section>
-        <h3>Bath & Body</h3>
+        <h3><a href="/pages/bath-and-body">Bath & Body</a></h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.bath-body.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
       </section>
       <section>
-        <h3>Hair Care</h3>
+        <h3><a href="/pages/hair-care">Hair Care</a></h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.haircare.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
