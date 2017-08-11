@@ -76,7 +76,7 @@
       <section>
         <h3>Fragrances</h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.fragrances.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
@@ -84,7 +84,7 @@
       <section>
         <h3>Home Fragrances</h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.home-fragrances.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
@@ -92,7 +92,7 @@
       <section>
         <h3>Skincare</h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.skincare.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
@@ -100,7 +100,7 @@
       <section>
         <h3>Bath & Body</h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.bath-body.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
@@ -108,7 +108,7 @@
       <section>
         <h3>Hair Care</h3>
         <ul>
-        {% for link in linklists.top-header.links %}
+        {% for link in linklists.haircare.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
