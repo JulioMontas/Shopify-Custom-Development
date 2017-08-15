@@ -37,6 +37,7 @@
   letter-spacing: 1px;
 }
 .latest-product .btn-gradient {
+  letter-spacing: 1px;
 	padding: 20px 30px;
 	border-radius: 5px;
 	color: white;
@@ -45,6 +46,13 @@
   background: -webkit-linear-gradient(left, #bba2c8 50%, #e895af);
   background: linear-gradient(-28deg, #bba2c8 0%, #e895af 100%);
 }
+.latest-product .btn-gradient:hover{
+  background:#e895af;
+}
+
+
+
+
 
 @include media-query($medium-up) {
   .latest-product .description {padding: 0px 120px;}

@@ -41,10 +41,10 @@
   {%- assign footer_linklist = section.settings.footer_linklist -%}
   {% if linklists[footer_linklist].links.size > 0 %}
     <ul>
-        <li><small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}</small></li>
-      {% for link in linklists[footer_linklist].links %}
+        <li><small>© 2017, So-Avant-Garde</small></li>
+      <!-- {% for link in linklists[footer_linklist].links %}
         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-      {% endfor %}
+      {% endfor %} -->
     </ul>
   {% endif %}
 </footer>
