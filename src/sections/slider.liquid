@@ -3,7 +3,8 @@
   <div class="wrapper">
     <div class="photo is-animating">
       <img src="{{ block.settings.image | img_url: '1920x1080' }}" alt="{{ image.alt | escape }}">
-      <a href="{{ block.settings.url }}" class="btn-slider">{{ block.settings.textarea }}</a>
+      <a href="{{ block.settings.url }}" class="slide-text-btn"><span>{{ block.settings.textarea }}</span></a>
+      <a href="#" class="slide-arrow-btn"><i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></a>
     </div>
   </div>
   {% endfor %}
@@ -77,18 +78,25 @@
 	margin-left: -15px;
 	margin-right: 30px;
 }
-.btn-slider {
+
+
+
+.slick-slider .wrapper div a:nth-child(2) span {
+	width: 550px;
+	display: inline-flex;
+}
+
+
+.slide-text-btn {
+	font-family: Raleway;
 	position: absolute;
-	bottom: 55%;
+	bottom: 30%;
 	display: block;
 	width: 100%;
-	padding: 0;
-	margin: 0;
-	/* background: red; */
 	text-align: center;
 	color: white;
 	text-decoration: none;
 	font-size: 2.5em;
-	font-weight: bold;
+  text-shadow: 0 0 5px rgba(255,255,255,0.50);
 }
 {% endstylesheet %}
