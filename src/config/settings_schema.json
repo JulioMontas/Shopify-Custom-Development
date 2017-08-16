@@ -16,9 +16,14 @@
         "label": "Base size",
         "default": "16px",
         "options": [
-          { 
+          {
             "value": "'Roboto Condensed', sans-serif",
             "label": "Roboto Condensed",
+            "group": "My added fonts"
+          },
+          {
+            "value": "'Raleway', sans-serif",
+            "label": "Raleway",
             "group": "My added fonts"
           },
           {
