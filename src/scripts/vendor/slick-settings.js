@@ -60,11 +60,3 @@ $('.list-of-four').slick({
     }
   ]
 });
-
-$('header li:nth-child(1)').mouseover(function() {
-    $('.header-dropdown').stop(true, true).show(400);
-});
-
-// }).mouseout(function() {
-//     $('.header-dropdown').stop(true, true).hide(400);
-// });

@@ -13,7 +13,6 @@
  */
 // =require vendor/slick.min.js
 
-
 /*!
  * slick-settings.js
  */
@@ -23,6 +22,12 @@
  * anime.min.js
  */
 // =require vendor/anime.min.js
+
+/*!
+ * header-dropdown.js
+ */
+// =require vendor/header-dropdown.js
+
 
 // Attempts to preserve comments that likely contain licensing information,
 // even if the comment does not have directives such as `@license` or `/*!`.
