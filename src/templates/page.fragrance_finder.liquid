@@ -5,42 +5,134 @@
       <div class="page-width">
         <div class="products-collections">
          <section>
+           <h2 style="color:#673C7E;">Aromatic</h2>
            <div class="center"><p style="color:#673C7E;">Evoke the experience of the natural world with herbal notes of sage, rosemary, cumin, lavender, basil and other greens.</p></div>
-           <div class="list-of-four page-width">
-           {%- assign collection = collections.fragrance-finder-aromatic-all -%}
-             {% for product in collection.products limit: 12 %}
-               <a href="{{ product.url | within: collection }}">
-                 <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-                 <h2>{{ product.vendor }}</h2>
-                 <p>{{ product.title }}</p>
-                 <p>
-                   {% if product.compare_at_price > product.price %}
-                     {% if product.price_varies %}
-                       {%- assign sale_price = product.price | money -%}
-                       {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-                     {% else %}
-                       {{ 'products.product.on_sale' | t }}
-                       {{ product.price | money }}
-                     {% endif %}
-                   {% else %}
-                     {% if product.price_varies %}
-                       {%- assign price = product.price | money -%}
-                       {{ 'products.product.from_text_html' | t: price: price }}
-                     {% else %}
-                       {{ product.price | money }}
-                     {% endif %}
-                   {% endif %}
-                 </p>
-               {% else %}
-             {% endfor %}
-             </a>
-           </div>
-           <ul class="finder-btn">
-             <li><a href="/collections/fragrance-finder-aromatic-all/">Aromatic</a></li>
-             <li><a href="/collections/fragrance-finder-aromatic-aquatic/">Aromatic Aquatic</a></li>
-             <li><a href="/collections/fragrance-finder-aromatic-fougere/">Aromatic Fougere</a></li>
-             <li><a href="/collections/fragrance-finder-aromatic-fruity/">Aromatic Fruity</a></li>
+           <!-- <ul class="finder-btn"> -->
+           <ul class="tabs">
+             <li class="tab-link current" data-tab="tab-1">Aromatic</li>
+             <li class="tab-link" data-tab="tab-2">Aromatic Aquatic</li>
+             <li class="tab-link" data-tab="tab-3">Aromatic Fougere</li>
+             <li class="tab-link" data-tab="tab-4">Aromatic Fruity</li>
            </ul>
+             <div id="tab-1" class="list-of-four tab-content current">
+               {%- assign collection = collections.fragrance-finder-aromatic-all -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+            	</div> <!-- END tab-content -->
+
+            	<div id="tab-2" class="list-of-four tab-content">
+                {%- assign collection = collections.fragrance-finder-aromatic-aquatic -%}
+                  {% for product in collection.products limit: 12 %}
+                    <a href="{{ product.url | within: collection }}">
+                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                      <h2>{{ product.vendor }}</h2>
+                      <p>{{ product.title }}</p>
+                      <p>
+                        {% if product.compare_at_price > product.price %}
+                          {% if product.price_varies %}
+                            {%- assign sale_price = product.price | money -%}
+                            {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                          {% else %}
+                            {{ 'products.product.on_sale' | t }}
+                            {{ product.price | money }}
+                          {% endif %}
+                        {% else %}
+                          {% if product.price_varies %}
+                            {%- assign price = product.price | money -%}
+                            {{ 'products.product.from_text_html' | t: price: price }}
+                          {% else %}
+                            {{ product.price | money }}
+                          {% endif %}
+                        {% endif %}
+                      </p>
+                    {% else %}
+                  {% endfor %}
+                  </a>
+            	</div> <!-- END tab-content -->
+
+              <div id="tab-3" class="list-of-four tab-content">
+                {%- assign collection = collections.fragrance-finder-aromatic-fougere -%}
+                  {% for product in collection.products limit: 12 %}
+                    <a href="{{ product.url | within: collection }}">
+                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                      <h2>{{ product.vendor }}</h2>
+                      <p>{{ product.title }}</p>
+                      <p>
+                        {% if product.compare_at_price > product.price %}
+                          {% if product.price_varies %}
+                            {%- assign sale_price = product.price | money -%}
+                            {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                          {% else %}
+                            {{ 'products.product.on_sale' | t }}
+                            {{ product.price | money }}
+                          {% endif %}
+                        {% else %}
+                          {% if product.price_varies %}
+                            {%- assign price = product.price | money -%}
+                            {{ 'products.product.from_text_html' | t: price: price }}
+                          {% else %}
+                            {{ product.price | money }}
+                          {% endif %}
+                        {% endif %}
+                      </p>
+                    {% else %}
+                  {% endfor %}
+                  </a>
+            	</div> <!-- END tab-content -->
+
+              <div id="tab-4" class="list-of-four tab-content">
+                {%- assign collection = collections.fragrance-finder-aromatic-fruity -%}
+                  {% for product in collection.products limit: 12 %}
+                    <a href="{{ product.url | within: collection }}">
+                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                      <h2>{{ product.vendor }}</h2>
+                      <p>{{ product.title }}</p>
+                      <p>
+                        {% if product.compare_at_price > product.price %}
+                          {% if product.price_varies %}
+                            {%- assign sale_price = product.price | money -%}
+                            {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                          {% else %}
+                            {{ 'products.product.on_sale' | t }}
+                            {{ product.price | money }}
+                          {% endif %}
+                        {% else %}
+                          {% if product.price_varies %}
+                            {%- assign price = product.price | money -%}
+                            {{ 'products.product.from_text_html' | t: price: price }}
+                          {% else %}
+                            {{ product.price | money }}
+                          {% endif %}
+                        {% endif %}
+                      </p>
+                    {% else %}
+                  {% endfor %}
+                  </a>
+            	</div> <!-- END tab-content -->
          </section>
        </div>
       </div>
@@ -56,8 +148,14 @@
        <div class="page-width">
          <div class="products-collections">
            <section>
+             <h2 style="color:#536E4B;">Chypre</h2>
              <div class="center"><p style="color:#536E4B;">Wrap yourself in the sensual, woody elegance of bergamot, labdanum, musk and oakmoss.</p></div>
-             <div class="list-of-four page-width">
+             <ul class="tabs">
+               <li class="tab-link current" data-tab="tab-5">Chypre</li>
+               <li class="tab-link" data-tab="tab-6">Chypre Floral</li>
+               <li class="tab-link" data-tab="tab-7">Chypre Fruity</li>
+             </ul>
+             <div id="tab-5" class="list-of-four tab-content current">
              {%- assign collection = collections.fragrance-finder-chypre-all -%}
                {% for product in collection.products limit: 12 %}
                  <a href="{{ product.url | within: collection }}">
@@ -86,11 +184,66 @@
                {% endfor %}
                </a>
              </div>
-              <ul class="finder-btn">
-                <li><a href="/collections/fragrance-finder-chypre-all/">Chypre</a></li>
-                <li><a href="/collections/fragrance-finder-chypre-floral">Chypre Floral</a></li>
-                <li><a href="/collections/fragrance-finder-chypre-fruity/">Chypre Fruity</a></li>
-              </ul>
+
+             <div id="tab-6" class="list-of-four tab-content">
+               {%- assign collection = collections.fragrance-finder-chypre-fruity -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+            </div> <!-- END tab-content -->
+
+            <div id="tab-7" class="list-of-four tab-content">
+              {%- assign collection = collections.fragrance-finder-chypre-floral -%}
+                {% for product in collection.products limit: 12 %}
+                  <a href="{{ product.url | within: collection }}">
+                    <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                    <h2>{{ product.vendor }}</h2>
+                    <p>{{ product.title }}</p>
+                    <p>
+                      {% if product.compare_at_price > product.price %}
+                        {% if product.price_varies %}
+                          {%- assign sale_price = product.price | money -%}
+                          {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                        {% else %}
+                          {{ 'products.product.on_sale' | t }}
+                          {{ product.price | money }}
+                        {% endif %}
+                      {% else %}
+                        {% if product.price_varies %}
+                          {%- assign price = product.price | money -%}
+                          {{ 'products.product.from_text_html' | t: price: price }}
+                        {% else %}
+                          {{ product.price | money }}
+                        {% endif %}
+                      {% endif %}
+                    </p>
+                  {% else %}
+                {% endfor %}
+                </a>
+           </div> <!-- END tab-content -->
           </section>
         </div>
        </div>
@@ -99,6 +252,9 @@
    </div>
  </div>
 
+
+
+
  <div class="fragrance-finder">
     <div class="grid">
       <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/citrus_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
@@ -106,9 +262,13 @@
         <div class="page-width">
           <div class="products-collections">
            <section>
+             <h2 style="color:#F59B0C">Citrus Aromatic</h2>
              <div class="center"><p style="color:#F59B0C">Add an uplifting dose of fresh zest with a burst of lemon, bergamot, orange, and mandarin fragrances, perfect for summer.</p></div>
-             <div class="list-of-four page-width">
-             {%- assign collection = collections.fragrance-finder-citrus-all -%}
+             <ul class="tabs">
+               <li class="tab-link current" data-tab="tab-8">Citrus Aromatic</li>
+             </ul>
+             <div id="tab-8" class="list-of-four tab-content current">
+             {%- assign collection = collections.fragrance-finder-citrus-aromatic -%}
                {% for product in collection.products limit: 12 %}
                  <a href="{{ product.url | within: collection }}">
                    <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -136,9 +296,6 @@
                {% endfor %}
                </a>
              </div>
-               <ul class="finder-btn">
-                 <li><a href="/collections/fragrance-finder-citrus-aromatic">Citrus Aromatic</a></li>
-               </ul>
            </section>
          </div>
         </div>
@@ -154,8 +311,21 @@
          <div class="page-width">
            <div class="products-collections">
              <section>
+               <h2 style="color:#E44690;">Floral</h2>
                <div class="center"><p style="color:#E44690;">Let your feminine, playful spirit shine with a bouquet of jasmine, peony, gardenia and lily.</p></div>
-               <div class="list-of-four page-width">
+
+               <ul class="tabs">
+                 <li class="tab-link current" data-tab="tab-9">Floral</li>
+                 <li class="tab-link" data-tab="tab-10">Floral Aquatic</li>
+                 <li class="tab-link" data-tab="tab-11">Floral Fruity</li>
+                 <li class="tab-link" data-tab="tab-12">Floral Fruity Gormand</li>
+                 <li class="tab-link" data-tab="tab-13">Floral Green</li>
+                 <li class="tab-link" data-tab="tab-14">Floral Musk</li>
+                 <li class="tab-link" data-tab="tab-15">Floral Woody Musk</li>
+                 <li class="tab-link" data-tab="tab-16">Floral Woody</li>
+               </ul>
+
+               <div id="tab-9" class="list-of-four tab-content current">
                {%- assign collection = collections.fragrance-finder-floral-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -184,16 +354,217 @@
                  {% endfor %}
                  </a>
                </div>
-                <ul class="finder-btn">
-                  <li><a href="/collections/fragrance-finder-floral-all">Floral</a></li>
-                  <li><a href="/collections/fragrance-finder-floral-aquatic">Floral Aquatic</a></li>
-                  <li><a href="/collections/fragrance-finder-floral-fruity">Floral Fruity</a></li>
-                  <li><a href="/collections/fragrance-finder-floral-fruity-gormand">Floral Fruity Gormand</a></li>
-                  <li><a href="/collections/fragrance-finder-floral-green">Floral Green</a></li>
-                  <li><a href="/collections/fragrance-finder-floral-musk">Floral Musk</a></li>
-                  <li><a href="/collections/fragrance-finder-floral-woody-musk">Floral Woody Musk</a></li>
-                  <li><a href="/collections/fragrance-finder-floral-woody">Floral Woody</a></li>
-                </ul>
+
+               <div id="tab-10" class="list-of-four tab-content">
+               {%- assign collection = collections.fragrance-finder-floral-aquatic -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+               </div>
+
+               <div id="tab-11" class="list-of-four tab-content">
+               {%- assign collection = collections.fragrance-finder-floral-fruity -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+               </div>
+
+
+               <div id="tab-12" class="list-of-four tab-content">
+               {%- assign collection = collections.fragrance-finder-floral-fruity-gormand -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+               </div>
+
+               <div id="tab-13" class="list-of-four tab-content">
+               {%- assign collection = collections.fragrance-finder-floral-green -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+               </div>
+
+               <div id="tab-14" class="list-of-four tab-content">
+               {%- assign collection = collections.fragrance-finder-floral-musk -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+               </div>
+
+               <div id="tab-15" class="list-of-four tab-content">
+               {%- assign collection = collections.fragrance-finder-floral-woody-musk -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+               </div>
+
+               <div id="tab-16" class="list-of-four tab-content">
+               {%- assign collection = collections.fragrance-finder-floral-woody -%}
+                 {% for product in collection.products limit: 12 %}
+                   <a href="{{ product.url | within: collection }}">
+                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                     <h2>{{ product.vendor }}</h2>
+                     <p>{{ product.title }}</p>
+                     <p>
+                       {% if product.compare_at_price > product.price %}
+                         {% if product.price_varies %}
+                           {%- assign sale_price = product.price | money -%}
+                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                         {% else %}
+                           {{ 'products.product.on_sale' | t }}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% else %}
+                         {% if product.price_varies %}
+                           {%- assign price = product.price | money -%}
+                           {{ 'products.product.from_text_html' | t: price: price }}
+                         {% else %}
+                           {{ product.price | money }}
+                         {% endif %}
+                       {% endif %}
+                     </p>
+                   {% else %}
+                 {% endfor %}
+                 </a>
+               </div>
             </section>
           </div>
          </div>
@@ -209,8 +580,12 @@
           <div class="page-width">
             <div class="products-collections">
              <section>
+               <h2 style="color:#A45B52;">Leather</h2>
                <div class="center"><p style="color:#A45B52;">Evoke the smoky richness of leather with sharp and spicy notes of honey, tobacco, wood.</p></div>
-               <div class="list-of-four page-width">
+               <ul class="tabs">
+                 <li class="tab-link current" data-tab="tab-17">Leather</li>
+               </ul>
+               <div id="tab-17" class="list-of-four tab-content current">
                {%- assign collection = collections.fragrance-finder-leather-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -239,9 +614,6 @@
                  {% endfor %}
                  </a>
                </div>
-                 <ul class="finder-btn">
-                   <li><a href="/collections/fragrance-finder-leather-all">Leather</a></li>
-                 </ul>
              </section>
            </div>
           </div>
@@ -250,6 +622,7 @@
       </div>
     </div>
 
+
     <div class="fragrance-finder">
        <div class="grid">
          <div class="grid__item medium-up--one-tenth flip"><img src="https://cdn.shopify.com/s/files/1/2191/4809/files/Oriental_-white_background-_320X1150.jpg?4587741525595457670" alt=""></div>
@@ -257,8 +630,17 @@
            <div class="page-width">
              <div class="products-collections">
                <section>
+                 <h2 style="color:#E7A078;">Oriental</h2>
                  <div class="center"><p style="color:#E7A078;">Create an intoxicating irresistible warmth with an accord of vanilla, musk, cinnamon, cardamom.</p></div>
-                 <div class="list-of-four page-width">
+                 <ul class="tabs">
+                   <li class="tab-link current" data-tab="tab-18">Oriental</li>
+                   <li class="tab-link" data-tab="tab-19">Oriental Floral</li>
+                   <li class="tab-link" data-tab="tab-20">Oriental Fougere</li>
+                   <li class="tab-link" data-tab="tab-21">Oriental Spicy </li>
+                   <li class="tab-link" data-tab="tab-22">Oriental Woody</li>
+                   <li class="tab-link" data-tab="tab-23">Oriental Vanilla</li>
+                 </ul>
+                 <div id="tab-18" class="list-of-four tab-content current">
                  {%- assign collection = collections.fragrance-finder-oriental-all -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -287,14 +669,157 @@
                    {% endfor %}
                    </a>
                  </div>
-                  <ul class="finder-btn">
-                    <li><a href="/collections/fragrance-finder-oriental-all">Oriental</a></li>
-                    <li><a href="/collections/fragrance-finder-oriental-floral">Oriental Floral</a></li>
-                    <li><a href="/collections/fragrance-finder-oriental-fougere">Oriental Fougere</a></li>
-                    <li><a href="/collections/fragrance-finder-oriental-spicy">Oriental Spicy</a></li>
-                    <li><a href="/collections/fragrance-finder-oriental-woody">Oriental Woody</a></li>
-                    <li><a href="/collections/fragrance-finder-oriental-vanilla">Oriental Vanilla</a></li>
-                  </ul>
+
+                 <div id="tab-19" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-oriental-floral -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-20" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-oriental-fougere -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-21" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-oriental-spicy -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-22" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-oriental-woody -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-23" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-oriental-vanilla -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
               </section>
             </div>
            </div>
@@ -310,8 +835,21 @@
             <div class="page-width">
               <div class="products-collections">
                <section>
+                 <h2 style="color:#544849;">Woody</h2>
                  <div class="center"><p style="color:#544849;">Add mystery with an earthy aroma of wood, patchouli, sandalwood, cedar and a hint of spice.</p></div>
-                 <div class="list-of-four page-width">
+
+                 <ul class="tabs">
+                   <li class="tab-link current" data-tab="tab-24">Woody</li>
+                   <li class="tab-link" data-tab="tab-25">Woody Aromatic</li>
+                   <li class="tab-link" data-tab="tab-26">Woody Aquatic</li>
+                   <li class="tab-link" data-tab="tab-27">Woody Citrus </li>
+                   <li class="tab-link" data-tab="tab-28">Woody Floral</li>
+                   <li class="tab-link" data-tab="tab-29">Woody Floral Green</li>
+                   <li class="tab-link" data-tab="tab-30">Woody Spicy</li>
+                   <li class="tab-link" data-tab="tab-31">Woody Vetiver</li>
+                 </ul>
+
+                 <div id="tab-24" class="list-of-four tab-content current">
                  {%- assign collection = collections.fragrance-finder-woody-all -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -340,17 +878,217 @@
                    {% endfor %}
                    </a>
                  </div>
-                   <ul class="finder-btn">
-                     <li><a href="/collections/fragrance-finder-woody-all">Woody</a></li>
-                     <li><a href="/collections/fragrance-finder-woody-aromatic">Woody Aromatic</a></li>
-                     <li><a href="/collections/fragrance-finder-woody-aquatic">Woody Aquatic</a></li>
-                     <li><a href="/collections/fragrance-finder-woody-citrus">Woody Citrus</a></li>
-                     <li><a href="/collections/fragrance-finder-woody-floral">Woody Floral</a></li>
-                     <li><a href="/collections/fragrance-finder-woody-floral-green">Woody Floral Green</a></li>
-                     <li><a href="/collections/fragrance-finder-woody-floral-cedarwood">Woody Floral Cedarwood</a></li>
-                     <li><a href="/collections/fragrance-finder-woody-spicy">Woody Spicy</a></li>
-                     <li><a href="/collections/fragrance-finder-woody-vetiver">Woody Vetiver</a></li>
-                   </ul>
+
+                 <div id="tab-25" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-woody-aromatic -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-26" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-woody-aquatic -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-27" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-woody-citrus -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-28" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-woody-floral -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-29" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-woody-floral-green -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-30" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-woody-spicy -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
+                 <div id="tab-31" class="list-of-four tab-content">
+                 {%- assign collection = collections.fragrance-finder-woody-vetiver -%}
+                   {% for product in collection.products limit: 12 %}
+                     <a href="{{ product.url | within: collection }}">
+                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                       <h2>{{ product.vendor }}</h2>
+                       <p>{{ product.title }}</p>
+                       <p>
+                         {% if product.compare_at_price > product.price %}
+                           {% if product.price_varies %}
+                             {%- assign sale_price = product.price | money -%}
+                             {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                           {% else %}
+                             {{ 'products.product.on_sale' | t }}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% else %}
+                           {% if product.price_varies %}
+                             {%- assign price = product.price | money -%}
+                             {{ 'products.product.from_text_html' | t: price: price }}
+                           {% else %}
+                             {{ product.price | money }}
+                           {% endif %}
+                         {% endif %}
+                       </p>
+                     {% else %}
+                   {% endfor %}
+                   </a>
+                 </div>
+
                </section>
              </div>
             </div>
