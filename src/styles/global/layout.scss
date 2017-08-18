@@ -3,7 +3,6 @@ body,
 html {
   background-color: $color-body;
 }
-
 .page-width {
   @include clearfix();
   max-width: $width-site;
@@ -20,7 +19,6 @@ html {
 	color: white;
 	text-decoration: none;
 }
-
 #top-header {
 	font-size: 0.8em;
 	letter-spacing: 0.1em;
@@ -41,7 +39,6 @@ html {
 	align-items: baseline;
 	padding: 0px 30px;
 }
-
 @-webkit-keyframes MoveBG {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -63,7 +60,6 @@ html {
 	align-items: center;
 	padding: 0px 25px 0px 0px;
 }
-
 #lower-header h1 a {
  	color: #999;
  	text-decoration: none;
@@ -72,10 +68,8 @@ html {
  	text-transform: uppercase;
  	letter-spacing: 2px;
 }
+#lower-header h1 a:hover {color: #333;}
 
-#lower-header h1 a:hover {
- color: #333;
-}
 #lower-header .site-nav {
 	flex-direction: row;
 	justify-content: space-between;
@@ -95,9 +89,7 @@ html {
    font-weight: 100;
  }
 
- #lower-header .site-nav li a:hover{
-  font-weight: 600;
-}
+#lower-header .site-nav li a:hover{font-weight: 600;}
 
 #lower-header .site-nav li a::after {
 	content: "";
@@ -107,7 +99,6 @@ html {
 	background: #999;
 	margin-top: 4px;
 }
-
 
 // Search bar
 #Search {
@@ -122,7 +113,6 @@ html {
   background: white;
   color:#999;
 }
-
 
 /*================ Collection Larger Button ================*/
 /*==========================================================*/
@@ -147,7 +137,6 @@ html {
 	color: #fff;
 	outline: none;
 }
-
 .tilter__figure,
 .tilter__image {
 	display: block;
@@ -159,8 +148,6 @@ html {
 
 .tilter__figure > * {transform: translateZ(0px); /* Force correct stacking order */}
 
-
-
 .tilter__figure {position: relative;}
 .tilter__figure::before {
 	content: '';
@@ -171,7 +158,6 @@ html {
 	height: 90%;
 	box-shadow: 0 25px 15px rgba(35,32,39,0.5);
 }
-
 .tilter__deco {
 	position: absolute;
 	top: 0;
@@ -182,9 +168,8 @@ html {
   border-radius: 5px;
 }
 
-.tilter__deco--overlay {
-	background-image: linear-gradient(45deg, rgba(226, 60, 99, 0.2), rgba(145, 58, 252, 0.2), rgba(16, 11, 192, 0.2));
-}
+// .tilter__deco--overlay {background-image: linear-gradient(45deg, rgba(226, 60, 99, 0.2), rgba(145, 58, 252, 0.2), rgba(16, 11, 192, 0.2));}
+.tilter__deco--overlay {background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(255,255,255,0), rgba(255,255,255,0));}
 
 .tilter__deco--shine div {
 	position: absolute;
@@ -194,13 +179,11 @@ html {
 	height: 200%;
 	/*background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);*/
 }
-
 .tilter__deco--lines {
 	fill: none;
 	stroke: #fff;
 	stroke-width: 1.5px;
 }
-
 .tilter__caption {
 	position: absolute;
 	bottom: 0;
@@ -221,7 +204,6 @@ html {
 	margin: 1em 0 0 0;
 	letter-spacing: 0.15em;
 }
-
 .collection-larger-btn ul {
 	display: flex;
 	flex-wrap: wrap;
