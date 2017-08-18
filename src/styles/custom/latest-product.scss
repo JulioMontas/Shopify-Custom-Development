@@ -57,7 +57,7 @@
 @include media-query($medium-up) {
   .latest-product .description {padding: 0px 120px;}
   .latest-product {
-	padding: 150px 100px;
+	// padding: 150px 100px;
 	margin-left: -30px;
   }
 }
