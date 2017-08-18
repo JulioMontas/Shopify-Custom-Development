@@ -32,7 +32,9 @@ $('.list-of-five').slick({
 });
 
 
+
 $('.list-of-four').slick({
+  speed: 300,
   infinite: false,
   slidesToShow: 4,
   slidesToScroll: 4,

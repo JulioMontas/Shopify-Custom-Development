@@ -46,7 +46,7 @@
 }
 
 .fragrance-finder .center p {
- margin: 90px 0% 60px;
+ margin: 25px 0% 20px;
  font-weight: normal;
  font-style: italic;
  font-size: 1.1em;
@@ -54,6 +54,12 @@
 }
 .fragrance-finder .fragrance-finder{margin-bottom: 10em;}
 .fragrance-finder .fragrance-finder:nth-child(2){margin-top: 2.5em;}
+
+//Title Name
+.fragrance-finder section h2:nth-child(1) {
+	text-align: center;
+	margin-top: 2.5em;
+}
 
 // Not showing the flowers in mobile
 .grid__item.medium-up--one-tenth {display: none;}
@@ -75,8 +81,19 @@
 }
 .fragrance-finder ul.finder-btn li{list-style: none;}
 
-
 @include media-query($medium-up) {
   .grid__item.medium-up--one-tenth {display: block;}
   .fragrance-finder {margin-bottom: 10em;}
 }
+
+
+/*---Featured Product - tab switch---*/
+ul.tabs {margin:0 0 25px 0; padding: 0px; list-style: none; text-align:center;}
+ul.tabs li {background:none; color:#106199; display: inline-block; padding: 6px 25px; cursor: pointer; font-size:14px; position:relative;}
+ul.tabs li.current {
+	color: #106199;
+	font-weight: bold;
+}
+// ul.tabs li.current:after {top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(136, 183, 213, 0); border-top-color: #106199; border-width: 10px; margin-left: -10px;}
+.tab-content {/*display: none;*/ position:absolute; left:-9999px;}
+.tab-content.current {/*display: inherit;*/ position:relative; left:0;}
