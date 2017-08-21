@@ -3,7 +3,7 @@
 .collectionPreview ul {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: left;
+	justify-content: center;
 	align-items: baseline;
 	text-align: center;
 	padding: 0;
@@ -18,21 +18,26 @@
 .collectionPreview ul li a {
 	text-decoration: none;
 }
+
 .collectionPreview ul li a h2{
   color: #333;
 	text-transform: uppercase;
 	font-size: 0.9em;
 }
+
 .collectionPreview ul li a p {
   color: #9D9D9D;
   font-size: 0.9em;
   line-height: 20px;
   margin: -5px 20px 11px;
 }
+
 .page-width ul  li a p:nth-child(4){
   color: #5343C2;
 	font-style: italic;
 }
+
+
 </style>
 
   <div class="page-width collectionPreview">
@@ -78,7 +83,8 @@
           </p>
         </a>
       </li>
-			
+
+
     {% else %}
       {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
         {% for i in (1..8) %}

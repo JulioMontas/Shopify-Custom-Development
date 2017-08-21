@@ -1,38 +1,7 @@
 {% paginate search.results by 10 %}
 
-<style media="screen">
-  .search ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: left;
-	align-items: baseline;
-	text-align: center;
-	padding: 0;
-	letter-spacing: 1px;
-	margin-top: 2.5em;
-}
-.search ul li {
-	list-style: none;
-	width: 265px;
-	margin-bottom: 5em;
-}
-.search ul li a {
-	text-decoration: none;
-}
-.search ul li h5 a{
-  color: #9D9D9D;
-  font-size: 0.9em;
-  line-height: 20px;
-  margin: -5px 20px 11px;
-}
-.search ul li p span{
-  color: #5343C2;
-	font-style: italic;
-}
-</style>
-
-<div class="page-width search">
-  <h3>
+<div class="page-width">
+  <h1>
     {% if search.performed %}
       {% if search.results_count == 0 %}
         {{ 'general.search.no_results_html' | t: terms: search.terms }}
@@ -42,9 +11,9 @@
     {% else %}
       {{ 'general.search.title' | t }}
     {% endif %}
-  </h3>
+  </h1>
 
-  <!-- <form action="/search" method="get" role="search">
+  <form action="/search" method="get" role="search">
     <label for="Search" class="label-hidden">
       {{ 'general.search.placeholder' | t }}
     </label>
@@ -57,7 +26,8 @@
       {% include 'icon-search' %}
       <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
     </button>
-  </form> -->
+  </form>
+
 
 {% if search.performed %}
     <ul>
