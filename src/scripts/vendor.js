@@ -39,9 +39,10 @@
 // =require vendor/tabbed.js
 
 /*!
- * lightbox.js
+ * jquery.fancybox.min.js
  */
-// =require vendor/lightbox.js
+// =require vendor/jquery.fancybox.min.js
+
 
 // Attempts to preserve comments that likely contain licensing information,
 // even if the comment does not have directives such as `@license` or `/*!`.
