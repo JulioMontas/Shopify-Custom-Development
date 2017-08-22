@@ -3,31 +3,15 @@
   "presets": {
     "Default": {
       "sections": {
-        "collection-list": {
-          "type": "collection-list",
-          "blocks": {
-            "collection-list-0": {
-              "type": "collection"
-            }
-          },
-          "block_order": [
-            "collection-list-0"
-          ]
-        },
-        "featured-collection": {
-          "type": "featured-collection",
+        "slider": {
+          "type": "slider",
           "settings": {
             "collection": "frontpage"
           }
-        },
-        "featured-product": {
-          "type": "featured-product"
         }
       },
       "content_for_index": [
-        "collection-list",
-        "featured-collection",
-        "featured-product"
+        "slider"
       ]
     }
   }
