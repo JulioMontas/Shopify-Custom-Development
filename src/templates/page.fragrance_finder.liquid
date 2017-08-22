@@ -8,13 +8,13 @@
            <h2 style="color:#673C7E;">Aromatic</h2>
            <div class="center"><p style="color:#673C7E;">Evoke the experience of the natural world with herbal notes of sage, rosemary, cumin, lavender, basil and other greens.</p></div>
            <!-- <ul class="finder-btn"> -->
-           <ul class="tabs">
+           <ul class="tabs-one">
              <li class="tab-link current" data-tab="tab-1">Aromatic</li>
              <li class="tab-link" data-tab="tab-2">Aromatic Aquatic</li>
              <li class="tab-link" data-tab="tab-3">Aromatic Fougere</li>
              <li class="tab-link" data-tab="tab-4">Aromatic Fruity</li>
            </ul>
-             <div id="tab-1" class="list-of-four tab-content current">
+             <div id="tab-1" class="list-of-four tab-content-one current-one">
                {%- assign collection = collections.fragrance-finder-aromatic-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -44,7 +44,7 @@
                  </a>
             	</div> <!-- END tab-content -->
 
-            	<div id="tab-2" class="list-of-four tab-content">
+            	<div id="tab-2" class="list-of-four tab-content-one">
                 {%- assign collection = collections.fragrance-finder-aromatic-aquatic -%}
                   {% for product in collection.products limit: 12 %}
                     <a href="{{ product.url | within: collection }}">
@@ -74,7 +74,7 @@
                   </a>
             	</div> <!-- END tab-content -->
 
-              <div id="tab-3" class="list-of-four tab-content">
+              <div id="tab-3" class="list-of-four tab-content-one">
                 {%- assign collection = collections.fragrance-finder-aromatic-fougere -%}
                   {% for product in collection.products limit: 12 %}
                     <a href="{{ product.url | within: collection }}">
@@ -104,7 +104,7 @@
                   </a>
             	</div> <!-- END tab-content -->
 
-              <div id="tab-4" class="list-of-four tab-content">
+              <div id="tab-4" class="list-of-four tab-content-one">
                 {%- assign collection = collections.fragrance-finder-aromatic-fruity -%}
                   {% for product in collection.products limit: 12 %}
                     <a href="{{ product.url | within: collection }}">
@@ -150,12 +150,12 @@
            <section>
              <h2 style="color:#536E4B;">Chypre</h2>
              <div class="center"><p style="color:#536E4B;">Wrap yourself in the sensual, woody elegance of bergamot, labdanum, musk and oakmoss.</p></div>
-             <ul class="tabs">
+             <ul class="tabs-two">
                <li class="tab-link current" data-tab="tab-5">Chypre</li>
                <li class="tab-link" data-tab="tab-6">Chypre Floral</li>
                <li class="tab-link" data-tab="tab-7">Chypre Fruity</li>
              </ul>
-             <div id="tab-5" class="list-of-four tab-content current">
+             <div id="tab-5" class="list-of-four tab-content-two current-two">
              {%- assign collection = collections.fragrance-finder-chypre-all -%}
                {% for product in collection.products limit: 12 %}
                  <a href="{{ product.url | within: collection }}">
@@ -185,7 +185,7 @@
                </a>
              </div>
 
-             <div id="tab-6" class="list-of-four tab-content">
+             <div id="tab-6" class="list-of-four tab-content-two">
                {%- assign collection = collections.fragrance-finder-chypre-fruity -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -215,7 +215,7 @@
                  </a>
             </div> <!-- END tab-content -->
 
-            <div id="tab-7" class="list-of-four tab-content">
+            <div id="tab-7" class="list-of-four tab-content-two">
               {%- assign collection = collections.fragrance-finder-chypre-floral -%}
                 {% for product in collection.products limit: 12 %}
                   <a href="{{ product.url | within: collection }}">
@@ -264,10 +264,10 @@
            <section>
              <h2 style="color:#F59B0C">Citrus Aromatic</h2>
              <div class="center"><p style="color:#F59B0C">Add an uplifting dose of fresh zest with a burst of lemon, bergamot, orange, and mandarin fragrances, perfect for summer.</p></div>
-             <ul class="tabs">
+             <ul class="tabs-three">
                <li class="tab-link current" data-tab="tab-8">Citrus Aromatic</li>
              </ul>
-             <div id="tab-8" class="list-of-four tab-content current">
+             <div id="tab-8" class="list-of-four tab-content-three current-three">
              {%- assign collection = collections.fragrance-finder-citrus-aromatic -%}
                {% for product in collection.products limit: 12 %}
                  <a href="{{ product.url | within: collection }}">
@@ -314,7 +314,7 @@
                <h2 style="color:#E44690;">Floral</h2>
                <div class="center"><p style="color:#E44690;">Let your feminine, playful spirit shine with a bouquet of jasmine, peony, gardenia and lily.</p></div>
 
-               <ul class="tabs">
+               <ul class="tabs-four">
                  <li class="tab-link current" data-tab="tab-9">Floral</li>
                  <li class="tab-link" data-tab="tab-10">Floral Aquatic</li>
                  <li class="tab-link" data-tab="tab-11">Floral Fruity</li>
@@ -325,7 +325,7 @@
                  <li class="tab-link" data-tab="tab-16">Floral Woody</li>
                </ul>
 
-               <div id="tab-9" class="list-of-four tab-content current">
+               <div id="tab-9" class="list-of-four tab-content-four current-four">
                {%- assign collection = collections.fragrance-finder-floral-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -355,7 +355,7 @@
                  </a>
                </div>
 
-               <div id="tab-10" class="list-of-four tab-content">
+               <div id="tab-10" class="list-of-four tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-aquatic -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -385,7 +385,7 @@
                  </a>
                </div>
 
-               <div id="tab-11" class="list-of-four tab-content">
+               <div id="tab-11" class="list-of-four tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-fruity -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -416,7 +416,7 @@
                </div>
 
 
-               <div id="tab-12" class="list-of-four tab-content">
+               <div id="tab-12" class="list-of-four tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-fruity-gormand -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -446,7 +446,7 @@
                  </a>
                </div>
 
-               <div id="tab-13" class="list-of-four tab-content">
+               <div id="tab-13" class="list-of-four tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-green -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -476,7 +476,7 @@
                  </a>
                </div>
 
-               <div id="tab-14" class="list-of-four tab-content">
+               <div id="tab-14" class="list-of-four tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-musk -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -506,7 +506,7 @@
                  </a>
                </div>
 
-               <div id="tab-15" class="list-of-four tab-content">
+               <div id="tab-15" class="list-of-four tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-woody-musk -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -536,7 +536,7 @@
                  </a>
                </div>
 
-               <div id="tab-16" class="list-of-four tab-content">
+               <div id="tab-16" class="list-of-four tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-woody -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -582,10 +582,10 @@
              <section>
                <h2 style="color:#A45B52;">Leather</h2>
                <div class="center"><p style="color:#A45B52;">Evoke the smoky richness of leather with sharp and spicy notes of honey, tobacco, wood.</p></div>
-               <ul class="tabs">
+               <ul class="tabs-five">
                  <li class="tab-link current" data-tab="tab-17">Leather</li>
                </ul>
-               <div id="tab-17" class="list-of-four tab-content current">
+               <div id="tab-17" class="list-of-four tab-content-five current-five">
                {%- assign collection = collections.fragrance-finder-leather-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -632,7 +632,7 @@
                <section>
                  <h2 style="color:#E7A078;">Oriental</h2>
                  <div class="center"><p style="color:#E7A078;">Create an intoxicating irresistible warmth with an accord of vanilla, musk, cinnamon, cardamom.</p></div>
-                 <ul class="tabs">
+                 <ul class="tabs-six">
                    <li class="tab-link current" data-tab="tab-18">Oriental</li>
                    <li class="tab-link" data-tab="tab-19">Oriental Floral</li>
                    <li class="tab-link" data-tab="tab-20">Oriental Fougere</li>
@@ -640,7 +640,7 @@
                    <li class="tab-link" data-tab="tab-22">Oriental Woody</li>
                    <li class="tab-link" data-tab="tab-23">Oriental Vanilla</li>
                  </ul>
-                 <div id="tab-18" class="list-of-four tab-content current">
+                 <div id="tab-18" class="list-of-four tab-content-six current-six">
                  {%- assign collection = collections.fragrance-finder-oriental-all -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -670,7 +670,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-19" class="list-of-four tab-content">
+                 <div id="tab-19" class="list-of-four tab-content-six">
                  {%- assign collection = collections.fragrance-finder-oriental-floral -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -700,7 +700,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-20" class="list-of-four tab-content">
+                 <div id="tab-20" class="list-of-four tab-content-six">
                  {%- assign collection = collections.fragrance-finder-oriental-fougere -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -730,7 +730,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-21" class="list-of-four tab-content">
+                 <div id="tab-21" class="list-of-four tab-content-six">
                  {%- assign collection = collections.fragrance-finder-oriental-spicy -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -760,7 +760,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-22" class="list-of-four tab-content">
+                 <div id="tab-22" class="list-of-four tab-content-six">
                  {%- assign collection = collections.fragrance-finder-oriental-woody -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -790,7 +790,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-23" class="list-of-four tab-content">
+                 <div id="tab-23" class="list-of-four tab-content-six">
                  {%- assign collection = collections.fragrance-finder-oriental-vanilla -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -838,7 +838,7 @@
                  <h2 style="color:#544849;">Woody</h2>
                  <div class="center"><p style="color:#544849;">Add mystery with an earthy aroma of wood, patchouli, sandalwood, cedar and a hint of spice.</p></div>
 
-                 <ul class="tabs">
+                 <ul class="tabs-seven">
                    <li class="tab-link current" data-tab="tab-24">Woody</li>
                    <li class="tab-link" data-tab="tab-25">Woody Aromatic</li>
                    <li class="tab-link" data-tab="tab-26">Woody Aquatic</li>
@@ -849,7 +849,7 @@
                    <li class="tab-link" data-tab="tab-31">Woody Vetiver</li>
                  </ul>
 
-                 <div id="tab-24" class="list-of-four tab-content current">
+                 <div id="tab-24" class="list-of-four tab-content-seven current-seven">
                  {%- assign collection = collections.fragrance-finder-woody-all -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -879,7 +879,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-25" class="list-of-four tab-content">
+                 <div id="tab-25" class="list-of-four tab-content-seven">
                  {%- assign collection = collections.fragrance-finder-woody-aromatic -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -909,7 +909,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-26" class="list-of-four tab-content">
+                 <div id="tab-26" class="list-of-four tab-content-seven">
                  {%- assign collection = collections.fragrance-finder-woody-aquatic -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -939,7 +939,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-27" class="list-of-four tab-content">
+                 <div id="tab-27" class="list-of-four tab-content-seven">
                  {%- assign collection = collections.fragrance-finder-woody-citrus -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -969,7 +969,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-28" class="list-of-four tab-content">
+                 <div id="tab-28" class="list-of-four tab-content-seven">
                  {%- assign collection = collections.fragrance-finder-woody-floral -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -999,7 +999,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-29" class="list-of-four tab-content">
+                 <div id="tab-29" class="list-of-four tab-content-seven">
                  {%- assign collection = collections.fragrance-finder-woody-floral-green -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -1029,7 +1029,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-30" class="list-of-four tab-content">
+                 <div id="tab-30" class="list-of-four tab-content-seven">
                  {%- assign collection = collections.fragrance-finder-woody-spicy -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
@@ -1059,7 +1059,7 @@
                    </a>
                  </div>
 
-                 <div id="tab-31" class="list-of-four tab-content">
+                 <div id="tab-31" class="list-of-four tab-content-seven">
                  {%- assign collection = collections.fragrance-finder-woody-vetiver -%}
                    {% for product in collection.products limit: 12 %}
                      <a href="{{ product.url | within: collection }}">
