@@ -1,5 +1,6 @@
 $( document ).ready(function() {
 //tabbed content in homepage - featured product
+
 $('ul.tabs-one li').click(function() {
     var tab_id = $(this).attr('data-tab');
     $('ul.tabs-one li').removeClass('current-one');
