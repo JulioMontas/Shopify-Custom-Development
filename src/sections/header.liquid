@@ -19,8 +19,33 @@
         <div class="cartShopping"><a href="/cart">{% include 'icon-cart' %} {{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }}</a></div>
       </div>
       <!-- End of #top-header -->
-    <div class="center-lower-header">
-    <div id="lower-header">
+    <div class="center-lower-header" >
+
+      <div class="medium-up--hide">
+        {% if template.name == 'index' %}
+          <h1 itemscope itemtype="http://schema.org/Organization">
+        {% else %}
+          <h1 itemscope itemtype="http://schema.org/Organization">
+        {% endif %}
+            <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+              {% if section.settings.logo != blank %}
+                {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
+                <img src="{{ section.settings.logo | img_url: image_size }}"
+                     srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                     alt="{{ section.settings.logo.alt | default: shop.name }}"
+                     itemprop="logo">
+              {% else %}
+                {{ shop.name }}
+              {% endif %}
+            </a>
+        {% if template.name == 'index' %}
+          </h1>
+        {% else %}
+          </h1>
+        {% endif %}
+      </div>
+
+    <div id="lower-header" class="small--hide">
         {% if template.name == 'index' %}
           <h1 itemscope itemtype="http://schema.org/Organization">
         {% else %}
