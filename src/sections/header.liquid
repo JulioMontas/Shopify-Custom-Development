@@ -10,6 +10,7 @@
 	  color: white;}
 
   .cartShopping a:hover {color:#FFC5C5;}
+
 </style>
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
@@ -19,31 +20,54 @@
         <div class="cartShopping"><a href="/cart">{% include 'icon-cart' %} {{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }}</a></div>
       </div>
       <!-- End of #top-header -->
-    <div class="center-lower-header" >
+    <div class="center-lower-header">
 
-      <div class="medium-up--hide">
-        {% if template.name == 'index' %}
-          <h1 itemscope itemtype="http://schema.org/Organization">
-        {% else %}
-          <h1 itemscope itemtype="http://schema.org/Organization">
-        {% endif %}
-            <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
-              {% if section.settings.logo != blank %}
-                {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
-                <img src="{{ section.settings.logo | img_url: image_size }}"
-                     srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-                     alt="{{ section.settings.logo.alt | default: shop.name }}"
-                     itemprop="logo">
-              {% else %}
-                {{ shop.name }}
-              {% endif %}
-            </a>
-        {% if template.name == 'index' %}
-          </h1>
-        {% else %}
-          </h1>
-        {% endif %}
-      </div>
+      <div class="mobile-navigation medium-up--hide"> <!-- Mobile toggle -->
+        <section>
+          <form action="/search" method="get" role="search">
+            <!-- <label for="Search" class="label-hidden">
+              {{ 'general.search.placeholder' | t }}
+            </label>
+            <input type="search"
+                   name="q"
+                   id="Search"
+                   value="{{ search.terms | escape }}"
+                   placeholder="{{ 'general.search.placeholder' | t }}"> -->
+            <button type="submit" class="btn">
+              {% include 'icon-search' %}
+              <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+          </form>
+        </section>
+
+        <section>
+          {% if template.name == 'index' %}
+            <h1 itemscope itemtype="http://schema.org/Organization">
+          {% else %}
+            <h1 itemscope itemtype="http://schema.org/Organization">
+          {% endif %}
+              <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+                {% if section.settings.logo != blank %}
+                  {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
+                  <img src="{{ section.settings.logo | img_url: image_size }}"
+                       srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                       alt="{{ section.settings.logo.alt | default: shop.name }}"
+                       itemprop="logo">
+                {% else %}
+                  {{ shop.name }}
+                {% endif %}
+              </a>
+          {% if template.name == 'index' %}
+            </h1>
+          {% else %}
+            </h1>
+          {% endif %}
+        </section>
+
+        <section>
+          <a href="#" class="menu-dropdown">Menu</a>
+        </section>
+      </div>  <!-- End of .medium-up--hide -->
 
     <div id="lower-header" class="small--hide">
         {% if template.name == 'index' %}
@@ -70,6 +94,7 @@
 
         <nav role="navigation">
           <ul class="site-nav">
+            <li><a href="#" class="shop-dropdown">Shop</a></li>
             {% for link in linklists[section.settings.main_linklist].links %}
               {%- assign child_list_handle = link.title | handleize -%}
               {% if menus[child_list_handle].links != blank %}
@@ -96,14 +121,14 @@
         </nav>
 
         <form action="/search" method="get" role="search">
-          <label for="Search" class="label-hidden">
+          <!-- <label for="Search" class="label-hidden">
             {{ 'general.search.placeholder' | t }}
           </label>
           <input type="search"
                  name="q"
                  id="Search"
                  value="{{ search.terms | escape }}"
-                 placeholder="{{ 'general.search.placeholder' | t }}">
+                 placeholder="{{ 'general.search.placeholder' | t }}"> -->
           <button type="submit" class="btn">
             {% include 'icon-search' %}
             <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
@@ -131,7 +156,7 @@
         "step": 10,
         "unit": "px",
         "label": "Custom logo width",
-        "default": 250
+        "default": 200
       },
       {
         "type": "link_list",

@@ -1,3 +1,15 @@
-$('header li:nth-child(1)').mouseover(function() {
-    $('.header-dropdown').stop(true, true).show(400);
+// For the Shot Button in Desktop
+
+$('.shop-dropdown').click(function() {
+    $('.header-dropdown').slideToggle("slow");
+});
+
+$('.header-dropdown').mouseleave(function() {
+    $('.header-dropdown').slideToggle("slow");
+});
+
+
+// For the Menu Button in Mobile
+$('.menu-dropdown').click(function() {
+    $('.header-dropdown').slideToggle("slow");
 });
