@@ -13,26 +13,20 @@
   font-weight: 300;
   background: red;
 }
-
 .header-dropdown > div section h3 a {
 	text-decoration: none;
 	color: #5343C2;
 	text-transform: uppercase;
 	font-size: 0.8em;
 }
-
 .header-dropdown div section ul {padding: 0;}
-
 .header-dropdown div section ul li{list-style: none;}
-
 .header-dropdown div section ul li a {
 	color: #5343C2;
 	text-decoration: none;
   font-size: 0.8em;
   font-weight: 100;
 }
-
-
 // Fragrances two section links
 .header-dropdown section:nth-child(1) > ul {
 	float: left;
@@ -48,9 +42,6 @@
   justify-content: space-around;
   align-items: center;
 }
-
-
-
 
 @include media-query($small) {
   .header-dropdown div {
