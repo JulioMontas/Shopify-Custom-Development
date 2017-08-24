@@ -36,6 +36,10 @@
 	list-style: none;
 	margin-bottom: 3em;
 	padding: 0px 10px;
+  opacity: 0.7;
+}
+.search-page ul li:hover {
+  opacity: 1;
 }
 
 // Product Image
@@ -49,9 +53,11 @@
 	letter-spacing: 1px;
 	line-height: 20px;
 }
+
 // Product Price
 .search-page > ul li p {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	margin-top: -14px;
   color: #5343C2;
+  font-style: italic;
 }
