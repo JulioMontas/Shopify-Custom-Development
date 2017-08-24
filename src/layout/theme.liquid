@@ -74,10 +74,15 @@
       <section>
         <h3><a href="/pages/fragrances">Fragrances</a></h3>
         <ul>
-        {% for link in linklists.fragrances.links %}
+        {% for link in linklists.fragrances-one.links %}
            <li>{{ link.title | link_to: link.url }}</li>
         {% endfor %}
         </ul>
+        <ul>
+        {% for link in linklists.fragrances-two.links %}
+           <li>{{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+      </ul>
       </section>
       <section>
         <h3><a href="/pages/home-fragrances">Home Fragrances</a></h3>

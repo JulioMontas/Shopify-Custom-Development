@@ -32,7 +32,14 @@
 }
 
 
-
+// Fragrances two section links
+.header-dropdown section:nth-child(1) > ul {
+	float: left;
+	margin: 0;
+}
+.header-dropdown section:nth-child(1) > ul:nth-child(2) {
+	margin-right: 30px;
+}
 
 
 .mobile-navigation {
