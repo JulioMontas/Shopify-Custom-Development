@@ -43,6 +43,11 @@
  */
 // =require vendor/lightbox.js
 
+/*!
+ * lity.js
+ */
+// =require vendor/lity.js
+
 
 
 // Attempts to preserve comments that likely contain licensing information,
