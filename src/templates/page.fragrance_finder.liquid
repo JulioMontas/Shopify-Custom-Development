@@ -244,8 +244,8 @@
                 {% endfor %}
                 </a>
            </div> <!-- END tab-content -->
-           <div>
-             <a href="https://www.youtube.com/watch?v=gGCW4WHBqrU" data-lightbox="example-set" data-title="Text">Video..</a>
+           <div class="btn-video">
+             <a href="//www.youtube.com/watch?v=gGCW4WHBqrU" data-lity><i class="fa fa-video-camera" aria-hidden="true"></i></a>
            </div>
           </section>
         </div>
@@ -262,13 +262,43 @@
         <div class="page-width">
           <div class="products-collections">
            <section>
-             <h2 style="color:#F59B0C">Citrus Aromatic</h2>
+             <h2 style="color:#F59B0C">Citrus</h2>
              <div class="center"><p style="color:#F59B0C">Add an uplifting dose of fresh zest with a burst of lemon, bergamot, orange, and mandarin fragrances, perfect for summer.</p></div>
              <ul class="tabs-three">
-               <li class="tab-link current" data-tab="tab-8">Citrus Aromatic</li>
+               <li class="tab-link current" data-tab="tab-82">Citrus Aromatic</li>
+               <li class="tab-link current" data-tab="tab-83">Citrus Floral</li>
              </ul>
-             <div id="tab-8" class="list-of-four tab-content-three current-three">
+             <div id="tab-82" class="list-of-four tab-content-three current-three">
              {%- assign collection = collections.fragrance-finder-citrus-aromatic -%}
+               {% for product in collection.products limit: 12 %}
+                 <a href="{{ product.url | within: collection }}">
+                   <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                   <h2>{{ product.vendor }}</h2>
+                   <p>{{ product.title }}</p>
+                   <p>
+                     {% if product.compare_at_price > product.price %}
+                       {% if product.price_varies %}
+                         {%- assign sale_price = product.price | money -%}
+                         {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                       {% else %}
+                         {{ 'products.product.on_sale' | t }}
+                         {{ product.price | money }}
+                       {% endif %}
+                     {% else %}
+                       {% if product.price_varies %}
+                         {%- assign price = product.price | money -%}
+                         {{ 'products.product.from_text_html' | t: price: price }}
+                       {% else %}
+                         {{ product.price | money }}
+                       {% endif %}
+                     {% endif %}
+                   </p>
+                 {% else %}
+               {% endfor %}
+               </a>
+             </div>
+             <div id="tab-83" class="list-of-four tab-content-three">
+             {%- assign collection = collections.fragrance-finder-citrus-floral -%}
                {% for product in collection.products limit: 12 %}
                  <a href="{{ product.url | within: collection }}">
                    <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
@@ -817,6 +847,9 @@
                      {% else %}
                    {% endfor %}
                    </a>
+                 </div>
+                 <div class="btn-video">
+                   <a href="//www.youtube.com/watch?v=ScOl9F4xUXY" data-lity><i class="fa fa-video-camera" aria-hidden="true"></i></a>
                  </div>
 
               </section>

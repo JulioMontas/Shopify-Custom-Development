@@ -145,3 +145,21 @@ ul.tabs-seven li.current-seven{
 .tab-content-five.current-five,
 .tab-content-six.current-six,
 .tab-content-seven.current-seven{/*display: inherit;*/ position:relative; left:0;}
+
+
+
+// Video Lightbox Button
+.btn-video{
+  text-align: center;
+}
+.btn-video a {
+  color: #106199;
+	border: 1px solid #333;
+	padding: 0.6em 2em;
+	border-radius: 20px;
+}
+
+.btn-video a:hover {
+  color: #5790b7;
+  border: 1px solid #999;
+}
