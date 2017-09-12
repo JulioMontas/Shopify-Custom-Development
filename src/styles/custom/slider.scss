@@ -22,7 +22,24 @@
 	text-decoration: none;
 	font-size: 2.5em;
   text-shadow: 0 0 5px rgba(255,255,255,0.50);
+	-webkit-transition: 500ms linear 0s;
+		-moz-transition: 500ms linear 0s;
+		-o-transition: 500ms linear 0s;
+		transition: 500ms linear 0s;
+	-webkit-animation: glow .5s infinite alternate;
 }
+
+.slide-text-btn:hover,
+.slide-arrow-btn:hover {
+	color: #5343C2;
+}
+
+@-webkit-keyframes glow {
+    to {
+        text-shadow: 0 0 10px rgba(255,255,255,0.50);
+    }
+}
+
 
 .slide-arrow-btn {
 	display: block;
@@ -31,11 +48,27 @@
 	width: 100%;
 	bottom: 15%;
 	color: white;
+	-webkit-transition: 500ms linear 0s;
+		-moz-transition: 500ms linear 0s;
+		-o-transition: 500ms linear 0s;
+		transition: 500ms linear 0s;
+}
+
+
+@include media-query($medium) {
+  .slide-text-btn {
+  	font-size: 1.7em;
+		bottom: 50%;
+  }
+	.slick-dots li {bottom: 3.5em;}
+	.slide-arrow-btn {display: none;}
 }
 
 @include media-query($small) {
   .slide-text-btn {
-  	color: red;
-  	font-size: 1em;
+  	font-size: 0.95em;
+		font-weight: bold;
+		bottom: 50%;
   }
+	.slide-arrow-btn {display: none;}
 }

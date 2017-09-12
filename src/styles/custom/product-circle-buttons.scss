@@ -11,8 +11,9 @@
 }
 .product-circle-buttons nav ul{
   display: flex;
-	flex-direction: column;
+	flex-direction: row;
   justify-content: space-between;
+	flex-wrap: nowrap;
 	margin-bottom: 150px;
 }
 .product-circle-buttons nav ul li {
@@ -61,12 +62,48 @@
 }
 
 
-@include media-query($medium-up) {
+@include media-query($medium) {
+	.product-circle-buttons nav ul li {margin-left: 40px;}
+	.product-circle-buttons section:nth-child(1) p {font-size: 1.2em;}
+
 	.product-circle-buttons nav ul{
-	  flex-direction: row;
+		flex-direction: row;
+		flex-wrap: wrap;
 		padding: 0;
+		justify-content: space-around;
 	}
+	.product-circle-buttons nav ul li a{
+		opacity: 1;
+	}
+}
+
+
+@include media-query($small) {
+	.product-circle-buttons section:nth-child(1) p {
+		font-size: 0.9em;
+		margin-bottom: 60px;
+	}
+	.product-circle-buttons::before,
+	.products-collections::before{
+		content: '';
+		display: block;
+		background: #dfdfdf;
+		width: 100%;
+		height: 1px;
+		margin: 20px 0 40px;
+	}
+	.product-circle-buttons nav ul {
+	  margin-bottom: -30px;
+		margin-left: -10px;
+		flex-direction: column;
+  }
 	.product-circle-buttons nav ul li {
-		margin-left: 40px;
+	  margin-bottom: 50px;
+  }
+
+	.product-circle-buttons nav ul li a{
+		opacity: 1;
 	}
+
+
 }

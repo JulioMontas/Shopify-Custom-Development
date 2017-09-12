@@ -29,7 +29,14 @@
 }
 .pressPage .archive-list .responsive-table-row {background: #FFF;}
 .pressPage .archive-list .responsive-table-row:nth-of-type(odd) {background: #FAFAFA;}
-.pressPage .archive-list .responsive-table-row td {text-align: center;}
+
+// Article Text move to the left
+.pressPage .archive-list .responsive-table thead tr th{text-align: left;}
+
+.pressPage .archive-list .responsive-table tbody tr td:nth-child(1),
+.pressPage .archive-list .responsive-table thead tr th:nth-child(1){
+	padding-left: 30px;
+}
 
 .pressPage .archive-list .responsive-table-row .publication p {
   font-size: 1em;

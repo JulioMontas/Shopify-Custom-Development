@@ -80,7 +80,11 @@ html {
 
 #lower-header .site-nav li{list-style: none;}
 
-#lower-header .site-nav li a {
+
+
+//  Header Link style
+#lower-header .site-nav li a,
+.mobile-dropdown a {
    text-decoration: none;
    color: #333;
    text-transform: uppercase;
@@ -89,9 +93,13 @@ html {
    font-weight: 100;
  }
 
-#lower-header .site-nav li a:hover{font-weight: 600;}
+#lower-header .site-nav li a:hover,
+.mobile-dropdown a:hover{
+  font-weight: 600;
+}
 
-#lower-header .site-nav li a::after {
+#lower-header .site-nav li a::after,
+.mobile-dropdown a::after {
 	content: "";
 	display: block;
 	width: 100%;
@@ -99,6 +107,7 @@ html {
 	background: #999;
 	margin-top: 4px;
 }
+
 
 // Search bar
 #Search {
@@ -195,7 +204,7 @@ html {
 	font-size: 1.3em;
 	font-weight: bold;
 	text-transform: uppercase;
-	line-height: 10px;
+	// line-height: 10px;
 	margin: 0;
 	letter-spacing: 1px;
 }
