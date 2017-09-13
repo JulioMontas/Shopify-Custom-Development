@@ -79,10 +79,11 @@
 }
 
 @include media-query($small) {
-  .slide-text-btn {
-  	font-size: 1em;
-    bottom: 49%;
-    left: 3em;
+	.slide-text-btn {
+  	font-size: 0.95em;
+  	font-weight: bold;
+  	bottom: 50%;
+
   }
 	.desktop-title{display: none;}
 	.latest-product .grid__item {width: 100%;}
@@ -97,5 +98,6 @@
   }
 	.latest-product .description {
 	  margin-bottom: 50px;
+		line-height: 1.5em;
 	}
 }
