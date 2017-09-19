@@ -5,9 +5,7 @@
  opacity: 0.7;
 }
 
-.fragrance-finder .list-of-four a.slick-slide:hover {
- opacity: 1;
-}
+.fragrance-finder .list-of-four a.slick-slide:hover {opacity: 1;}
 
 .fragrance-finder .list-of-four a.slick-slide span {
  display: inline-block;
@@ -41,6 +39,7 @@
 /*Arrows position */
 .fragrance-finder .products-collections section div button:nth-child(1) {margin-left: -25px;}
 .fragrance-finder .products-collections section div button:nth-child(3) {margin-right: -25px;}
+
 /* Flip Corner Images */
 .fragrance-finder .flip{
  -moz-transform: scaleX(-1);
@@ -162,4 +161,10 @@ ul.tabs-seven li.current-seven{
 .btn-video a:hover {
   color: #5790b7;
   border: 1px solid #999;
+}
+
+@include media-query($medium) {
+  .fragrance-finder div div.cornerImage img {
+  	display: none;
+  }
 }
