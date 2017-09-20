@@ -168,3 +168,60 @@ ul.tabs-seven li.current-seven{
   	display: none;
   }
 }
+
+@include media-query($small) {
+  .fragrance-finder .grid{
+	  margin-bottom: 7em;
+  }
+  ul.tabs-one li,
+  ul.tabs-two li,
+  ul.tabs-three li,
+  ul.tabs-four li,
+  ul.tabs-five li,
+  ul.tabs-six li,
+  ul.tabs-seven li {
+    display: block;
+  	margin-bottom: 0.7em;
+  	color: white;
+  	border-radius: 15px;
+  	padding: 0.8em 0;
+  }
+  ul.tabs-one li{background: #673C7E;}
+  ul.tabs-two li{background: #536E4B;}
+  ul.tabs-three li{background: #F59B0C;}
+  ul.tabs-four li{background: #E44690;}
+  ul.tabs-five li{background: #A45B52;}
+  ul.tabs-six li{background: #E7A078;}
+  ul.tabs-seven li{background: #544849;}
+
+  .fragrance-finder .center p {
+	  font-size: 0.9em;
+    margin: 0px 0% 1.5em;
+  }
+
+  // The Title of the Collection
+  .fragrance-finder section h2:nth-child(1) {
+  	margin-top: 0px;
+	  margin-bottom: 0.2em;
+   }
+
+   // Button when is active
+   ul.tabs-one li.current-one,
+   ul.tabs-two li.current-two,
+   ul.tabs-three li.current-three,
+   ul.tabs-four li.current-four,
+   ul.tabs-five li.current-five,
+   ul.tabs-six li.current-six,
+   ul.tabs-seven li.current-seven {
+	   color: #FFF;
+     opacity: 0.8;
+  }
+
+  .medium-up--eight-tenths {
+	width: 100%;
+}
+
+
+
+
+}
