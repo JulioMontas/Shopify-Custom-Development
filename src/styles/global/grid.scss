@@ -21,6 +21,12 @@
   }
 }
 
+@include media-query($small) {
+  .grid__item {
+    padding-left: 0px;
+  }
+}
+
 /*============================================================================
   Reversed grids allow you to structure your source in the opposite
   order to how your rendered layout will appear.
@@ -35,6 +41,8 @@
     float: right;
   }
 }
+
+
 
 /*============================================================================
   Grid Columns
