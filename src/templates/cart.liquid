@@ -98,7 +98,9 @@
       <p>{{ 'cart.general.savings' | t }} {{ cart.total_discounts | money }}</p>
     {% endif %}
     <p class="taxes">{{ 'cart.general.shipping_at_checkout' | t }}</p>
-    <input type="submit" name="update" value="{{ 'cart.general.update' | t }}"><input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}">
+    <div class="push-right">
+      <input type="submit" name="update" class="btn-update" value="{{ 'cart.general.update' | t }}"><input type="submit" name="checkout" class="btn-checkout" value="{{ 'cart.general.checkout' | t }}">
+    </div>
   </form>
 {% else %}
 
