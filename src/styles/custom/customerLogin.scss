@@ -1,0 +1,99 @@
+#CustomerLoginForm form#customer_login input,
+.createAccount form#create_customer input,
+#RecoverPasswordForm form input,
+#RecoverPasswordForm form button#HideRecoverPasswordLink,
+.form-reset-password.page-width form input{
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border-color: #ccc;
+  border-radius: 5px;
+}
+
+
+#RecoverPasswordForm form button#HideRecoverPasswordLink{
+  border-style: none;
+}
+
+
+#RecoverPasswordForm form input.btn,
+#RecoverPasswordForm form button#HideRecoverPasswordLink,
+#CustomerLoginForm form#customer_login input.btn,
+.form-reset-password.page-width form input.btn{
+  background: #5343c2;
+  color:white;
+}
+
+#RecoverPasswordForm form input.btn:hover,
+#RecoverPasswordForm form button#HideRecoverPasswordLink:hover,
+#CustomerLoginForm form#customer_login input.btn:hover,
+.form-reset-password.page-width form input.btn:hover{
+  background: #4373c2;
+}
+
+
+
+#CustomerLoginForm form#customer_login a {
+	text-decoration: none;
+}
+
+#CustomerLoginForm form#customer_login a#RecoverPassword:hover{
+  color: #4373c2;
+}
+
+
+
+
+
+#CustomerLoginForm form#customer_login input.btn,
+#CustomerLoginForm form#customer_login a.createAccount{
+  -webkit-transition: background 0.15s ease;
+   -moz-transition: background 0.15s ease;
+   -o-transition: background 0.15s ease;
+   transition: background 0.15s ease;
+}
+
+// #CustomerLoginForm form#customer_login input.btn:hover{
+//   background: #404040;
+//   color:#FFF;
+// }
+
+.createAccount form#create_customer p input.btn{
+  background: #5343c2;
+  color: #FFF;
+}
+
+.createAccount form#create_customer p input.btn:hover{
+  background: #4373c2;
+}
+
+#CustomerLoginForm form#customer_login a.createAccount {
+	background: #5343c2;
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding: 1em 0;
+	border-radius: 5px;
+	margin-top: 2em;
+  color:#FFF;
+}
+
+#CustomerLoginForm form#customer_login a.createAccount:hover {
+  background: #4373c2;
+}
+
+
+
+
+
+
+
+
+
+#ResetSuccess.form-success {
+	background: yellow;
+	padding: 15px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	font-size: 0.9em;
+}
