@@ -83,6 +83,26 @@ html {
 
 
 
+#top-header .cartShopping ul {
+	display: flex;
+}
+#top-header .cartShopping ul li {
+	margin-left: 11px;
+  list-style: none;
+}
+#top-header .cartShopping ul li:nth-child(3) {
+  margin-left: 0px;
+}
+#top-header .cartShopping ul li:nth-child(1)::after {
+	display: block;
+	content: "|";
+	margin-left: 10px;
+	float: right;
+}
+
+
+
+
 
 #lower-header .site-nav li{list-style: none;}
 

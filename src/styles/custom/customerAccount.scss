@@ -1,0 +1,83 @@
+.customerAccount,
+.accountAddresses{
+  letter-spacing: 1px;
+}
+.customerAccount h2,
+.accountAddresses h2 {
+	background: #f5f5f5;
+	padding: 15px;
+	font-size: 1em;
+	border-radius: 5px;
+  font-weight: normal;
+}
+.customerAccount p {
+	padding: 5px 20px;
+  color: #999;
+}
+
+
+
+.accountAddresses input,
+.accountAddresses #AddressNewForm form div.grid p select,
+.accountAddresses div form div.grid p select{
+  width: 100%;
+  padding: 13px;
+  border-color: #ccc;
+  border-radius: 5px;
+}
+
+
+.despacito {
+	background: #5343c2;
+  color:white;
+	width: 19%;
+	padding: 15px;
+	border-radius: 5px;
+  font-weight: normal;
+}
+
+
+.accountAddresses #AddressNewForm form .buttons input.btn,
+.accountAddresses #AddressNewForm form .buttons button.address-new-toggle{
+  background: #5343c2;
+  color:white;
+}
+.accountAddresses #AddressNewForm form .buttons button.address-new-toggle{
+	width: 100%;
+	padding: 15px;
+	border-style: none;
+	margin: 5px 0px 40px;
+	border-radius: 5px;
+  -webkit-transition: background 0.15s ease;
+   -moz-transition: background 0.15s ease;
+   -o-transition: background 0.15s ease;
+   transition: background 0.15s ease;
+}
+
+.accountAddresses #AddressNewForm form .buttons input.btn:hover,
+.accountAddresses #AddressNewForm form .buttons button.address-new-toggle:hover,
+.accountAddresses h2 button.btn.address-new-toggle:hover,
+.accountAddresses button.address-edit-toggle:hover,
+.accountAddresses button.address-delete:hover{
+  background: #4373c2;
+  color:white;
+}
+
+
+
+.accountAddresses button.address-edit-toggle,
+.accountAddresses button.address-delete {
+	background: #5343c2;
+	border-style: none;
+	color: #cfcfcf;
+	padding: 10px 35px;
+	border-radius: 5px;
+	font-size: 0.8em;
+}
+
+.accountAddresses h2 button.btn.address-new-toggle {
+	background: #5343c2;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: white;
+}
