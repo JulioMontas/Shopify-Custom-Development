@@ -17,11 +17,15 @@
 
 
 
+.accountAddresses .cancelAddress{
+  margin-top: 5px;
+}
 .accountAddresses input,
 .accountAddresses #AddressNewForm form div.grid p select,
-.accountAddresses div form div.grid p select{
+.accountAddresses div form div.grid p select,
+.accountAddresses .cancelAddress{
   width: 100%;
-  padding: 13px;
+  padding: 15px;
   border-color: #ccc;
   border-radius: 5px;
 }
@@ -38,7 +42,8 @@
 
 
 .accountAddresses #AddressNewForm form .buttons input.btn,
-.accountAddresses #AddressNewForm form .buttons button.address-new-toggle{
+.accountAddresses #AddressNewForm form .buttons button.address-new-toggle,
+.accountAddresses .btn.updateAddress{
   background: #5343c2;
   color:white;
 }
@@ -54,11 +59,13 @@
    transition: background 0.15s ease;
 }
 
+
 .accountAddresses #AddressNewForm form .buttons input.btn:hover,
 .accountAddresses #AddressNewForm form .buttons button.address-new-toggle:hover,
 .accountAddresses h2 button.btn.address-new-toggle:hover,
 .accountAddresses button.address-edit-toggle:hover,
-.accountAddresses button.address-delete:hover{
+.accountAddresses button.address-delete:hover,
+.accountAddresses .btn.updateAddress:hover{
   background: #4373c2;
   color:white;
 }
@@ -69,10 +76,10 @@
 .accountAddresses button.address-delete {
 	background: #5343c2;
 	border-style: none;
-	color: #cfcfcf;
-	padding: 10px 35px;
+	color: white;
+	padding: 15px 35px;
 	border-radius: 5px;
-	font-size: 0.8em;
+	// font-size: 0.8em;
 }
 
 .accountAddresses h2 button.btn.address-new-toggle {
