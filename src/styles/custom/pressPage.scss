@@ -1,27 +1,31 @@
-.pressPage{letter-spacing: 1px;}
+// This is global, move it later.
 
-.pressPage .wide-intro{
+.wide-intro{
   height: 40vh;
   background-image: linear-gradient(41deg, #bba2c8, #e895af);
   color:white;
 }
-.pressPage .wide-intro section {
+.wide-intro section {
 	text-align: center;
 	padding-top: 8.5%;
 	line-height: 0.8em;
 }
 
-.pressPage .wide-intro section h2 {
+.wide-intro section h2 {
 	font-size: 1.8em;
 	text-transform: uppercase;
 }
-.pressPage .wide-intro section p {
+.wide-intro section p {
 	font-size: 1.3em;
 	font-weight: 100;
 	font-style: italic;
   letter-spacing: 0.1em;
 }
 
+// Press Page
+
+
+.pressPage{letter-spacing: 1px;}
 
 .pressPage .archive-list .responsive-table {
 	width: 100%;
@@ -38,15 +42,9 @@
   color: white;
 }
 
+.pressPage .archive-list .responsive-table-row td a{color:#5343C2;}
 
-.pressPage .archive-list .responsive-table-row td a{
-  color:#5343C2;
-}
-.pressPage .archive-list .responsive-table-row td a:hover{
-  color:#4373c2;
-}
-
-
+.pressPage .archive-list .responsive-table-row td a:hover{color:#4373c2;}
 
 // Article Text move to the left
 .pressPage .archive-list .responsive-table thead tr th{text-align: left;}
@@ -71,13 +69,12 @@
   // color:#666;
 }
 
-
 @include media-query($small) {
-  .pressPage .wide-intro section {
+  .wide-intro section {
     padding-top: 3em;
     line-height: 1.5em;
   }
-  .pressPage .wide-intro section p {
+  .wide-intro section p {
     font-size: 1em;
   	padding: 0em 3em;
   }
@@ -88,16 +85,13 @@
    .pressPage .archive-list .responsive-table-row:nth-of-type(2n+1) {
 	    background: white;
       margin: 5em 0em;
-    }
-
-
+  }
   .pressPage .archive-list .responsive-table td::before {
     color: #D0D0D0;
   	font-size: 0.7em;
   	letter-spacing: 0.2em;
   	font-weight: lighter;
   }
-
   .pressPage tr.responsive-table-row:nth-child(1) > td:nth-child(1){
     margin-top: -26px;
   }
