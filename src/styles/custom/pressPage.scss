@@ -1,83 +1,49 @@
-// This is global, move it later.
-
-.wide-intro{
-  height: 40vh;
-  background-image: linear-gradient(41deg, #bba2c8, #e895af);
-  color:white;
-}
-.wide-intro section {
-	text-align: center;
-	padding-top: 8.5%;
-	line-height: 0.8em;
-}
-
-.wide-intro section h2 {
-	font-size: 1.8em;
-	text-transform: uppercase;
-}
-.wide-intro section p {
-	font-size: 1.3em;
-	font-weight: 100;
-	font-style: italic;
-  letter-spacing: 0.1em;
-}
-
 // Press Page
-
-
-.pressPage{letter-spacing: 1px;}
-
-.pressPage .archive-list .responsive-table {
-	width: 100%;
-	margin-top: -3.4em;
-}
-.pressPage .archive-list .responsive-table .small--hide {
-	height: 55px;
-	color: #FFF;
-}
-.pressPage .archive-list .responsive-table-row {background: #FFF;}
-.pressPage .archive-list .responsive-table-row:nth-of-type(odd) {background: #FAFAFA;}
-.pressPage .archive-list .responsive-table-row:hover{
-  background: #bba2c8;
-  color: white;
+.pressPage{
+	letter-spacing: 1px;
+	.archive-list .responsive-table {
+		width: 100%;
+		margin-top: -3.4em;
+		.small--hide {
+			height: 55px;
+			color: #FFF;
+		}
+	.pressPage .archive-list .responsive-table-row {
+		background: #FFF;
+		:hover{
+		  background: #bba2c8;
+		  color: white;
+		}
+		:nth-of-type(odd) {
+			background: #FAFAFA;
+		}
+	}
+	.publication p {
+	  font-size: 1em;
+	  font-weight: bold;
+	}
+	.article p {
+	  font-size: 0.9em;
+	  font-weight: normal;
+	}
+	.published p {
+	  font-size: 0.8em;
+	  font-weight: normal;
+	}
+ }
 }
 
 .pressPage .archive-list .responsive-table-row td a{color:#5343C2;}
-
 .pressPage .archive-list .responsive-table-row td a:hover{color:#4373c2;}
 
 // Article Text move to the left
 .pressPage .archive-list .responsive-table thead tr th{text-align: left;}
-
 .pressPage .archive-list .responsive-table tbody tr td:nth-child(1),
 .pressPage .archive-list .responsive-table thead tr th:nth-child(1){
 	padding-left: 30px;
 }
 
-.pressPage .archive-list .responsive-table-row .publication p {
-  font-size: 1em;
-  font-weight: bold;
-}
-.pressPage .archive-list .responsive-table-row .article p {
-  font-size: 0.9em;
-  font-weight: normal;
-  // color:#666;
-}
-.pressPage .archive-list .responsive-table-row .published p {
-  font-size: 0.8em;
-  font-weight: normal;
-  // color:#666;
-}
-
 @include media-query($small) {
-  .wide-intro section {
-    padding-top: 3em;
-    line-height: 1.5em;
-  }
-  .wide-intro section p {
-    font-size: 1em;
-  	padding: 0em 3em;
-  }
   .pressPage .archive-list .responsive-table tbody tr td:nth-child(1),
   .pressPage .archive-list .responsive-table thead tr th:nth-child(1) {
 	   padding-left: 17px;
@@ -95,7 +61,6 @@
   .pressPage tr.responsive-table-row:nth-child(1) > td:nth-child(1){
     margin-top: -26px;
   }
-
 }
 @include media-query($medium) {
   .article p {

@@ -1,0 +1,34 @@
+// Page Intro Section for Press and Contact page.
+.wide-intro {
+  height: 40vh;
+  background-image: linear-gradient(41deg, #bba2c8, #e895af);
+  color:white;
+  section {
+  	text-align: center;
+  	padding-top: 8.5%;
+  	line-height: 0.8em;
+    h2 {
+    	font-size: 1.8em;
+    	text-transform: uppercase;
+    }
+    p {
+    	font-size: 1.3em;
+    	font-weight: 100;
+    	font-style: italic;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+@include media-query($small) {
+  .wide-intro {
+    section {
+      padding-top: 3em;
+      line-height: 1.5em;
+      p {
+        font-size: 1em;
+      	padding: 0em 3em;
+      }
+    }
+  }
+}
