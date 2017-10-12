@@ -10,10 +10,16 @@
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
 
   <div class="grid__item productPage">
-    <div class="grid page-width" style="margin-bottom: 5em;">
+    <div class="grid page-width">
+
       <div class="grid__item medium-up--one-half productPage-images">
         <h3>{{ current_variant.price | money }}</h3>
-        <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image>
+        <!-- <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image> -->
+        <ul class="product-slides">
+          {% for image in product.images %}
+        	  <li>{{ image | product_img_url: 'original' | img_tag }}</li>
+        	{% endfor %}
+        </ul>
       </div>
 
       <div class="grid__item medium-up--one-half productPage-description">
@@ -27,7 +33,7 @@
           <link itemprop="availability" href="http://schema.org/{% if current_variant.available %}InStock{% else %}OutOfStock{% endif %}">
 
           <form action="/cart/add" method="post" enctype="multipart/form-data">
-            {% unless product.has_only_default_variant %}
+            <!-- {% unless product.has_only_default_variant %}
               {% for option in product.options_with_values %}
                 <div class="selector-wrapper js">
                   <label for="SingleOptionSelector-{{ forloop.index0 }}">
@@ -48,7 +54,7 @@
                   </select>
                 </div>
               {% endfor %}
-            {% endunless %}
+            {% endunless %} -->
 
             <button
               type="submit"

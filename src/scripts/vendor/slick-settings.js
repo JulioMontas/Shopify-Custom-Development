@@ -1,3 +1,9 @@
+
+$('.product-slides').slick({
+  dots: false,
+  arrows: true,
+});
+
 $('.list-of-five').slick({
   speed: 300,
   infinite: false,
