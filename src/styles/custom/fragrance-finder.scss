@@ -79,6 +79,15 @@
 // Not showing the flowers in mobile
 .grid__item.medium-up--one-tenth {display: none;}
 
+
+// .fragrance-finder .grid__item{
+//   margin-left: 0px;
+// }
+
+.fragrance-finder div div.grid__item{
+  padding-left: 0px;
+}
+
 .fragrance-finder ul.finder-btn {
 	display: flex;
 	flex-direction: row;

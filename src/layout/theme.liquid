@@ -63,7 +63,14 @@
   {{ content_for_header }}
 </head>
 
+<script type="text/javascript">
+        $("#fakeLoader").fakeLoader();
+    </script>
+
+
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
+  <div id="fakeLoader"></div>
+
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 

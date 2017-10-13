@@ -48,6 +48,11 @@
  */
 // =require vendor/lity.js
 
+/*!
+ * fakeLoader.js
+ */
+// =require vendor/fakeLoader.js
+
 
 
 // Attempts to preserve comments that likely contain licensing information,
