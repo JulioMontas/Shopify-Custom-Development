@@ -188,6 +188,10 @@ ul.tabs-seven li.current-seven{
 }
 
 @include media-query($small) {
+
+  .fragrance-finder .products-collections {margin-left: 2em;}
+
+
   .fragrance-finder .grid{
 	  margin-bottom: 7em;
   }

@@ -161,7 +161,15 @@ html {
 }
 
 @include media-query($small) {
-
+  #top-header div p {
+  	display: none;
+  }
+  #top-header .cartShopping ul {
+	margin-left: -40px;
+  }
+  #top-header {
+	justify-content: center;
+}
 
 }
 /*================ Collection Larger Button ================*/
