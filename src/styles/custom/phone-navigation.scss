@@ -1,0 +1,38 @@
+.phone-navigation {
+  text-align: center;
+}
+.phone-navigation ul{
+  margin-left: -40px;
+}
+.phone-navigation ul li{
+  list-style: none;
+  margin-bottom: 2px;
+}
+
+.phone-navigation ul li a{
+	width: 100%;
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+	color: white;
+  background: #5343C2;
+}
+.phone-navigation ul li a:hover{
+  background: #4373c2;
+}
+
+.phone-navigation ul div.nav-header-dropdown div section h3 a{
+  color: #5343C2;
+  text-decoration: none;
+}
+
+.phone-navigation ul div.nav-header-dropdown div section h3 a:hover,
+.phone-navigation ul div.nav-header-dropdown div section ul li a:hover{
+  color: #4373c2;
+}
+
+.phone-navigation ul div.nav-header-dropdown div section ul li a{
+  background: none;
+  color: #5343C2;
+  padding: 0em 0;
+}

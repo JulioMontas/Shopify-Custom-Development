@@ -1,12 +1,24 @@
 /*!
+ * jquery-3.1.1.min.js
+ */
+// =require vendor/jquery-3.1.1.min.js
+
+
+/*!
  * modernizr.min.js
  */
 // =require vendor/modernizr.min.js
 
 /*!
- * jquery-2.2.3.min.js
+ * jquery.viewportchecker.min
  */
-// =require vendor/jquery-2.2.3.min.js
+// =require vendor/jquery.viewportchecker.min
+
+
+/*!
+ * pageAnimationControl.js
+ */
+// =require vendor/pageAnimationControl.js
 
 /*!
  * slick.min.js
@@ -17,11 +29,6 @@
  * slick-settings.js
  */
 // =require vendor/slick-settings.js
-
-/*!
- * anime.min.js
- */
-// =require vendor/anime.min.js
 
 /*!
  * header-dropdown.js
@@ -52,6 +59,7 @@
  * fakeLoader.js
  */
 // =require vendor/fakeLoader.js
+
 
 
 

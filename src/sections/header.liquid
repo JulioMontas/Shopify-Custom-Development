@@ -97,6 +97,8 @@
         </section>
       </div>  <!-- End of .medium-up--hide -->
 
+
+
     <div id="lower-header" class="small--hide">
         {% if template.name == 'index' %}
           <h1 itemscope itemtype="http://schema.org/Organization">
@@ -163,6 +165,90 @@
           </button>
         </form>
      </div><!-- End of #top-header -->
+
+
+
+
+       <nav class="phone-navigation" style="display:none;">
+         <ul class="site-nav">
+           <li><a href="#" class="nav-shop-dropdown">Shop</a></li>
+
+           <div class="nav-header-dropdown" style="display:none;">
+             <div>
+               <section>
+                 <h3><a href="/pages/fragrances">Fragrances</a></h3>
+                 <ul>
+                 {% for link in linklists.fragrances-one.links %}
+                    <li>{{ link.title | link_to: link.url }}</li>
+                 {% endfor %}
+                 </ul>
+                 <ul>
+                 {% for link in linklists.fragrances-two.links %}
+                    <li>{{ link.title | link_to: link.url }}</li>
+                 {% endfor %}
+               </ul>
+               </section>
+               <section>
+                 <h3><a href="/pages/home-fragrances">Home Fragrances</a></h3>
+                 <ul>
+                 {% for link in linklists.home-fragrances.links %}
+                    <li>{{ link.title | link_to: link.url }}</li>
+                 {% endfor %}
+                 </ul>
+               </section>
+               <section>
+                 <h3><a href="/pages/skincare">Skincare</a></h3>
+                 <ul>
+                 {% for link in linklists.skincare.links %}
+                    <li>{{ link.title | link_to: link.url }}</li>
+                 {% endfor %}
+                 </ul>
+               </section>
+               <section>
+                 <h3><a href="/pages/bath-and-body">Bath & Body</a></h3>
+                 <ul>
+                 {% for link in linklists.bath-body.links %}
+                    <li>{{ link.title | link_to: link.url }}</li>
+                 {% endfor %}
+                 </ul>
+               </section>
+               <section>
+                 <h3><a href="/pages/haircare">Haircare</a></h3>
+                 <ul>
+                 {% for link in linklists.haircare.links %}
+                    <li>{{ link.title | link_to: link.url }}</li>
+                 {% endfor %}
+                 </ul>
+               </section>
+             </div>
+           </div>
+
+           {% for link in linklists[section.settings.main_linklist].links %}
+             {%- assign child_list_handle = link.title | handleize -%}
+             {% if menus[child_list_handle].links != blank %}
+               <li class="site-nav--has-submenu{% if link.active %} site-nav--active{% endif %}">
+                 <a href="{{ link.url }}" class="site-nav__link">
+                   {{ link.title }}
+                   {% include 'icon-arrow-down' %}
+                 </a>
+                 <ul class="site-nav__submenu">
+                   {% for childlink in menus[child_list_handle].links %}
+                     <li {% if childlink.active %}class="site-nav--active"{% endif %}>
+                       <a href="{{ childlink.url }}" class="site-nav__link">{{ childlink.title | escape }}</a>
+                     </li>
+                   {% endfor %}
+                 </ul>
+               </li>
+             {% else %}
+               <li {% if link.active %}class="site-nav--active"{% endif %}>
+                 <a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a>
+               </li>
+             {% endif %}
+           {% endfor %}
+         </ul>
+       </nav>
+     </div>
+
    </div><!-- End of .center-lower-header -->
 
   </header>
