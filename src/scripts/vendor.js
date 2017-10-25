@@ -3,22 +3,20 @@
  */
 // =require vendor/jquery-3.1.1.min.js
 
-
 /*!
  * modernizr.min.js
  */
 // =require vendor/modernizr.min.js
 
 /*!
- * jquery.viewportchecker.min
+ * jquery.viewportchecker.min.js
  */
-// =require vendor/jquery.viewportchecker.min
-
+// =require vendor/jquery.viewportchecker.min.js
 
 /*!
- * pageAnimationControl.js
+ * animationControl.js
  */
-// =require vendor/pageAnimationControl.js
+// =require vendor/animationControl.js
 
 /*!
  * slick.min.js
@@ -54,12 +52,6 @@
  * lity.js
  */
 // =require vendor/lity.js
-
-/*!
- * fakeLoader.js
- */
-// =require vendor/fakeLoader.js
-
 
 
 
