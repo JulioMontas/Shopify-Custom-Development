@@ -43,7 +43,7 @@
   <div class="page-width collectionPreview">
     <ul>
     {% for product in collection.products %}
-      <li>
+      <li class="animationFadeIn">
         <a href="{{ product.url | within: collection }}">
           <span><img src="{{ product.featured_image.src | img_url: '110x110' }}" alt="{{ product.featured_image.alt | escape }}"></span>
           <h2>{{ product.vendor }}</h2>
