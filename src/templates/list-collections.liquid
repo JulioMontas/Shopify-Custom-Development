@@ -3,24 +3,60 @@
   This page represents the /collections and /products pages.
 {% endcomment %}
 
-<div class="page-width">
-{% for collection in collections %}
-  {% unless collection.handle == 'frontpage' %}
-    <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">
-      {% if collection.image != blank %}
-        {{ collection | img_url: '480x480' | img_tag: collection.title }}
-      {% elsif collection.products.first != blank %}
-        {{ collection.products.first | img_url: '480x480' | img_tag: collection.title }}
-      {% else %}
-        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-        {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
-      {% endif %}
-    </a>
+<style>
+.collectionList ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	text-align: center;
+	padding: 0;
+	letter-spacing: 1px;
+	margin-top: 2.5em;
+}
+.collectionList ul li {
+	list-style: none;
+	width: 265px;
+	margin-bottom: 5em;
+}
+.collectionList ul li p a {
+	text-decoration: none;
+  color: #5343C2;
+	text-transform: uppercase;
+	font-size: 0.8em;
+  font-weight: bold;
+}
+.collectionList ul li p a:hover {
+  color: #4373c2;
+}
 
-    <p>
-      <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">{{ collection.title }}</a>
-    </p>
-  {% endunless %}
-{% endfor %}
+</style>
+
+<div class="page-width collectionList">
+  <ul>
+    {% for collection in collections %}
+      {% unless collection.handle == 'frontpage' %}
+        <li class="animationFadeIn">
+          <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">
+            {% if collection.image != blank %}
+              {{ collection | img_url: '110x110' | img_tag: collection.title }}
+            {% elsif collection.products.first != blank %}
+              {{ collection.products.first | img_url: '110x110' | img_tag: collection.title }}
+            {% else %}
+              {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+              {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
+            {% endif %}
+          </a>
+
+          <p>
+            <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">{{ collection.title }}</a>
+          </p>
+        </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
 </div>
 {% endpaginate %}
