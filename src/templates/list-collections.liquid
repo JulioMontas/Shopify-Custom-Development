@@ -2,8 +2,7 @@
   This page represents the /collections and /products pages.
 {% endcomment %}
 
-<h1>{{ page_title }}</h1>
-
+<div class="page-width">
 {% for collection in collections %}
   {% unless collection.handle == 'frontpage' %}
     <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: title }}">
@@ -22,3 +21,4 @@
     </p>
   {% endunless %}
 {% endfor %}
+</div>

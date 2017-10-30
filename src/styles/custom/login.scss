@@ -1,0 +1,19 @@
+.loginContainer {
+	width: 40%;
+	margin: 0 auto;
+	background: #F6F6F6;
+	padding: 2em;
+	border-radius: 15px;
+}
+
+
+@include media-query($medium) {
+  .loginContainer {
+  	width: 60%;
+  }
+}
+@include media-query($small) {
+  .loginContainer {
+  	width: 100%;
+  }
+}
