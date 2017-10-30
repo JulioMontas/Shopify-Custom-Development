@@ -3,6 +3,7 @@
 }
 .phone-navigation ul{
   margin-left: -40px;
+  margin-bottom: 0px;
 }
 .phone-navigation ul li{
   list-style: none;
@@ -35,4 +36,13 @@
   background: none;
   color: #5343C2;
   padding: 0em 0;
+}
+
+@include media-query($small) {
+  .phone-navigation ul.site-nav div.nav-header-dropdown div section:nth-child(5) ul {
+	  margin-bottom: 20px;
+  }
+  .phone-navigation ul.site-nav div.nav-header-dropdown div:nth-child(1) > section ul li {
+	  margin-bottom: 6px;
+  }
 }

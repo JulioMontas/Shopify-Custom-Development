@@ -4,8 +4,8 @@
 	background: #F6F6F6;
 	padding: 2em;
 	border-radius: 15px;
+	margin-top: 3em;
 }
-
 
 @include media-query($medium) {
   .loginContainer {
