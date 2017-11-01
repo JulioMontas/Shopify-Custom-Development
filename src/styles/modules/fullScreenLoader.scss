@@ -1,0 +1,23 @@
+/*
+######################################
+######### Full Screen Loader #########
+######################################
+*/
+#fullScreenLoader {
+  height: 100%;
+  width: 100%;
+  opacity:0.95;
+  filter:alpha(opacity=95);
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index:1;
+}
+#fullScreenLoader img {
+  height: 320px;
+  width: 320px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-150px 0 0 -150px;
+}

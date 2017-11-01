@@ -1,4 +1,9 @@
 /*!
+ * fullScreenLoader.js
+ */
+// =require vendor/fullScreenLoader.js
+
+/*!
  * jquery-3.1.1.min.js
  */
 // =require vendor/jquery-3.1.1.min.js
