@@ -21,8 +21,7 @@
                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                      <h2>{{ product.vendor }}</h2>
                      <p>{{ product.title }}</p>
-                     <p>
-                       {% if product.compare_at_price > product.price %}
+                     <p>{% if product.compare_at_price > product.price %}
                          {% if product.price_varies %}
                            {%- assign sale_price = product.price | money -%}
                            {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
@@ -37,11 +36,10 @@
                          {% else %}
                            {{ product.price | money }}
                          {% endif %}
-                       {% endif %}
-                     </p>
+                       {% endif %}</p>
+                    </a>
                    {% else %}
                  {% endfor %}
-                 </a>
             	</div> <!-- END tab-content -->
 
             	<div id="tab-2" class="list-of-four tab-content-one">
@@ -1133,6 +1131,7 @@
                  </div>
                </section>
                <div class="btn-video">
+                 <a href="//www.youtube.com/watch?v=ALz_P3plF90" data-lity><i class="fa fa-video-camera" aria-hidden="true"></i></a>
                  <a href="//www.youtube.com/watch?v=vzFlRl0kK2o" data-lity><i class="fa fa-video-camera" aria-hidden="true"></i></a>
                </div>
              </div>

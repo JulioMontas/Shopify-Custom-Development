@@ -3,7 +3,6 @@
  */
 // =require vendor/fullScreenLoader.js
 
-
 /*!
  * modernizr.min.js
  */

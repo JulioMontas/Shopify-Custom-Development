@@ -55,8 +55,7 @@
 						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
 						<h2>{{ product.vendor }}</h2>
 						<p>{{ product.title }}</p>
-						<p>
-					    {% if product.compare_at_price > product.price %}
+						<p>{% if product.compare_at_price > product.price %}
 					      {% if product.price_varies %}
 					        {%- assign sale_price = product.price | money -%}
 					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
@@ -71,11 +70,10 @@
 					      {% else %}
 					        {{ product.price | money }}
 					      {% endif %}
-					    {% endif %}
-					  </p>
+					    {% endif %}</p>
+					</a>
 					{% else %}
 				{% endfor %}
-				</a>
 			</div>
 		</section>
 		<section class="animationFadeIn">
@@ -87,8 +85,7 @@
 						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
 						<h2>{{ product.vendor }}</h2>
 						<p>{{ product.title }}</p>
-						<p>
-					    {% if product.compare_at_price > product.price %}
+						<p>{% if product.compare_at_price > product.price %}
 					      {% if product.price_varies %}
 					        {%- assign sale_price = product.price | money -%}
 					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
@@ -103,11 +100,10 @@
 					      {% else %}
 					        {{ product.price | money }}
 					      {% endif %}
-					    {% endif %}
-					  </p>
+					    {% endif %}</p>
+					</a>
 					{% else %}
 				{% endfor %}
-				</a>
 			</div>
 		</section>
 		<section class="animationFadeIn">
@@ -119,8 +115,7 @@
 						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
 						<h2>{{ product.vendor }}</h2>
 						<p>{{ product.title }}</p>
-						<p>
-					    {% if product.compare_at_price > product.price %}
+						<p>{% if product.compare_at_price > product.price %}
 					      {% if product.price_varies %}
 					        {%- assign sale_price = product.price | money -%}
 					        {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
@@ -135,11 +130,10 @@
 					      {% else %}
 					        {{ product.price | money }}
 					      {% endif %}
-					    {% endif %}
-					  </p>
+					    {% endif %}</p>
+					</a>
 					{% else %}
 				{% endfor %}
-				</a>
 			</div>
 		</section>
   </div>
