@@ -17,3 +17,13 @@ $('.menu-dropdown').click(function() {
 $('.nav-shop-dropdown').click(function() {
     $('.nav-header-dropdown').slideToggle("slow");
 });
+
+
+
+
+
+
+// Search Dropdown
+$('.SearchDropdown').click(function() {
+    $('.search-navigation').slideToggle("slow");
+});

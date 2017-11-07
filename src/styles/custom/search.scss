@@ -6,7 +6,7 @@
   font-weight: 100;
 }
 // Container
-.search-page > form {
+.search-page form{
 	background: #FAFAFA;
 	padding: 15px;
 	border-radius: 5px;
@@ -60,4 +60,19 @@
 	margin-top: -14px;
   color: #5343C2;
   font-style: italic;
+}
+
+
+
+
+
+// Search dropdown
+.search-navigation {
+	background: #F0F0F0;
+	padding: 0.5em;
+}
+.search-navigation form input#Search {
+	width: 96%;
+	padding: 1em;
+	border-style: none;
 }

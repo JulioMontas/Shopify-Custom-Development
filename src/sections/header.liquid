@@ -150,21 +150,29 @@
           </ul>
         </nav>
 
-        <form action="/search" method="get" role="search">
-          <!-- <label for="Search" class="label-hidden">
-            {{ 'general.search.placeholder' | t }}
-          </label>
-          <input type="search"
-                 name="q"
-                 id="Search"
-                 value="{{ search.terms | escape }}"
-                 placeholder="{{ 'general.search.placeholder' | t }}"> -->
-          <button type="submit" class="btn">
-            {% include 'icon-search' %}
-            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-          </button>
-        </form>
+        <button type="submit" class="btn SearchDropdown">
+          {% include 'icon-search' %}
+          <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+        </button>
      </div><!-- End of #top-header -->
+
+     <div class="search-navigation" style="display:none;">
+       <form action="/search" method="get" role="search">
+         <label for="Search" class="label-hidden">
+           {{ 'general.search.placeholder' | t }}
+         </label>
+         <input type="search"
+                name="q"
+                id="Search"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.placeholder' | t }}">
+         <button type="submit" class="btn">
+           {% include 'icon-search' %}
+           <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+         </button>
+       </form>
+
+     </div>
 
 
 
