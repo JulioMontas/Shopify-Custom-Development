@@ -19,6 +19,12 @@ $('.animationFadeInRight').addClass("hidden").viewportChecker({
 });
 
 
+$('.animationDown').addClass("hidden").viewportChecker({
+  classToAdd: 'visible animated bounceInDown',
+  offset: 100,
+  repeat: true
+});
+
 
 
 
