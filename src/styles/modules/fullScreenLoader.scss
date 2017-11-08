@@ -13,11 +13,16 @@
   background: linear-gradient(-28deg, #bba2c8 0%, #e895af 100%);
 }
 
+.fullScreenLoader div.logo {
+	text-align: center;
+	margin-top: 15%;
+}
+
 .spinner {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  margin: 27% auto;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	margin: 10% auto;
 }
 
 .double-bounce1, .double-bounce2 {
