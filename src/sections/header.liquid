@@ -11,6 +11,11 @@
 
   .cartShopping a:hover {color:#FFC5C5;}
 
+  .SearchDropdown {
+	  border-style: none;
+	  background: none;
+   }
+
 </style>
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
@@ -51,20 +56,10 @@
 
       <div class="mobile-navigation medium-up--hide"> <!-- Mobile toggle -->
         <section>
-          <form action="/search" method="get" role="search">
-            <!-- <label for="Search" class="label-hidden">
-              {{ 'general.search.placeholder' | t }}
-            </label>
-            <input type="search"
-                   name="q"
-                   id="Search"
-                   value="{{ search.terms | escape }}"
-                   placeholder="{{ 'general.search.placeholder' | t }}"> -->
-            <button type="submit" class="btn">
-              {% include 'icon-search' %}
-              <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-            </button>
-          </form>
+          <button type="submit" class="SearchDropdown">
+            {% include 'icon-search' %}
+            <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+          </button>
 
         </section>
 
@@ -166,12 +161,7 @@
                 id="Search"
                 value="{{ search.terms | escape }}"
                 placeholder="{{ 'general.search.placeholder' | t }}">
-         <button type="submit" class="btn">
-           {% include 'icon-search' %}
-           <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-         </button>
        </form>
-
      </div>
 
 

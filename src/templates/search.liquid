@@ -32,7 +32,7 @@
 {% if search.performed %}
     <ul>
       {% for item in search.results %}
-        <li>
+        <li class="animationFadeIn">
           {% if item.featured_image %}
             <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
               {{ item.featured_image.src | img_url: '240x240' | img_tag: item.featured_image.alt }}
