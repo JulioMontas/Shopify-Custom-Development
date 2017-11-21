@@ -20,18 +20,22 @@
 	font-size: 0.8em;
 }
 .header-dropdown div section h3 a::after,
-.header-dropdown div section h3 a::before{
+.header-dropdown div section h3 a::before,
+.phone-navigation ul div.nav-header-dropdown div section h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section h3 a::before{
   content: "";
 	display: block;
   background: #5343C2;
   width: 100%;
 	height: 3px;
 }
-.header-dropdown div section h3 a::after {
+.header-dropdown div section h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section h3 a::after {
 	margin-bottom: -10px;
 }
+
 .header-dropdown div section:nth-child(1) h3 > a::after,
-.header-dropdown div section:nth-child(1) h3 > a::before {
+.header-dropdown div section:nth-child(1) h3 > a::before{
   width: 35%;
 }
 .header-dropdown div section:nth-child(3) h3 > a::after,
@@ -39,9 +43,55 @@
   width: 62%;
 }
 .header-dropdown div section:nth-child(4) h3 > a::after,
-.header-dropdown div section:nth-child(4) h3 > a::before {
+.header-dropdown div section:nth-child(4) h3 > a::before{
   width: 90%;
 }
+
+// Mobile style the other part is inside the .phone-navigation.scss
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(1){
+  margin-top: 2em;
+}
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(1),
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(2),
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(3),
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(4),
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(5){
+  margin-bottom: 3em;
+}
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(1) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(1) h3 a::before,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(2) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(2) h3 a::before,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(3) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(3) h3 a::before,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(4) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(4) h3 a::before,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(5) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(5) h3 a::before{
+  margin: 0 auto;
+}
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(1) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(1) h3 a::before{
+  width: 29%;
+}
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(2) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(2) h3 a::before{
+  width: 44%;
+}
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(3) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(3) h3 a::before{
+  width: 23%;
+}
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(4) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(4) h3 a::before{
+  width: 32%;
+}
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(5) h3 a::after,
+.phone-navigation ul div.nav-header-dropdown div section:nth-child(5) h3 a::before{
+  width: 23%;
+}
+
+
 .header-dropdown div section h3 a,
 .header-dropdown div section ul li a{
   -webkit-transition: color 0.25s ease;
@@ -84,4 +134,3 @@
   	flex-direction: column;
   }
 }
-// L

@@ -18,6 +18,26 @@
 	margin-top: 15%;
 }
 
+// No Javascript Text, No backgroun color it willl show up if JavaScript in enable
+.fullScreenLoader .noJavascriptPapi {
+	width: 340px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 1em 3em;
+	margin-top: -120px;
+	// border: 2px solid #FFF;
+	// background: rgba(255,255,255,0.3);
+	border-radius: 15px;
+  line-height: 23px;
+}
+.fullScreenLoader .noJavascriptPapi a {
+  text-decoration: none;
+  color: #5343C2;
+}
+.fullScreenLoader .noJavascriptPapi a:hover {
+  color: #4373c2;
+}
+
 .spinner {
 	width: 40px;
 	height: 40px;
