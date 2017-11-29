@@ -1,0 +1,13 @@
+<div class="section-RelatedProducts">
+  <section class="product-images">
+    {% for image in product.images %}
+      <img src="{{ image.src | product_img_url: 'medium' }}">
+    {% endfor %}
+  </section>
+  <section>
+    <a href="{{ product.url }}">{{ product.title }}</a>
+  </section>
+  <section>
+    {{ product.price | money_without_trailing_zeros }}
+  </section>
+</div>
