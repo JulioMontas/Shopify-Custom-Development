@@ -1,3 +1,36 @@
-.section-RelatedProducts {
-    text-align: center;
-  }
+.section-RelatedProducts{
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.section-RelatedProducts a{
+  text-decoration: none;
+  opacity: 0.7;
+}
+.section-RelatedProducts a:hover{opacity: 1;}
+
+.section-RelatedProducts a h2{
+  color: #333;
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+.section-RelatedProducts a p{
+  color: #9D9D9D;
+	font-size: 0.9em;
+	line-height: 20px;
+	margin: -5px 20px 11px;
+}
+
+.section-RelatedProducts a p:nth-child(4){
+  color: #5343C2;
+	font-style: italic;
+}
+
+
+.section-header__title {
+	font-size: 0.9em;
+	font-style: italic;
+	letter-spacing: 1px;
+	color: #333;
+}
