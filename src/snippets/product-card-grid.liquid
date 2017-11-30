@@ -1,13 +1,23 @@
 <div class="section-RelatedProducts">
-  <section class="product-images">
-    {% for image in product.images %}
-      <img src="{{ image.src | product_img_url: 'medium' }}">
-    {% endfor %}
-  </section>
-  <section>
-    <a href="{{ product.url }}">{{ product.title }}</a>
-  </section>
-  <section>
-    {{ product.price | money_without_trailing_zeros }}
-  </section>
+  <a href="{{ product.url | within: collection }}">
+    <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+    <h2>{{ product.vendor }}</h2>
+    <p>{{ product.title }}</p>
+    <p>{% if product.compare_at_price > product.price %}
+        {% if product.price_varies %}
+          {%- assign sale_price = product.price | money -%}
+          {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+        {% else %}
+          {{ 'products.product.on_sale' | t }}
+          {{ product.price | money }}
+        {% endif %}
+      {% else %}
+        {% if product.price_varies %}
+          {%- assign price = product.price | money -%}
+          {{ 'products.product.from_text_html' | t: price: price }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}</p>
+  </a>
 </div>
