@@ -7,6 +7,27 @@
 
 
 
+
+
+
+// Social Media Sharing
+.section-product__social__CTA {
+	padding: 10px 160px 15px;
+	border: 2px solid #5343C2;
+	border-radius: 5px;
+}
+
+.section-product__social__CTA:hover {
+	background: rgba(83,67,194,0.1);
+}
+
+#shopify-section-socialMedia-share div.page-width div {
+	text-align: center;
+}
+
+
+
+
 // .reviewSection .spr-header-title::before,
 // .social-sharing h2::before {
 // 	content: '';
@@ -20,8 +41,7 @@
 // 	z-index: -1;
 // }
 
-.reviewSection .spr-header-title,
-.social-sharing h2 {
+.reviewSection .spr-header-title {
 	text-align: center;
 	font-size: 1.25em;
 	color: #333;
@@ -170,17 +190,17 @@ input[type=number]{-moz-appearance: textfield;}
   bottom: -1px;
   height: 50%;
 }
-.social-sharing {
-	text-align: center;
-	margin-bottom: 2em;
-}
-.social-sharing a {
-	margin-left:15px;
-}
-
-.social-sharing > a:nth-child(2) {
-	margin-left:0;
-}
+// .social-sharing {
+// 	text-align: center;
+// 	margin-bottom: 2em;
+// }
+// .social-sharing a {
+// 	margin-left:15px;
+// }
+//
+// .social-sharing > a:nth-child(2) {
+// 	margin-left:0;
+// }
 @include media-query($small) {
   // .social-sharing h2::before {
   // 	display: none;

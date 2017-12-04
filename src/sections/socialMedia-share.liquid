@@ -1,0 +1,31 @@
+<div class="page-width">
+  <h2 class="section-header__title">Share</h2>
+
+  <div style="text-aling:center">
+    {% if settings.share_twitter %}
+      <a class="section-product__social__CTA" target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}">{% include 'icon-twitter' %}</a>
+    {% endif %}
+
+    {% if settings.share_facebook %}
+      <a class="section-product__social__CTA" target="_blank" href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}">{% include 'icon-facebook' %}</a>
+    {% endif %}
+
+    {% if settings.share_pinterest %}
+      <a class="section-product__social__CTA" target="_blank" href="//pinterest.com/pin/create/button/?url={{ shop.url | append: share_permalink }}&amp;media={{ share_image | img_url: '1024x1024' }}&amp;description={{ share_title | url_param_escape }}">{% include 'icon-pinterest' %}</a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product pages",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_share_buttons",
+        "label": "Show social sharing buttons",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}
