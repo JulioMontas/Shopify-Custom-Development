@@ -41,15 +41,18 @@
 // 	z-index: -1;
 // }
 
-.reviewSection .spr-header-title {
-	text-align: center;
-	font-size: 1.25em;
-	color: #333;
-	font-weight: 100;
-	letter-spacing: 1px;
-	z-index: 131;
-	position: relative;
-}
+// .reviewSection .spr-header-title {
+// 	text-align: center;
+// 	font-size: 1.25em;
+// 	color: #333;
+// 	font-weight: 100;
+// 	letter-spacing: 1px;
+// 	z-index: 131;
+// 	position: relative;
+// }
+// .reviewSection .spr-header-title::after {
+// 	width: 180px;
+// }
 
 
 // .reviewSection .spr-header-title::after,
@@ -63,9 +66,6 @@
 // 	z-index: 139;
 // }
 
-.reviewSection .spr-header-title::after {
-	width: 180px;
-}
 .social-sharing > h2:nth-child(1)::after {
 	width: 75px;
 }
