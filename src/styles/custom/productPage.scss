@@ -28,6 +28,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+.social-sharing ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.social-sharing ul li {
+	list-style: none;
+}
+
+
 // .reviewSection .spr-header-title::before,
 // .social-sharing h2::before {
 // 	content: '';
@@ -66,9 +86,10 @@
 // 	z-index: 139;
 // }
 
-.social-sharing > h2:nth-child(1)::after {
-	width: 75px;
-}
+// .social-sharing > h2:nth-child(1)::after {
+// 	width: 75px;
+// }
+
 .reviewSection .spr-icon {
 	color: #5343C2;
 }
