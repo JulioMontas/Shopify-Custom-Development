@@ -7,14 +7,13 @@
 
 
 
-
-
-
-// Social Media Sharing
 .section-product__social__CTA {
-	padding: 10px 160px 15px;
+	padding: 0.8em 0;
 	border: 2px solid #5343C2;
 	border-radius: 5px;
+	width: 340px;
+	display: block;
+	text-align: center;
 }
 
 .section-product__social__CTA:hover {
@@ -49,55 +48,10 @@
   }
 }
 
-// .reviewSection .spr-header-title::before,
-// .social-sharing h2::before {
-// 	content: '';
-// 	display: block;
-// 	width: 100%;
-// 	height: 1px;
-// 	background: #ccc;
-// 	border-radius: 5px;
-// 	position: absolute;
-// 	bottom: 50%;
-// 	z-index: -1;
-// }
+.reviewSection .spr-icon {color: #5343C2;}
 
-// .reviewSection .spr-header-title {
-// 	text-align: center;
-// 	font-size: 1.25em;
-// 	color: #333;
-// 	font-weight: 100;
-// 	letter-spacing: 1px;
-// 	z-index: 131;
-// 	position: relative;
-// }
-// .reviewSection .spr-header-title::after {
-// 	width: 180px;
-// }
+.reviewSection .spr-summary-actions a {text-decoration: none;}
 
-
-// .reviewSection .spr-header-title::after,
-// .social-sharing > h2:nth-child(1)::after {
-// 	background: white;
-// 	content: "";
-// 	display: table;
-// 	height: 30px;
-// 	margin: 0 auto;
-// 	margin-top: -26px;
-// 	z-index: 139;
-// }
-
-// .social-sharing > h2:nth-child(1)::after {
-// 	width: 75px;
-// }
-
-.reviewSection .spr-icon {
-	color: #5343C2;
-}
-
-.reviewSection .spr-summary-actions a {
-	text-decoration: none;
-}
 .productPage-description{letter-spacing:1px;}
 
 .productPage-images h3,
@@ -124,13 +78,7 @@ div.grid__item:nth-child(2) > p:nth-child(2){
 	line-height: 22px;
 }
 
-.productPage-description div:hover ~  .productPage-description div p{
-	color: #333;
-}
-
-
-
-
+.productPage-description div:hover ~  .productPage-description div p{color: #333;}
 
 .grid__item div form button {
 	background: #5343C2;
@@ -147,9 +95,8 @@ div.grid__item:nth-child(2) > p:nth-child(2){
    -o-transition: background 0.15s ease;
    transition: background 0.15s ease;
 }
-.grid__item div form button:hover{
-  background: #4373c2;
-}
+
+.grid__item div form button:hover{background: #4373c2;}
 
 .quantity {position: relative;}
 
@@ -212,21 +159,8 @@ input[type=number]{-moz-appearance: textfield;}
   bottom: -1px;
   height: 50%;
 }
-// .social-sharing {
-// 	text-align: center;
-// 	margin-bottom: 2em;
-// }
-// .social-sharing a {
-// 	margin-left:15px;
-// }
-//
-// .social-sharing > a:nth-child(2) {
-// 	margin-left:0;
-// }
+
 @include media-query($small) {
-  // .social-sharing h2::before {
-  // 	display: none;
-  // }
   .productPage-images {
 	text-align: center;
   }
