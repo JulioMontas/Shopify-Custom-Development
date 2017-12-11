@@ -27,10 +27,6 @@
 	font-style: italic;
 }
 
-
-
-
-
 .section-header__title,
 .reviewSection .spr-header-title {
 	text-align: center;
@@ -38,7 +34,6 @@
 	font-weight: 100;
 	letter-spacing: 1px;
 	color: #333;
-	margin-top: 4em;
 }
 
 .section-header__title::after,
@@ -49,5 +44,5 @@
 	height: 1px;
 	background: #E3E3E3;
 	border-radius: 5px;
-	margin: 0.4em 0 5em 0;
+	margin: 0.4em 0 4em 0;
 }
