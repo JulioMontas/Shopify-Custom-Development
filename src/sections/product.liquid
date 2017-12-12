@@ -10,8 +10,12 @@
   <meta itemprop="description" content="{{ product.description | strip_html | escape }}">
 
   <div class="grid__item productPage">
+    <div class="product-Breadcrumbs">
+      <section class="page-width">
+        {% include 'breadcrumbs' %}
+      </section>
+    </div>
     <div class="grid page-width animationFadeIn">
-
       <div class="grid__item medium-up--one-half productPage-images">
         <h3>{{ current_variant.price | money }}</h3>
         <!-- <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image> -->
@@ -101,7 +105,6 @@
       </div><!-- End of Second one-half -->
     </div>
   </div>
-
 
 {% if section.settings.show_share_buttons %}
   {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}

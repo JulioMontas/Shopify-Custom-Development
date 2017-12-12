@@ -38,3 +38,44 @@
 	  }
   }
 }
+
+.product-Breadcrumbs{
+	background: #f9f9f9;
+	padding: 20px 0px;
+}
+.product-Breadcrumbs section nav a {
+	text-decoration: none;
+	color: #bfbfbf;
+	-webkit-transition: color 0.15s ease;
+	 -moz-transition: color 0.15s ease;
+	 -o-transition: color 0.15s ease;
+	 transition: color 0.15s ease;
+}
+.product-Breadcrumbs section nav a:hover {
+	color: #5343c2;
+}
+
+
+
+.product-Breadcrumbs .breadcrumb > span:nth-child(2),
+.product-Breadcrumbs .breadcrumb > span:nth-child(4) {
+	padding: 0 0.5em;
+	color: #bfbfbf;
+}
+
+
+.product-Breadcrumbs .breadcrumb > span:last-child {
+	font-weight: bold;
+}
+
+
+
+
+
+// .breadcrumbs-nav ul li::before {
+//     content: ">";
+//     display: block;
+//     float: right;
+//     margin: 0px 15px;
+//     color: #bfbfbf;
+// }
