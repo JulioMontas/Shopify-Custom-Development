@@ -167,3 +167,21 @@ input[type=number]{-moz-appearance: textfield;}
 	text-align: center;
   }
 }
+
+
+// Review Section
+
+.spr-container .spr-content .spr-form form.new-review-form .spr-form-contact div{
+  width: 49%;
+  float: left;
+}
+.spr-container .spr-content .spr-form form.new-review-form .spr-form-contact div input,
+.spr-container .spr-content .spr-form form.new-review-form .spr-form-review div input,
+.spr-container .spr-content .spr-form form.new-review-form .spr-form-review div.spr-form-review-body div.spr-form-input textarea{
+  padding: 13px;
+  border-color: #ccc;
+  border-radius: 5px;
+}
+.spr-container .spr-content .spr-form form.new-review-form .spr-form-contact div:nth-child(2){
+  margin-left: 1%;
+}
