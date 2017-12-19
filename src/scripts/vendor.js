@@ -58,6 +58,11 @@
  */
 // =require vendor/lity.js
 
+/*!
+ * imageGalleryThumbnails.js
+ */
+// =require vendor/imageGalleryThumbnails.js
+
 
 
 // Attempts to preserve comments that likely contain licensing information,

@@ -19,13 +19,19 @@
       <div class="grid__item medium-up--one-half productPage-images">
         <h3>{{ current_variant.price | money }}</h3>
         <!-- <img src="{{ featured_image | img_url: '480x480' }}" alt="{{ featured_image.alt | escape }}" data-product-featured-image> -->
-        <ul class="product-slides">
-          {% for image in product.images %}
-        	  <li>{{ image | product_img_url: 'original' | img_tag }}</li>
-        	{% endfor %}
-        </ul>
+        <nav class="imgGalleryThumbnails">
+          <ul class="slider-for">
+            {% for image in product.images %}
+          	  <li>{{ image | product_img_url: 'original' | img_tag }}</li>
+          	{% endfor %}
+          </ul>
+          <ul class="slider-nav">
+            {% for image in product.images %}
+          	  <li>{{ image | product_img_url: 'original' | img_tag }}</li>
+          	{% endfor %}
+          </ul>
+        </nav>
       </div>
-
       <div class="grid__item medium-up--one-half productPage-description">
         <h2>{{ product.title }}</h2>
         <p>{{ product.vendor }}</p>
