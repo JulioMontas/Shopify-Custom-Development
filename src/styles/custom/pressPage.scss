@@ -10,16 +10,13 @@
   height: 55px;
   color: #FFF;
 }
-.pressPage .archive-list .responsive-table .pressPage .archive-list .responsive-table-row {
+.pressPage .archive-list section .responsive-table tbody tr.responsive-table-row {
   background: #FFF;
 }
-.pressPage .archive-list .responsive-table .pressPage .archive-list .responsive-table-row :hover {
-  background: #bba2c8;
-  color: white;
-}
-.pressPage .archive-list .responsive-table .pressPage .archive-list .responsive-table-row :nth-of-type(odd) {
+.pressPage .archive-list section .responsive-table tbody tr.responsive-table-row:nth-of-type(odd) {
   background: #FAFAFA;
 }
+
 .pressPage .archive-list .responsive-table .publication p {
   font-size: 1em;
   font-weight: bold;
