@@ -14,13 +14,13 @@
 .product-circle-buttons nav ul{
   display: flex;
 	flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 	flex-wrap: nowrap;
 	margin-bottom: 150px;
 }
 .product-circle-buttons nav ul li {
 	list-style: none;
-	width: 250px;
+	width: 280px;
 	margin-left: 0px;
 }
 .product-circle-buttons nav ul li a{

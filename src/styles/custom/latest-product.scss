@@ -55,9 +55,6 @@
   background:#e895af;
 }
 
-
-
-
 @include media-query($medium-up) {
   .mobile-title{display: none;}
 }

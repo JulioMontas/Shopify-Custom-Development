@@ -1,36 +1,36 @@
 // Press Page
-.pressPage{
-	letter-spacing: 1px;
-	.archive-list .responsive-table {
-		width: 100%;
-		margin-top: -25px;
-		.small--hide {
-			height: 55px;
-			color: #FFF;
-		}
-	.pressPage .archive-list .responsive-table-row {
-		background: #FFF;
-		:hover{
-		  background: #bba2c8;
-		  color: white;
-		}
-		:nth-of-type(odd) {
-			background: #FAFAFA;
-		}
-	}
-	.publication p {
-	  font-size: 1em;
-	  font-weight: bold;
-	}
-	.article p {
-	  font-size: 0.9em;
-	  font-weight: normal;
-	}
-	.published p {
-	  font-size: 0.8em;
-	  font-weight: normal;
-	}
- }
+.pressPage {
+  letter-spacing: 1px;
+}
+.pressPage .archive-list .responsive-table {
+  width: 100%;
+  margin-top: -25px;
+}
+.pressPage .archive-list .responsive-table .small--hide {
+  height: 55px;
+  color: #FFF;
+}
+.pressPage .archive-list .responsive-table .pressPage .archive-list .responsive-table-row {
+  background: #FFF;
+}
+.pressPage .archive-list .responsive-table .pressPage .archive-list .responsive-table-row :hover {
+  background: #bba2c8;
+  color: white;
+}
+.pressPage .archive-list .responsive-table .pressPage .archive-list .responsive-table-row :nth-of-type(odd) {
+  background: #FAFAFA;
+}
+.pressPage .archive-list .responsive-table .publication p {
+  font-size: 1em;
+  font-weight: bold;
+}
+.pressPage .archive-list .responsive-table .article p {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+.pressPage .archive-list .responsive-table .published p {
+  font-size: 0.8em;
+  font-weight: normal;
 }
 
 .pressPage .archive-list .responsive-table-row td a{color:#5343C2;}
