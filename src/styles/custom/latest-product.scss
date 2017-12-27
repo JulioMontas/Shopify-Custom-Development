@@ -98,3 +98,32 @@
 		line-height: 1.5em;
 	}
 }
+
+
+
+//New section
+
+.section-DiscoverTizianaTerenzi section.text-n-cta {
+	background: linear-gradient(-28deg, #bba2c8 0%, #e895af 100%);
+	text-align: center;
+}
+.section-DiscoverTizianaTerenzi section.text-n-cta div {
+	width: 50%;
+	margin: 0 auto;
+	padding: 111px;
+}
+
+
+.section-DiscoverTizianaTerenzi section.upperIMG nav ul li,
+.section-DiscoverTizianaTerenzi section.lowerIMG nav ul li{
+	list-style: none;
+}
+
+.section-DiscoverTizianaTerenzi section.upperIMG nav ul,
+.section-DiscoverTizianaTerenzi section.lowerIMG nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: -40px;
+
+}
