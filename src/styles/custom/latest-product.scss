@@ -153,3 +153,42 @@
 	background: #ffffff1a;
 	border-radius: 5px;
 }
+
+
+
+@include media-query($medium) {
+
+}
+
+@include media-query($small) {
+	.section-DiscoverTizianaTerenzi section.text-n-cta div {
+	  width: 90%;
+	  padding: 0px;
+	  padding-bottom: 2.5em;
+  }
+	.upperIMG nav ul li:nth-child(2),
+	.upperIMG nav ul li:nth-child(3),
+	.upperIMG nav ul li:nth-child(4),
+	.upperIMG nav ul li:nth-child(5),
+	.lowerIMG nav ul li:nth-child(2),
+	.lowerIMG nav ul li:nth-child(3),
+	.lowerIMG nav ul li:nth-child(4),
+	.lowerIMG nav ul li:nth-child(5){
+		display: none;
+	}
+	.section-DiscoverTizianaTerenzi section.text-n-cta div p {
+  	line-height: 23px;
+  	font-size: 1em;
+  	margin-top: 0px;
+  	padding-top: 2em;
+  }
+	.section-DiscoverTizianaTerenzi section.text-n-cta div a {
+	border: 2px solid #FFF;
+	padding: 15px 0px;
+	text-decoration: none;
+	color: #FFF;
+	background: #ffffff1a;
+	border-radius: 5px;
+	display: block;
+}
+}
