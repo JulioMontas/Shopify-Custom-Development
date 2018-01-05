@@ -178,9 +178,11 @@
 
   <main role="main" id="MainContent">
     {{ content_for_layout }}
-    <!-- {% include 'latest-product' %} -->
     {% include 'product-circle-buttons' %}
     {% include 'new-arrivals' %}
+    {% include 'latest-product' %}
+    {% include 'trending' %}
+    {% include 'more-to-adore' %}
   </main>
   {% section 'footer' %}
 
