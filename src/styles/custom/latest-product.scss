@@ -102,11 +102,33 @@
 
 
 //New section
-
 .section-DiscoverTizianaTerenzi section.text-n-cta {
-	background: linear-gradient(-28deg, #bba2c8 0%, #e895af 100%);
 	text-align: center;
+	background: linear-gradient(30deg, #bba2c8, #e895af);
+	background-size: 400% 400%;
+	-webkit-animation: AnimationBG 5s ease infinite;
+	-moz-animation: AnimationBG 5s ease infinite;
+	animation: AnimationBG 5s ease infinite;
 }
+
+@-webkit-keyframes AnimationBG {
+	 0%{background-position:0% 51%}
+	 50%{background-position:100% 50%}
+	 100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationBG {
+	 0%{background-position:0% 51%}
+	 50%{background-position:100% 50%}
+	 100%{background-position:0% 51%}
+}
+@keyframes AnimationBG {
+	 0%{background-position:0% 51%}
+	 50%{background-position:100% 50%}
+	 100%{background-position:0% 51%}
+}
+
+
+
 
 
 .section-DiscoverTizianaTerenzi section.text-n-cta div {
@@ -114,7 +136,6 @@
 	margin: 0 auto;
 	padding: 55px;
 }
-
 
 .section-DiscoverTizianaTerenzi section.upperIMG nav ul li,
 .section-DiscoverTizianaTerenzi section.lowerIMG nav ul li{
@@ -139,21 +160,54 @@
 
 // Text
 .section-DiscoverTizianaTerenzi section.text-n-cta div p {
-	color: white;
-	font-weight: lighter;
-	line-height: 30px;
+	color: #FFFFFF;
+	line-height: 25px;
 	letter-spacing: 1px;
-	font-size: 1.2em;
 	margin-bottom: 2.5em;
-	margin-top: -1.1em;
+	text-shadow: 1px 1px hotpink;
 }
 .section-DiscoverTizianaTerenzi section.text-n-cta div a {
-	border: 2px solid #FFF;
 	padding: 11px 30px;
 	text-decoration: none;
-	color: #FFF;
-	background: #ffffff1a;
+	color: #fefefe;
+	background: #ffffff4d;
 	border-radius: 5px;
+	letter-spacing: 1px;
+	text-shadow: 1px 1px hotpink;
+	-webkit-animation: fadein 5s ease infinite; /* Safari, Chrome and Opera > 12.1 */
+			-moz-animation: fadein 5s ease infinite; /* Firefox < 16 */
+			 -ms-animation: fadein 5s ease infinite; /* Internet Explorer */
+				-o-animation: fadein 5s ease infinite; /* Opera < 12.1 */
+					 animation: fadein 5s ease infinite;
+}
+@keyframes fadein {
+	 50%{opacity: 0.50;}
+	 80%{opacity: 0.80;}
+	 50%{opacity: 0.50;}
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+	50%{opacity: 0.50;}
+	80%{opacity: 0.80;}
+	50%{opacity: 0.50;}
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+	50%{opacity: 0.50;}
+	80%{opacity: 0.80;}
+	50%{opacity: 0.50;}
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+	50%{opacity: 0.50;}
+	80%{opacity: 0.80;}
+	50%{opacity: 0.50;}
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+	50%{opacity: 0.50;}
+	80%{opacity: 0.80;}
+	50%{opacity: 0.50;}
 }
 
 
@@ -224,13 +278,80 @@
 	.lowerIMG nav ul li:nth-child(1),
 	.lowerIMG nav ul li:nth-child(2),
 	.lowerIMG nav ul li:nth-child(5){
-		opacity: 0.8;
+		-webkit-animation: fadeinOne 10s ease infinite; /* Safari, Chrome and Opera > 12.1 */
+				-moz-animation: fadeinOne 10s ease infinite; /* Firefox < 16 */
+				 -ms-animation: fadeinOne 10s ease infinite; /* Internet Explorer */
+					-o-animation: fadeinOne 10s ease infinite; /* Opera < 12.1 */
+						 animation: fadeinOne 10s ease infinite;
 	}
 	.upperIMG nav ul li:nth-child(1),
 	.upperIMG nav ul li:nth-child(3),
 	.upperIMG nav ul li:nth-child(5),
 	.lowerIMG nav ul li:nth-child(4),
 	.lowerIMG nav ul li:nth-child(2){
-		opacity: 0.5;
+		-webkit-animation: fadeinOne 5s ease infinite; /* Safari, Chrome and Opera > 12.1 */
+				-moz-animation: fadeinOne 5s ease infinite; /* Firefox < 16 */
+				 -ms-animation: fadeinOne 5s ease infinite; /* Internet Explorer */
+					-o-animation: fadeinOne 5s ease infinite; /* Opera < 12.1 */
+						 animation: fadeinOne 5s ease infinite;
+	}
+	@keyframes fadeinOne {
+		 50%{opacity: 0.50;}
+		 80%{opacity: 0.80;}
+		 50%{opacity: 0.50;}
+	}
+	/* Firefox < 16 */
+	@-moz-keyframes fadeinOne {
+		50%{opacity: 0.50;}
+		80%{opacity: 0.80;}
+		50%{opacity: 0.50;}
+	}
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes fadeinOne {
+		50%{opacity: 0.50;}
+		80%{opacity: 0.80;}
+		50%{opacity: 0.50;}
+	}
+	/* Internet Explorer */
+	@-ms-keyframes fadeinOne {
+		50%{opacity: 0.50;}
+		80%{opacity: 0.80;}
+		50%{opacity: 0.50;}
+	}
+	/* Opera < 12.1 */
+	@-o-keyframes fadeinOne {
+		50%{opacity: 0.50;}
+		80%{opacity: 0.80;}
+		50%{opacity: 0.50;}
+	}
+
+	@keyframes fadeinTwo {
+		 80%{opacity: 0.80;}
+		 50%{opacity: 0.50;}
+		 80%{opacity: 0.80;}
+	}
+	/* Firefox < 16 */
+	@-moz-keyframes fadeinTwo {
+		80%{opacity: 0.80;}
+		50%{opacity: 0.50;}
+		80%{opacity: 0.80;}
+	}
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes fadeinTwo {
+		80%{opacity: 0.80;}
+		50%{opacity: 0.50;}
+		80%{opacity: 0.80;}
+	}
+	/* Internet Explorer */
+	@-ms-keyframes fadeinTwo {
+		80%{opacity: 0.80;}
+		50%{opacity: 0.50;}
+		80%{opacity: 0.80;}
+	}
+	/* Opera < 12.1 */
+	@-o-keyframes fadeinTwo {
+		80%{opacity: 0.80;}
+		50%{opacity: 0.50;}
+		80%{opacity: 0.80;}
 	}
 }
