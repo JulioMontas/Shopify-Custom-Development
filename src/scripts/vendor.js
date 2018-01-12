@@ -64,9 +64,9 @@
 // =require vendor/imageGalleryThumbnails.js
 
 /*!
- * typed.js
+ * typewrite-setting.js
  */
-// =require vendor/typed.js
+// =require vendor/typewrite-setting.js
 
 // Attempts to preserve comments that likely contain licensing information,
 // even if the comment does not have directives such as `@license` or `/*!`.

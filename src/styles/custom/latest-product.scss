@@ -165,6 +165,8 @@
 	letter-spacing: 1px;
 	margin-bottom: 2.5em;
 	text-shadow: 1px 1px hotpink;
+	font-size: 1.2em;
+	margin-top: 0px;
 }
 .section-DiscoverTizianaTerenzi section.text-n-cta div a {
 	padding: 11px 30px;
@@ -210,6 +212,43 @@
 	50%{opacity: 0.50;}
 }
 
+.section-DiscoverTizianaTerenzi section.text-n-cta div a:hover {
+	-webkit-animation: fadeinAgain 5s ease infinite; /* Safari, Chrome and Opera > 12.1 */
+			-moz-animation: fadeinAgain 5s ease infinite; /* Firefox < 16 */
+			 -ms-animation: fadeinAgain 5s ease infinite; /* Internet Explorer */
+				-o-animation: fadeinAgain 5s ease infinite; /* Opera < 12.1 */
+					 animation: fadeinAgain 5s ease infinite;
+}
+
+@keyframes fadeinAgain {
+	 100%{opacity: 1;}
+	 80%{opacity: 0.80;}
+	 100%{opacity: 1;}
+}
+/* Firefox < 16 */
+@-moz-keyframes fadeinAgain {
+	100%{opacity: 1;}
+	80%{opacity: 0.80;}
+	100%{opacity: 1;}
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeinAgain {
+	100%{opacity: 1;}
+	80%{opacity: 0.80;}
+	100%{opacity: 1;}
+}
+/* Internet Explorer */
+@-ms-keyframes fadeinAgain {
+	100%{opacity: 1;}
+	80%{opacity: 0.80;}
+	100%{opacity: 1;}
+}
+/* Opera < 12.1 */
+@-o-keyframes fadeinAgain {
+	100%{opacity: 1;}
+	80%{opacity: 0.80;}
+	100%{opacity: 1;}
+}
 
 
 @include media-query($small) {
