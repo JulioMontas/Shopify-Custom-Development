@@ -1,0 +1,58 @@
+{% if template.name == 'index' %}
+<style media="screen">
+.intro-video-valentine .slider-wrapper video {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.intro-video-valentine .slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.intro-video-valentine .slider {
+  position: relative;
+  background: rgba(0,0,0,0.5);
+}
+.intro-video-valentine .slider h2,
+.intro-video-valentine .slider a {
+  margin: 0;
+}
+.intro-video-valentine .slider-wrapper,
+.intro-video-valentine .slider,
+.intro-video-valentine .items {
+  max-height: 600px;
+  color: #fff;
+}
+
+.intro-video-valentine .items {
+  padding: 15em;
+  text-align: center;
+}
+.intro-video {padding: 20px;}
+</style>
+
+
+<div class="intro-video-valentine">
+  <section class="slider-wrapper">
+    <video autoplay nocontrols loop>
+        <source src="https://pixabay.com/en/videos/download/video-6782_source.mp4" type="video/mp4">
+    </video>
+    <div class="slider">
+        <div class="items item-1">
+            <h1>Title</h1>
+            <a href="#">Discover </a>
+        </div>
+        <div class="items item-2">
+            <h1>Slide Title 2</h1>
+            <p>Slide Description 2</p>
+        </div>
+        <div class="items item-3">
+            <h1>Slide Title 3</h1>
+            <p>Slide Description 3</p>
+        </div>
+    </div>
+</section>
+</div>
+{% endif %}

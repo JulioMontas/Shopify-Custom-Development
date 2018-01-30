@@ -1,43 +1,39 @@
 {% if template.name == 'index' %}
 <style media="screen">
-video {
+.second-video-valentine .slider-wrapper video {
   max-width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.slider-wrapper {
+.second-video-valentine .slider-wrapper {
   position: relative;
   overflow: hidden;
 }
-.slider {
+.second-video-valentine .slider {
   position: relative;
   background: rgba(0,0,0,0.5);
 }
-.slider h2,
-.slider a {
+.second-video-valentine .slider h2,
+.second-video-valentine .slider a {
   margin: 0;
 }
-.slider-wrapper,
-.slider,
-.items {
-  max-height: 600px;
+.second-video-valentine .slider-wrapper,
+.second-video-valentine .slider,
+.second-video-valentine .items {
+  max-height: 750px;
   color: #fff;
 }
-.items {padding: 15em;}
-
-.intro-video {padding: 20px;}
-
-.text-desc {
-  min-height: 200px;
-  background: #fff;
+.second-video-valentine .items {
+  padding: 15em;
   text-align: center;
 }
+/* .second-video-valentine .intro-video {padding: 20px;} */
 </style>
 
 
-<div class="intro-video">
+<div class="second-video-valentine">
   <section class="slider-wrapper">
     <video autoplay nocontrols loop>
         <source src="https://pixabay.com/en/videos/download/video-6782_source.mp4" type="video/mp4">
@@ -46,14 +42,6 @@ video {
         <div class="items item-1">
             <h1>Title</h1>
             <a href="#">Discover </a>
-        </div>
-        <div class="items item-2">
-            <h1>Slide Title 2</h1>
-            <p>Slide Description 2</p>
-        </div>
-        <div class="items item-3">
-            <h1>Slide Title 3</h1>
-            <p>Slide Description 3</p>
         </div>
     </div>
 </section>
