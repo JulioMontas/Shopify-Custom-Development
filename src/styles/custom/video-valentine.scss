@@ -19,6 +19,7 @@
   position: relative;
   background: rgba(0,0,0,0.5);
 }
+
 .intro-video-valentine .slider h2,
 .intro-video-valentine .slider a,
 .second-video-valentine .slider h2,
@@ -28,9 +29,9 @@
 .intro-video-valentine .slider-wrapper,
 .intro-video-valentine .slider,
 .intro-video-valentine .items {
-  max-height: 600px;
   color: #fff;
 }
+
 .intro-video-valentine .items {
   padding: 15em;
   text-align: center;
@@ -49,4 +50,92 @@
 .second-video-valentine .items {
   padding: 15em;
   text-align: center;
+}
+
+
+
+.triangle-up,
+.triangle-down  {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 1;
+	width: 0;
+	height: 0;
+}
+
+.triangle-up {
+	border-top: 65px solid white;
+	border-right: 1920px solid transparent;
+}
+
+.triangle-down {
+	border-bottom: 65px solid white;
+	border-left: 1920px solid transparent;
+	margin-top: -65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1980px) and (min-width: 1680px)  {
+  .intro-video-valentine .slider-wrapper,
+  .intro-video-valentine .slider,
+  .intro-video-valentine .items {
+    max-height: 900px;
+  }
+  .intro-video-valentine .items {padding: 25em;}
+}
+
+
+@media only screen and (max-width: 1680px) and (min-width: 1441px)  {
+  .intro-video-valentine .slider-wrapper,
+  .intro-video-valentine .slider,
+  .intro-video-valentine .items {
+    max-height: 750px;
+  }
+  .intro-video-valentine .items {padding: 20em;}
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1280px)  {
+  .intro-video-valentine .slider-wrapper,
+  .intro-video-valentine .slider,
+  .intro-video-valentine .items {
+    max-height: 610px;
+  }
+  .intro-video-valentine .items {padding: 15em;}
+}
+
+
+// Small Screen 1280 x 800
+@include media-query($large) {
+  .intro-video-valentine .slider-wrapper,
+  .intro-video-valentine .slider,
+  .intro-video-valentine .items {
+    max-height: 510px;
+  }
+  .intro-video-valentine .items {padding: 12em;}
+}
+
+
+// Table
+@include media-query($medium) {
+  .intro-video-valentine .slider,
+  .second-video-valentine .slider {
+    background: yellow;
+  }
+}
+// Mobile
+@include media-query($small) {
+  .intro-video-valentine .slider,
+  .second-video-valentine .slider {
+    background: gold;
+  }
 }
