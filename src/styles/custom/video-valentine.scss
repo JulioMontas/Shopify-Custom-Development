@@ -1,0 +1,52 @@
+// intro
+.intro-video-valentine {padding: 20px;}
+
+.intro-video-valentine .slider-wrapper video,
+.second-video-valentine .slider-wrapper video  {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.intro-video-valentine .slider-wrapper,
+.second-video-valentine .slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.intro-video-valentine .slider,
+.second-video-valentine .slider {
+  position: relative;
+  background: rgba(0,0,0,0.5);
+}
+.intro-video-valentine .slider h2,
+.intro-video-valentine .slider a,
+.second-video-valentine .slider h2,
+.second-video-valentine .slider a {
+  margin: 0;
+}
+.intro-video-valentine .slider-wrapper,
+.intro-video-valentine .slider,
+.intro-video-valentine .items {
+  max-height: 600px;
+  color: #fff;
+}
+.intro-video-valentine .items {
+  padding: 15em;
+  text-align: center;
+}
+
+//////////////////
+// Second Video //
+//////////////////
+
+.second-video-valentine .slider-wrapper,
+.second-video-valentine .slider,
+.second-video-valentine .items {
+  max-height: 750px;
+  color: #fff;
+}
+.second-video-valentine .items {
+  padding: 15em;
+  text-align: center;
+}
