@@ -1,3 +1,7 @@
+video {
+	max-width: 100%;
+}
+
 // intro
 .intro-video-valentine {padding: 20px;}
 
@@ -19,7 +23,7 @@
 .intro-video-valentine .slider,
 .second-video-valentine .slider {
   position: relative;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.2);
 }
 
 .intro-video-valentine .slider h2,
@@ -49,23 +53,22 @@
 .second-video-valentine .slider-wrapper,
 .second-video-valentine .slider,
 .second-video-valentine .items {
-  max-height: 750px;
   color: #fff;
 }
 .second-video-valentine .items {
-  padding: 15em;
   text-align: center;
 }
 
-.triangle-up,
-.triangle-down  {
-	content: "";
-	display: block;
-	position: absolute;
-	z-index: 1;
-	width: 0;
-	height: 0;
-}
+
+// .triangle-up,
+// .triangle-down  {
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	z-index: 1;
+// 	width: 0;
+// 	height: 0;
+// }
 
 .second-video-valentine .slider-wrapper .slider .items a {
 	padding: 10px 50px;
@@ -74,13 +77,13 @@
 	text-decoration: none;
 }
 
-.triangle-up {border-top: 65px solid white;}
-
-.triangle-down {
-	border-bottom: 65px solid white;
-	border-left: 1920px solid transparent;
-	margin-top: -65px;
-}
+// .triangle-up {border-top: 65px solid white;}
+//
+// .triangle-down {
+// 	border-bottom: 65px solid white;
+// 	border-left: 1920px solid transparent;
+// 	margin-top: -65px;
+// }
 
 
 
@@ -90,7 +93,17 @@
   .intro-video-valentine .items {
     max-height: 900px;
   }
-  .intro-video-valentine .items {padding: 25em;}
+  .intro-video-valentine .items {
+    padding: 25em;
+  }
+  .second-video-valentine .slider-wrapper,
+  .second-video-valentine .slider,
+  .second-video-valentine .items {
+    height: 1080px;
+  }
+  .second-video-valentine .items {
+	  padding: 28.5em;
+  }
 }
 
 @media only screen and (max-width: 1680px) and (min-width: 1441px)  {
@@ -99,7 +112,17 @@
   .intro-video-valentine .items {
     max-height: 750px;
   }
-  .intro-video-valentine .items {padding: 20em;}
+  .intro-video-valentine .items {
+    padding: 20em;
+  }
+  .second-video-valentine .slider-wrapper,
+  .second-video-valentine .slider,
+  .second-video-valentine .items {
+    height: 940px;
+  }
+  .second-video-valentine .items {
+	  padding: 24.5em;
+  }
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1280px)  {
@@ -109,6 +132,15 @@
     max-height: 610px;
   }
   .intro-video-valentine .items {padding: 15em;}
+
+  .second-video-valentine .slider-wrapper,
+  .second-video-valentine .slider,
+  .second-video-valentine .items {
+    height: 800px;
+  }
+  .second-video-valentine .items {
+	  padding: 20em;
+  }
 }
 
 // Small Screen 1280 x 800
@@ -118,21 +150,39 @@
   .intro-video-valentine .items {
     max-height: 510px;
   }
-  .intro-video-valentine .items {padding: 12em;}
+  .intro-video-valentine .items {
+    padding: 12em;
+  }
+  .second-video-valentine .slider-wrapper,
+  .second-video-valentine .slider,
+  .second-video-valentine .items {
+    height: 718px;
+  }
+  .second-video-valentine .items {
+	  padding: 17.5em;
+  }
 }
 
 // Table
 @include media-query($medium) {
-  .intro-video-valentine .slider,
-  .second-video-valentine .slider {
-    background: yellow;
+  .second-video-valentine .slider-wrapper,
+  .second-video-valentine .slider,
+  .second-video-valentine .items {
+    height: 430px;
+  }
+  .second-video-valentine .items {
+	  padding: 8.5em;
   }
 }
 // Mobile
 @include media-query($small) {
-  .intro-video-valentine .slider,
-  .second-video-valentine .slider {
-    background: gold;
+  .second-video-valentine .slider-wrapper,
+  .second-video-valentine .slider,
+  .second-video-valentine .items {
+    height: 210px;
+  }
+  .second-video-valentine .items {
+	  padding: 1em;
   }
 }
 
@@ -178,7 +228,7 @@
 }
 
 .intro-slick .intro .center {
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.2);
 	width: 100%;
 	height: 100%;
 	padding: 20%;
@@ -200,6 +250,12 @@
 	font-size: 1.4em;
   color: #FFF;
 }
+
+
+.center-video-text div.content nav ul {
+	margin-left: -40px;
+}
+
 .center-video-text div.content nav ul li,
 .intro-slick .intro .center .content nav ul li{
   list-style: none;
@@ -212,6 +268,7 @@
 	text-decoration: none;
 	border: 1px solid #FFF;
 }
+
 
 
 
