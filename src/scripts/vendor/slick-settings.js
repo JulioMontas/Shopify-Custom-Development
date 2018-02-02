@@ -4,6 +4,13 @@ $('.product-slides').slick({
   arrows: true,
 });
 
+
+$('.intro-slick').slick({
+  dots: true,
+  arrows: false,
+});
+
+
 $('.list-of-five').slick({
   speed: 300,
   infinite: false,
