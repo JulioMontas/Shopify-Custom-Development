@@ -1,16 +1,3 @@
-
-$('.product-slides').slick({
-  dots: false,
-  arrows: true,
-});
-
-
-$('.intro-slick').slick({
-  dots: true,
-  arrows: false,
-});
-
-
 $('.list-of-five').slick({
   speed: 300,
   infinite: false,
@@ -70,3 +57,5 @@ $('.list-of-four').slick({
     }
   ]
 });
+
+new Vidage(selector);
