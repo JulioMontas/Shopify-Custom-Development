@@ -4,7 +4,6 @@ footer div.top section {
 	float: left;
 	padding: 1.5em 0;
 }
-
 footer div.top section ul {
 	margin-left: -40px;
 	list-style: none;
@@ -13,19 +12,27 @@ footer div.top section ul {
 	align-items: baseline;
   justify-content:center;
 }
-
-footer div.top section ul li {
-	margin-right: 10px;
+footer div.top section ul li {margin-right: 10px;}
+footer div.top section ul li:nth-child(1) {margin-right: 30px;}
+footer div.top section ul li:last-child {margin-right: 0px;}
+footer div.top section ul li h4 {
+	text-transform: uppercase;
+	color: #333;
+	letter-spacing: 1px;
+	font-weight: 100;
+	font-size: 0.9em;
 }
-
-footer div.top section ul li:nth-child(1) {
-	margin-right: 30px;
+footer div.top section:nth-child(1) ul li svg {color: #666;}
+footer div.top section:nth-child(2) ul li a {
+	background: #5343C2;
+	padding: 9px 0px;
+	border-radius: 30px;
+	color: white;
+	display: block;
+	height: 35px;
+	width: 35px;
+	text-align: center;
 }
-
-footer div.top section ul li:last-child {
-	margin-right: 0px;
-}
-
 
 // #shopify-section-footer{
 //   margin-top: 50px;
