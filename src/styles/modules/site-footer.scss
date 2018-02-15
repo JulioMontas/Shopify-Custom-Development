@@ -33,8 +33,7 @@ footer div.top section:nth-child(2) ul li a {
 	width: 35px;
 	text-align: center;
 }
-
-
+footer div.top section:nth-child(2) {background: #F2F2F2;}
 
 
 
@@ -42,52 +41,16 @@ footer div.bottom p {
 	font-size: 0.8em;
 	color: #333;
 }
-
-
-
-footer div.bottom section:nth-child(1) {
-	float: left;
-}
-
-footer div.bottom section:nth-child(2) {
-	float: right;
-}
-
+footer div.bottom section:nth-child(1) {float: left;}
+footer div.bottom section:nth-child(2) {float: right;}
 footer div.bottom section:nth-child(2) ul {
 	display: flex;
 	list-style: none;
 }
-footer div.bottom section:nth-child(2) ul li {
-	margin-right: 15px;
-}
-footer div.bottom section:nth-child(2) ul li:last-child {
-	margin-right: 0px;
-}
+footer div.bottom section:nth-child(2) ul li {margin-right: 15px;}
+footer div.bottom section:nth-child(2) ul li:last-child {margin-right: 0px;}
 footer div.bottom section:nth-child(2) ul li a {
 	text-decoration: none;
 	color:#5343C2;
+	font-size: 0.9em;
 }
-
-// #shopify-section-footer{
-//   margin-top: 50px;
-// }
-// #shopify-section-footer {
-//   background: #FAFAFA;
-// 	padding-top: 1px;
-// 	letter-spacing: 0.5px;
-//   bottom: 0;
-// }
-
-// footer ul {
-// 	display: flex;
-// 	justify-content: space-between;
-// 	padding: 0px;
-// }
-//
-// footer ul li{list-style: none;}
-//
-// footer ul:nth-child(1) > li:nth-child(2) a {font-size: 0.8em;}
-//
-// footer ul li a {
-// 	text-decoration:none;
-//   color:#5343C2;}
