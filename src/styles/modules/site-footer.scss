@@ -23,16 +23,6 @@ footer div.top section ul li h4 {
 	font-size: 0.9em;
 }
 footer div.top section:nth-child(1) ul li svg {color: #666;}
-footer div.top section:nth-child(2) ul li a {
-	background: #5343C2;
-	padding: 9px 0px;
-	border-radius: 30px;
-	color: white;
-	display: block;
-	height: 35px;
-	width: 35px;
-	text-align: center;
-}
 footer div.top section:nth-child(2) {background: #F2F2F2;}
 
 
@@ -49,8 +39,46 @@ footer div.bottom section:nth-child(2) ul {
 }
 footer div.bottom section:nth-child(2) ul li {margin-right: 15px;}
 footer div.bottom section:nth-child(2) ul li:last-child {margin-right: 0px;}
+
+footer div.top section:nth-child(2) ul li a,
+footer div.bottom section:nth-child(2) ul li a {
+	transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+}
+
 footer div.bottom section:nth-child(2) ul li a {
 	text-decoration: none;
 	color:#5343C2;
 	font-size: 0.9em;
+}
+footer div.bottom section:nth-child(2) ul li a:hover {
+	color:#8080C2;
+}
+
+footer div.top section:nth-child(2) ul li a {
+	background: #5343C2;
+	padding: 9px 0px;
+	border-radius: 30px;
+	color: white;
+	display: block;
+	height: 35px;
+	width: 35px;
+	text-align: center;
+}
+footer div.top section:nth-child(2) ul li a:hover{
+	background: #8080C2;
+}
+
+
+
+@include media-query($small){
+	footer div.top section{
+		width: 100%;
+	}
+}
+@include media-query($medium) {
+	footer div.top section{
+		width: 100%;
+	}
 }
