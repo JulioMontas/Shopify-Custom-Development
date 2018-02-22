@@ -1,0 +1,31 @@
+#christian-siriano-fragrances.template-page main#MainContent div.page-width.collection-larger-btn section {
+  width: 50%;
+  float: left;
+}
+#christian-siriano-fragrances.template-page main#MainContent div.page-width.collection-larger-btn section div.intro-video {
+	padding: 0;
+	padding-top: 30px;
+}
+#christian-siriano-fragrances.template-page main#MainContent div.page-width.collection-larger-btn section ul li.animationFadeIn.hidden.visible.animated.fadeIn a.tilter.tilter--2 {
+	width: 245px;
+	height: 319px;
+}
+#christian-siriano-fragrances.template-page main#MainContent div.page-width.collection-larger-btn section ul li.animationFadeIn.hidden.visible.animated.fadeIn.full-visible a.tilter.tilter--2 figure.tilter__figure figcaption.tilter__caption h3.tilter__title,
+#christian-siriano-fragrances.template-page main#MainContent div.page-width.collection-larger-btn section ul li.animationFadeIn.hidden.visible.animated.fadeIn a.tilter.tilter--2 figure.tilter__figure figcaption.tilter__caption h3.tilter__title {
+	font-size: 1em;
+	margin-bottom: -0.8em;
+}
+#christian-siriano-fragrances.template-page main#MainContent div.page-width.collection-larger-btn section div.intro-video video::after{
+  display: none;
+}
+
+@include media-query($small){
+  #christian-siriano-fragrances.template-page main#MainContent div.page-width.collection-larger-btn section {
+    width: 100%;
+  }
+}
+@include media-query($medium) {
+  #christian-siriano-fragrances.template-page main#MainContent div.page-width.collection-larger-btn section {
+    width: 100%;
+  }
+}
