@@ -10,19 +10,19 @@ video {
 .second-video-valentinee {
 	text-align: center;
 }
-.intro-video::after,
-.second-video-valentinee::before {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 0.5px;
-	background: #ccc;
-	width: 70%;
-	margin: 0 auto;
-}
-.intro-video::after {
-	margin-top: 4em;
-}
+// .intro-video::after,
+// .second-video-valentinee::before {
+// 	content: "";
+// 	display: block;
+// 	width: 100%;
+// 	height: 0.5px;
+// 	background: #ccc;
+// 	width: 70%;
+// 	margin: 0 auto;
+// }
+// .intro-video::after {
+// 	margin-top: 4em;
+// }
 .intro-video h3,
 .second-video-valentinee section h3 {
 	font-size: 1.7em;
