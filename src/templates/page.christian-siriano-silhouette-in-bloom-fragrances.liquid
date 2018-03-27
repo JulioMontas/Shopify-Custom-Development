@@ -1,0 +1,50 @@
+<nav class="breadcrumbs-nav">
+  <ul class="animationFadeIn">
+    <li><a href="/pages/fragrances">Fragrances</a></li>
+    <li><p>Christian Siriano Collections</p></li>
+  </ul>
+</nav>
+<div class="page-width bloomFragrances">
+  <section>
+    <div class="intro-video">
+        <video controls="true" autoplay loop muted poster="https://cdn.shopify.com/s/files/1/1765/8667/files/In_bloom.jpg">
+          <source src="https://cdn.shopify.com/s/files/1/1765/8667/files/take_4.mp4?17350816855582444248" type="video/mp4">
+          <source src="https://cdn.shopify.com/s/files/1/1765/8667/files/silhuette.webm" type="video/webm">
+          <p>This browser does not support the video element.</p>
+        </video>
+    </div>
+  </section>
+  <section>
+    <div class="collectionPreview">
+      <ul>
+        <li class="animationFadeIn">
+          {%- assign collection = collections.christian-siriano-silhouette-in-bloom-fragrances -%}
+            {% for product in collection.products limit: 1 %}
+              <a href="{{ product.url | within: collection }}">
+                <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                <h2>{{ product.vendor }}</h2>
+                <p>{{ product.title }}</p>
+                <p>{% if product.compare_at_price > product.price %}
+                    {% if product.price_varies %}
+                      {%- assign sale_price = product.price | money -%}
+                      {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                    {% else %}
+                      {{ 'products.product.on_sale' | t }}
+                      {{ product.price | money }}
+                    {% endif %}
+                  {% else %}
+                    {% if product.price_varies %}
+                      {%- assign price = product.price | money -%}
+                      {{ 'products.product.from_text_html' | t: price: price }}
+                    {% else %}
+                      {{ product.price | money }}
+                    {% endif %}
+                  {% endif %}</p>
+                </a>
+              {% else %}
+            {% endfor %}
+        </li>
+      <ul>
+    </div>
+  </section>
+</div>
