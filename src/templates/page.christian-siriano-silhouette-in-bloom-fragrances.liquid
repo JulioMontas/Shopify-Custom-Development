@@ -21,7 +21,7 @@
           {%- assign collection = collections.christian-siriano-silhouette-in-bloom-fragrances -%}
             {% for product in collection.products limit: 1 %}
               <a href="{{ product.url | within: collection }}">
-                <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
+                <span>{{ product.featured_image.src | img_url: '400x400' | img_tag: product.title }}</span>
                 <h2>{{ product.vendor }}</h2>
                 <p>{{ product.title }}</p>
                 <p>{% if product.compare_at_price > product.price %}
