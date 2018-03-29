@@ -24,9 +24,9 @@
 // =require vendor/animationControl.js
 
 /*!
- * slick.min.js
+ * slick.js
  */
-// =require vendor/slick.min.js
+// =require vendor/slick.js
 
 /*!
  * slick-settings.js
@@ -67,11 +67,6 @@
  * typewrite-setting.js
  */
 // =require vendor/typewrite-setting.js
-
-// /*!
-//  * Vidage.js.
-//  */
-// // =require vendor/Vidage.js
 
 
 // Attempts to preserve comments that likely contain licensing information,

@@ -3,6 +3,10 @@ $('.list-of-five').slick({
   infinite: false,
   slidesToShow: 5,
   slidesToScroll: 5,
+  autoplay:true,
+  arrows: true,
+  prevArrow:"<button type='button' class='slick-prev'><i class='fas fa-angle-left' aria-hidden='true'></i></button>",
+  nextArrow:"<button type='button' class='slick-next'><i class='fas fa-angle-right' aria-hidden='true'></i></button>",
   responsive: [
     {
       breakpoint: 1024,
@@ -33,6 +37,9 @@ $('.list-of-four').slick({
   infinite: false,
   slidesToShow: 4,
   slidesToScroll: 4,
+  arrows: true,
+  prevArrow:"<button type='button' class='slick-prev'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+  nextArrow:"<button type='button' class='slick-next'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
   responsive: [
     {
       breakpoint: 1024,
@@ -58,4 +65,20 @@ $('.list-of-four').slick({
   ]
 });
 
-new Vidage(selector);
+$('.product-slides').slick({
+  speed: 300,
+  infinite: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow:"<button type='button' class='slick-prev'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+  nextArrow:"<button type='button' class='slick-next'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+});
+
+// $('.productCircleButtons-slider').slick({
+//   speed: 300,
+//   infinite: false,
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   arrows: false,
+// });
