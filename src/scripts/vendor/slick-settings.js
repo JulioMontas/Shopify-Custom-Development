@@ -32,6 +32,7 @@ $('.list-of-five').slick({
   ]
 });
 
+
 $('.list-of-four').slick({
   speed: 300,
   infinite: false,
@@ -65,7 +66,7 @@ $('.list-of-four').slick({
   ]
 });
 
-$('.product-slides').slick({
+$('.slider-nav').slick({
   speed: 300,
   infinite: false,
   slidesToShow: 1,
@@ -75,7 +76,7 @@ $('.product-slides').slick({
   nextArrow:"<button type='button' class='slick-next'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
 });
 
-// 
+//
 // $('.productCircleButtons-slider').slick({
 //   speed: 300,
 //   infinite: false,
