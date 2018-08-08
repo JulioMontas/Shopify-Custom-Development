@@ -1,9 +1,17 @@
-.products-collections-slider section .list-of-five {margin-bottom: 7em;}
-.products-collections-slider section .list-of-five h2 {
+.products-collections-slider section .list-of-five,
+.products-collections-slider section .list-of-four {
+	margin-bottom: 7em;}
+
+
+.products-collections-slider section .list-of-five h2,
+.list-of-four a h2,
+.list-of-three a h2{
 	color: #333;
 	text-transform: uppercase;
 	font-size: 0.9em;}
-.products-collections-slider section .list-of-five p {
+.list-of-five p,
+.list-of-four p,
+.list-of-three p {
 	color: #9D9D9D;
 	font-size: 0.9em;
 	line-height: 20px;
@@ -11,11 +19,15 @@
 .products-collections-slider section a p:nth-child(4) {
 	color: #5343C2;
 	font-style: italic;}
-.products-collections-slider section .list-of-five a.slick-slide {
+.list-of-five a.slick-slide,
+.list-of-four a.slick-slide,
+.list-of-three a.slick-slide {
 	text-decoration: none;
 	letter-spacing: 1px;
 	text-align: center;}
-.products-collections-slider section .list-of-five a.slick-slide span {
+.list-of-five a.slick-slide span,
+.list-of-four a.slick-slide span,
+.list-of-three a.slick-slide span {
 	display: inline-block;
 	height: 110px;
 	vertical-align: bottom;}

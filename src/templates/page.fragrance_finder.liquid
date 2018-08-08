@@ -10,11 +10,10 @@
            <!-- <ul class="finder-btn"> -->
            <ul class="tabs-one">
              <li class="tab-link current" data-tab="tab-1">Aromatic</li>
-             <li class="tab-link" data-tab="tab-2">Aromatic Aquatic</li>
              <li class="tab-link" data-tab="tab-3">Aromatic Fougere</li>
              <li class="tab-link" data-tab="tab-4">Aromatic Fruity</li>
            </ul>
-             <div id="tab-1" class="list-of-four tab-content-one current-one">
+             <div id="tab-1" class="list-of-five tab-content-one current-one">
                {%- assign collection = collections.fragrance-finder-aromatic-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -42,37 +41,9 @@
                  {% endfor %}
             	</div> <!-- END tab-content -->
 
-            	<div id="tab-2" class="list-of-four tab-content-one">
-                {%- assign collection = collections.fragrance-finder-aromatic-aquatic -%}
-                  {% for product in collection.products limit: 12 %}
-                    <a href="{{ product.url | within: collection }}">
-                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-                      <h2>{{ product.vendor }}</h2>
-                      <p>{{ product.title }}</p>
-                      <p>{% if product.compare_at_price > product.price %}
-                          {% if product.price_varies %}
-                            {%- assign sale_price = product.price | money -%}
-                            {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-                          {% else %}
-                            {{ 'products.product.on_sale' | t }}
-                            {{ product.price | money }}
-                          {% endif %}
-                        {% else %}
-                          {% if product.price_varies %}
-                            {%- assign price = product.price | money -%}
-                            {{ 'products.product.from_text_html' | t: price: price }}
-                          {% else %}
-                            {{ product.price | money }}
-                          {% endif %}
-                        {% endif %}</p>
-                      </a>
-                    {% else %}
-                  {% endfor %}
-            	</div> <!-- END tab-content -->
-
               <div id="tab-3" class="list-of-four tab-content-one">
                 {%- assign collection = collections.fragrance-finder-aromatic-fougere -%}
-                  {% for product in collection.products limit: 12 %}
+                  {% for product in collection.products limit: 4 %}
                     <a href="{{ product.url | within: collection }}">
                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                       <h2>{{ product.vendor }}</h2>
@@ -100,7 +71,7 @@
 
               <div id="tab-4" class="list-of-four tab-content-one ">
                 {%- assign collection = collections.fragrance-finder-aromatic-fruity -%}
-                  {% for product in collection.products limit: 12 %}
+                  {% for product in collection.products limit: 4 %}
                     <a href="{{ product.url | within: collection }}">
                       <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                       <h2>{{ product.vendor }}</h2>
@@ -258,9 +229,9 @@
                <li class="tab-link current" data-tab="tab-82">Citrus Aromatic</li>
                <li class="tab-link current" data-tab="tab-83">Citrus Floral</li>
              </ul>
-             <div id="tab-82" class="list-of-four tab-content-three current-three">
+             <div id="tab-82" class="list-of-three tab-content-three current-three">
              {%- assign collection = collections.fragrance-finder-citrus-aromatic -%}
-               {% for product in collection.products limit: 12 %}
+               {% for product in collection.products limit: 3 %}
                  <a href="{{ product.url | within: collection }}">
                    <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                    <h2>{{ product.vendor }}</h2>
@@ -285,9 +256,9 @@
                  {% else %}
                {% endfor %}
              </div>
-             <div id="tab-83" class="list-of-four tab-content-three">
+             <div id="tab-83" class="list-of-two tab-content-three">
              {%- assign collection = collections.fragrance-finder-citrus-floral -%}
-               {% for product in collection.products limit: 12 %}
+               {% for product in collection.products limit: 2 %}
                  <a href="{{ product.url | within: collection }}">
                    <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                    <h2>{{ product.vendor }}</h2>
@@ -336,15 +307,12 @@
                <ul class="tabs-four">
                  <li class="tab-link current" data-tab="tab-9">Floral</li>
                  <li class="tab-link" data-tab="tab-10">Floral Aquatic</li>
-                 <li class="tab-link" data-tab="tab-11">Floral Fruity</li>
-                 <li class="tab-link" data-tab="tab-12">Floral Fruity Gormand</li>
-                 <li class="tab-link" data-tab="tab-13">Floral Green</li>
                  <li class="tab-link" data-tab="tab-14">Floral Musk</li>
                  <li class="tab-link" data-tab="tab-15">Floral Woody Musk</li>
                  <li class="tab-link" data-tab="tab-16">Floral Woody</li>
                </ul>
 
-               <div id="tab-9" class="list-of-four tab-content-four current-four">
+               <div id="tab-9" class="list-of-five tab-content-four current-four">
                {%- assign collection = collections.fragrance-finder-floral-all -%}
                  {% for product in collection.products limit: 12 %}
                    <a href="{{ product.url | within: collection }}">
@@ -372,9 +340,9 @@
                  {% endfor %}
                </div>
 
-               <div id="tab-10" class="list-of-four tab-content-four">
+               <div id="tab-10" class="list-of-two tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-aquatic -%}
-                 {% for product in collection.products limit: 12 %}
+                 {% for product in collection.products limit: 2 %}
                    <a href="{{ product.url | within: collection }}">
                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                      <h2>{{ product.vendor }}</h2>
@@ -400,93 +368,9 @@
                  {% endfor %}
                </div>
 
-               <div id="tab-11" class="list-of-four tab-content-four">
-               {%- assign collection = collections.fragrance-finder-floral-fruity -%}
-                 {% for product in collection.products limit: 12 %}
-                   <a href="{{ product.url | within: collection }}">
-                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-                     <h2>{{ product.vendor }}</h2>
-                     <p>{{ product.title }}</p>
-                     <p>{% if product.compare_at_price > product.price %}
-                         {% if product.price_varies %}
-                           {%- assign sale_price = product.price | money -%}
-                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-                         {% else %}
-                           {{ 'products.product.on_sale' | t }}
-                           {{ product.price | money }}
-                         {% endif %}
-                       {% else %}
-                         {% if product.price_varies %}
-                           {%- assign price = product.price | money -%}
-                           {{ 'products.product.from_text_html' | t: price: price }}
-                         {% else %}
-                           {{ product.price | money }}
-                         {% endif %}
-                       {% endif %}</p>
-                     </a>
-                   {% else %}
-                 {% endfor %}
-               </div>
-
-               <div id="tab-12" class="list-of-four tab-content-four">
-               {%- assign collection = collections.fragrance-finder-floral-fruity-gormand -%}
-                 {% for product in collection.products limit: 12 %}
-                   <a href="{{ product.url | within: collection }}">
-                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-                     <h2>{{ product.vendor }}</h2>
-                     <p>{{ product.title }}</p>
-                     <p>{% if product.compare_at_price > product.price %}
-                         {% if product.price_varies %}
-                           {%- assign sale_price = product.price | money -%}
-                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-                         {% else %}
-                           {{ 'products.product.on_sale' | t }}
-                           {{ product.price | money }}
-                         {% endif %}
-                       {% else %}
-                         {% if product.price_varies %}
-                           {%- assign price = product.price | money -%}
-                           {{ 'products.product.from_text_html' | t: price: price }}
-                         {% else %}
-                           {{ product.price | money }}
-                         {% endif %}
-                       {% endif %}</p>
-                     </a>
-                   {% else %}
-                 {% endfor %}
-               </div>
-
-               <div id="tab-13" class="list-of-four tab-content-four">
-               {%- assign collection = collections.fragrance-finder-floral-green -%}
-                 {% for product in collection.products limit: 12 %}
-                   <a href="{{ product.url | within: collection }}">
-                     <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
-                     <h2>{{ product.vendor }}</h2>
-                     <p>{{ product.title }}</p>
-                     <p>{% if product.compare_at_price > product.price %}
-                         {% if product.price_varies %}
-                           {%- assign sale_price = product.price | money -%}
-                           {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
-                         {% else %}
-                           {{ 'products.product.on_sale' | t }}
-                           {{ product.price | money }}
-                         {% endif %}
-                       {% else %}
-                         {% if product.price_varies %}
-                           {%- assign price = product.price | money -%}
-                           {{ 'products.product.from_text_html' | t: price: price }}
-                         {% else %}
-                           {{ product.price | money }}
-                         {% endif %}
-                       {% endif %}</p>
-                     </a>
-                   {% else %}
-                 {% endfor %}
-               </div>
-
-               <div id="tab-14" class="list-of-four tab-content-four">
+               <div id="tab-14" class="list-of-two tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-musk -%}
-                 {% for product in collection.products limit: 12 %}
+                 {% for product in collection.products limit: 2 %}
                    <a href="{{ product.url | within: collection }}">
                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                      <h2>{{ product.vendor }}</h2>
@@ -540,9 +424,9 @@
                  {% endfor %}
                </div>
 
-               <div id="tab-16" class="list-of-four tab-content-four">
+               <div id="tab-16" class="list-of-one tab-content-four">
                {%- assign collection = collections.fragrance-finder-floral-woody -%}
-                 {% for product in collection.products limit: 12 %}
+                 {% for product in collection.products limit: 1 %}
                    <a href="{{ product.url | within: collection }}">
                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                      <h2>{{ product.vendor }}</h2>

@@ -2,9 +2,9 @@
   <div class="products-collections-slider">
 		<section class="animationFadeIn">
 			<div class="center"><h2>Trending</h2></div>
-			<div class="list-of-five page-width">
+			<div class="list-of-four page-width">
 			{%- assign collection = collections.trending -%}
-				{% for product in collection.products limit: 12 %}
+				{% for product in collection.products limit: 4 %}
 				  <a href="{{ product.url | within: collection }}">
 						<span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
 						<h2>{{ product.vendor }}</h2>
