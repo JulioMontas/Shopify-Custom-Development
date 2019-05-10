@@ -15,7 +15,7 @@
            </ul>
              <div id="tab-1" class="list-of-four tab-content-one current-one">
                {%- assign collection = collections.fragrance-finder-aromatic-all -%}
-                 {% for product in collection.products limit: 3 %}
+                 {% for product in collection.products limit: 4 %}
                    <a href="{{ product.url | within: collection }}">
                      <span>{{ product.featured_image.src | img_url: '110x110' | img_tag: product.title }}</span>
                      <h2>{{ product.vendor }}</h2>
